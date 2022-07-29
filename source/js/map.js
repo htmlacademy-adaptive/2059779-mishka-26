@@ -20,7 +20,7 @@ ymaps.ready(function () {
             iconImageSize: [67, 100],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [0, 0]
+            iconImageOffset: [-27, -120]
         });
 
     myMap.geoObjects
