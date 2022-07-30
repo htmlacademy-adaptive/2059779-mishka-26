@@ -200,14 +200,23 @@
       <div class="modal__message">
         <section class="product-order">
           <h2 class="product-order__title">Добавить в корзину</h2>
-          <p class="product-order__message">Выберите размер:</p>
-          <!-- Не знаю, может это форма и стилизованные чек-боксы? -->
-          <div class="product-order__size-choser">
-            <button class="product-order__size-button">S</button>
-            <button class="product-order__size-button">M</button>
-            <button class="product-order__size-button">L</button>
-          </div>
-          <button class="product-order__add-button">Добавить</button>
+          <form class="product-order__form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="product-order__size-choser">
+              <h3 class="product-order__message">Выберите размер:</h3>
+              <label class="product-order__label">
+                <span class="product-order__size">S</span>
+                <input class="visually-hidden" type="checkbox" name="product-size" value="S">
+              </label>
+              <label class="product-order__label">
+                <span class="product-order__size">M</span>
+                <input class="visually-hidden" type="checkbox" name="product-size" value="M">
+              </label>
+              <label class="product-order__label">
+                <span class="product-order__size">L</span>
+                <input class="visually-hidden" type="checkbox" name="product-size" value="L">
+              </label>
+              <button class="product-order__add-button" type="submit">Добавить</button>
+          </form>
         </section>
       </div>
     </div>
