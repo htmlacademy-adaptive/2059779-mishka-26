@@ -114,29 +114,29 @@
             <h3 class="fieldset__title">ФИО</h3>
             <label class="fieldset__label">
               <span class="fieldset__value">Имя:</span>
-              <input class="fieldset__input fieldset__input--text" type="text" name="customer-name" placeholder="Введите ваше имя*" required>
+              <input class="fieldset__input fieldset__input--text" type="text" name="customer-name" placeholder="Введите ваше имя*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
             </label>
             <label class="fieldset__label">
               <span class="fieldset__value">Фамилия:</span>
-              <input class="fieldset__input fieldset__input--text" type="text" name="customer-second-name" placeholder="Укажите фамилию*" required>
+              <input class="fieldset__input fieldset__input--text" type="text" name="customer-second-name" placeholder="Укажите фамилию*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
             </label>
               <label class="fieldset__label">
               <span class="fieldset__value">Отчество:</span>
-              <input class="fieldset__input fieldset__input--text" type="text" name="customer-third-name" placeholder="Отчество, если желаете">
+              <input class="fieldset__input fieldset__input--text" type="text" name="customer-third-name" placeholder="Отчество, если желаете" pattern="[а-яА-ЯёЁa-zA-Z]">
             </label>
           </fieldset>
           <fieldset class="form__fieldset fieldset fieldset--accent">
             <h3 class="fieldset__title">Тел</h3>
             <label class="fieldset__label">
               <span class="visually-hidden">Ваш телефон:</span>
-              <input class="fieldset__input fieldset__input--phone" type="text" name="customer-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              <input class="fieldset__input fieldset__input--phone" type="text" name="customer-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" required>
             </label>
           </fieldset>
           <fieldset class="form__fieldset fieldset fieldset--accent">
             <h3 class="fieldset__title">E-mail</h3>
             <label class="fieldset__label">
               <span class="visually-hidden">Ваш электронный адрес:</span>
-              <input class="fieldset__input fieldset__input--email" type="text" name="customer-email" placeholder="Ваш Email*" required>
+              <input class="fieldset__input fieldset__input--email" type="text" name="customer-email" placeholder="Ваш Email*" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required>
             </label>
           </fieldset>
           <fieldset class="form__fieldset fieldset fieldset--accent">
