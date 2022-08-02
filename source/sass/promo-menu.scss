@@ -1,0 +1,19 @@
+@use "global.scss";
+
+.promo-menu {
+  @include global.list-reseter;
+}
+
+.promo-menu__link {
+  display: block;
+  @include global.fonter(700, 15px, 24px);
+  text-decoration: none;
+  color: var(--dark);
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+  &:active {
+    opacity: var(--hover-opacity);
+  }
+}

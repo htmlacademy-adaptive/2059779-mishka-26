@@ -1,0 +1,21 @@
+@use "global.scss";
+
+.main-menu {
+  @include global.list-reseter;
+}
+
+.main-menu__link {
+  display: block;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  @include global.fonter(700, 17px, 24px);
+  text-decoration: none;
+  color: var(--black);
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

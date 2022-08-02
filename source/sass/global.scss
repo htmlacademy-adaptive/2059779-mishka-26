@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+  url("../fonts/opensansbold.woff") format("woff");
+  font-display: swap;
+}
+
+@mixin fonter($weight: 400, $size: 25px, $line: 30px) {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin sizer($width, $height: $widht) {
+  width: $width;
+  height: $height;
+}
+
+@mixin centerer($x-axis: center, $y-axis: center) {
+  display: flex;
+  align-items: $x-axis;
+  justify-content: $y-axis;
+}
+
+@mixin list-reseter {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Не вижу смысла делать этот класс в отдельном файле. В рамках БЭМа это блок, но не */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Colors */
+:root {
+  --page-background: #ffffff;
+  --hero-background: #fafafa;
+  --font-main-color: #444444;
+  --dark: #000000;
+  --light: #ffffff;
+  --accent-color: #63D1BB;
+  --dark-accent-color: #56C3B2;
+  --hover-opacity: 0.6;
+  --active-opacity: 0.3;
+  --icon-opacity: 0.2;
+  --icon-hover-opacity: 1;
+  --icon-active-opacity: 0.3;
+}

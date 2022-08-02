@@ -1,0 +1,25 @@
+@use "global.scss";
+
+.main-hero {
+  padding-top: 72px;
+  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center center;
+}
+
+.main-hero__title {
+  @include global.centerer(initial, center);
+  @include global.fonter(700, 27px, 30px);
+  color: var(--dark);
+}
+
+.main-hero__button {
+  display: block;
+  padding: 24px 160px 31px 30px;
+  @include global.fonter(700, 19px, 24px);
+  color: var(--light);
+  background-color: var(--accent-color);
+  text-decoration: none;
+
+  &--toys {
+    background-color: var(--dark-accent-color);
+  }
+}

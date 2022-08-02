@@ -1,0 +1,21 @@
+@use "global.scss";
+
+.logo {
+  display: block;
+  background-color: var(--page-background);
+
+  .logo__img {
+  color: var(--dark);
+  }
+
+  &:hover {
+    .logo__img {
+    opacity: var(--hover-opacity);
+    }
+  }
+    &:active {
+    .logo__img {
+    opacity: var(--active-opacity);
+    }
+  }
+}

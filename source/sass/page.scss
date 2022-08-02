@@ -1,0 +1,20 @@
+@use "global.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  @include global.fonter(400, 15px, 24px);
+  color: var(--font-main-color);
+  background-color: var(--page-background);
+}
+
+.page__container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+}

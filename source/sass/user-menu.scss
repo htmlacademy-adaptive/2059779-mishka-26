@@ -1,0 +1,47 @@
+@use "global.scss";
+
+.user-menu {
+  @include global.list-reseter;
+}
+
+.user-menu__link {
+  display: block;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  @include global.fonter(700, 17px, 24px);
+  text-decoration: none;
+  color: var(--dark);
+
+  .user-menu__icon {
+    color: var(--dark);
+    opacity: var(--icon-opacity);
+  }
+
+  &:hover {
+
+    .user-menu__search-text {
+    opacity: var(--hover-opacity);
+    }
+
+    .user-menu__cart-text {
+    opacity: var(--hover-opacity);
+    }
+
+    .user-menu__cart-counter {
+    opacity: var(--hover-opacity);
+    }
+
+    .user-menu__icon {
+    color: var(--accent-color);
+    opacity: var(--icon-hover-opacity);
+    }
+  }
+  &:active {
+    opacity: var(--active-opacity);
+
+    .user-menu__icon {
+    color: var(--accent-color);
+    opacity: var(--icon-active-opacity);
+    }
+  }
+}
