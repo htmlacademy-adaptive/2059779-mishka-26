@@ -1,0 +1,46 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.contacts {
+  padding: 38px 30px 55px;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 28px;
+  @include global.fonter(700, 25px, 30px); /* stylelint-disable-line */
+  color: var(--dark);
+}
+
+.contacts__adress {
+  @include global.fonter(400, 14px, 30px);
+  color: var(--main-font-color);
+}
+
+.contacts__fields {
+  margin: 0;
+  margin-bottom: 62px;
+}
+
+.contacts__text {
+  margin: 0;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: var(--main-font-color);
+  border-bottom: 1px solid var(--accent-color);
+
+  &:hover {
+    color: var(--action-dark-accent-color);
+    border-bottom: 1px solid var(--action-dark-accent-color);
+  }
+
+  &:active {
+    color: var(--action-dark-accent-color);
+    border-bottom: 1px solid var(--action-dark-accent-color-01); /* Я так понял, что цветовыми функциями пользоваться нельзя. */
+  }
+}
+
+.contacts__map {
+  margin-bottom: 42px;
+}

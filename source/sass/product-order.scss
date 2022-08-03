@@ -1,0 +1,22 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.product-order__title {
+  @include global.fonter(700, 30px, 57px);
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.product-order__message {
+  margin: 0;
+  @include global.fonter(400, 17px, 30px); /* stylelint-disable-line */
+}
+
+.product-order__size-choser {
+  @include global.centerer;
+  gap: 7px;
+  border: none;
+}
+
+.product-order__label {
+  flex-grow: 1;
+}

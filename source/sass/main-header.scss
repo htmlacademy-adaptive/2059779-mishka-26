@@ -1,7 +1,6 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .main-header {
-  box-sizing: border-box;
   padding: 22px 30px;
   background-color: var(--page-background);
 }

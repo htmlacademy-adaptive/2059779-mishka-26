@@ -1,4 +1,4 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .main-menu {
   @include global.list-reseter;
@@ -8,13 +8,14 @@
   display: block;
   padding-top: 29px;
   padding-bottom: 27px;
-  @include global.fonter(700, 17px, 24px);
+  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
   text-decoration: none;
   color: var(--black);
 
   &:hover {
     opacity: var(--hover-opacity);
   }
+
   &:active {
     opacity: var(--active-opacity);
   }

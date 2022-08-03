@@ -1,21 +1,35 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .logo {
   display: block;
   background-color: var(--page-background);
 
   .logo__img {
-  color: var(--dark);
+    color: var(--dark);
   }
 
   &:hover {
     .logo__img {
-    opacity: var(--hover-opacity);
+      opacity: var(--hover-opacity);
     }
   }
-    &:active {
+
+  &:active {
     .logo__img {
-    opacity: var(--active-opacity);
+      opacity: var(--active-opacity);
     }
+  }
+
+  &--footer {
+    color: var(--dark);
+  }
+
+  &--footer:hover {
+    color: var(--dark-accent-color);
+  }
+
+  &--footer:active {
+    color: var(--dark-accent-color);
+    opacity: var(--active-opacity);
   }
 }

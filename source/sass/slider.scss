@@ -1,0 +1,42 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.slider__list {
+  @include global.list-reseter;
+  margin-bottom: 30px;
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__controls {
+  @include global.centerer;
+  margin-bottom: 38px;
+}
+
+.slider__control {
+  @include global.centerer;
+  flex-grow: 1;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: transparent;
+  border: 1px solid var(--neutral);
+  cursor: pointer;
+
+  &--prev {
+    transform: rotate(180deg);
+    border-left: none;
+  }
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

@@ -1,0 +1,41 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.promo-card {
+  padding: 31px 30px 36px;
+}
+
+.promo-card__title {
+  margin: 0;
+  @include global.fonter(700, 25px, 30px); /* stylelint-disable-line */
+  color: var(--dark);
+}
+
+.promo-card__subtitle {
+  margin: 0;
+  margin-bottom: 18px;
+  @include global.fonter(700, 17px, 20px); /* stylelint-disable-line */
+  color: var(--accent-color);
+}
+
+.promo-card__description {
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.promo-card__feature {
+  margin: 0;
+  margin-bottom: 41px;
+  padding: 0;
+}
+
+.promo-card__image {
+  display: block;
+  margin-top: 26px;
+}
+
+.promo-card__price {
+  @include global.centerer(center, center);
+  margin: 0;
+  margin-bottom: 25px;
+  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+}

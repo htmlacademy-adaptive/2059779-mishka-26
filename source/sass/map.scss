@@ -1,0 +1,19 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.map {
+  position: relative;
+}
+
+.map__link {
+  position: absolute;
+  z-index: -1;
+  display: block;
+}
+
+.map__image {
+  @include global.sizer(320px, 455px);
+}
+
+.map__body {
+  @include global.sizer(320px, 455px);
+}

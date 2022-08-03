@@ -1,0 +1,8 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.main-content__item::after {
+  content: "";
+  display: block;
+  @include global.sizer(100%, 6px); /* stylelint-disable-line */
+  background: url("../img/divider.svg") repeat transparent;
+}

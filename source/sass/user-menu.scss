@@ -1,4 +1,4 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .user-menu {
   @include global.list-reseter;
@@ -8,7 +8,7 @@
   display: block;
   padding-top: 29px;
   padding-bottom: 27px;
-  @include global.fonter(700, 17px, 24px);
+  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
   text-decoration: none;
   color: var(--dark);
 
@@ -18,30 +18,30 @@
   }
 
   &:hover {
-
     .user-menu__search-text {
-    opacity: var(--hover-opacity);
+      opacity: var(--hover-opacity);
     }
 
     .user-menu__cart-text {
-    opacity: var(--hover-opacity);
+      opacity: var(--hover-opacity);
     }
 
     .user-menu__cart-counter {
-    opacity: var(--hover-opacity);
+      opacity: var(--hover-opacity);
     }
 
     .user-menu__icon {
-    color: var(--accent-color);
-    opacity: var(--icon-hover-opacity);
+      color: var(--accent-color);
+      opacity: var(--icon-hover-opacity);
     }
   }
+
   &:active {
     opacity: var(--active-opacity);
 
     .user-menu__icon {
-    color: var(--accent-color);
-    opacity: var(--icon-active-opacity);
+      color: var(--accent-color);
+      opacity: var(--icon-active-opacity);
     }
   }
 }

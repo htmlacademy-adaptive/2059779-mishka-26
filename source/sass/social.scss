@@ -1,0 +1,21 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.social {
+  @include global.list-reseter;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.social__img {
+  color: var(--social-dark);
+
+  &:hover {
+    color: var(--action-dark-accent-color);
+  }
+
+  &:active {
+    color: var(--action-dark-accent-color);
+    opacity: var(--active-opacity);
+  }
+}

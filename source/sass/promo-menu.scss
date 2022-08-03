@@ -1,4 +1,4 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .promo-menu {
   @include global.list-reseter;
@@ -6,13 +6,14 @@
 
 .promo-menu__link {
   display: block;
-  @include global.fonter(700, 15px, 24px);
+  @include global.fonter(700, 15px, 24px); /* stylelint-disable-line */
   text-decoration: none;
   color: var(--dark);
 
   &:hover {
     opacity: var(--hover-opacity);
   }
+
   &:active {
     opacity: var(--hover-opacity);
   }

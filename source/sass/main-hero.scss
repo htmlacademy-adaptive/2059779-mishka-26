@@ -1,25 +1,86 @@
-@use "global.scss";
+@use "global.scss"; /* stylelint-disable-line */
 
 .main-hero {
   padding-top: 72px;
-  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center center;
+  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center 55px;
 }
 
 .main-hero__title {
-  @include global.centerer(initial, center);
-  @include global.fonter(700, 27px, 30px);
+  @include global.centerer(center, initial);
+  margin: 0;
+  padding: 73px 30px 120px 30px;
+  @include global.fonter(700, 27px, 30px); /* stylelint-disable-line */
+  text-align: center;
   color: var(--dark);
 }
 
 .main-hero__button {
+  position: relative;
   display: block;
   padding: 24px 160px 31px 30px;
-  @include global.fonter(700, 19px, 24px);
+  @include global.fonter(700, 19px, 24px); /* stylelint-disable-line */
   color: var(--light);
-  background-color: var(--accent-color);
   text-decoration: none;
+
+  &--interior {
+    background-color: var(--accent-color);
+  }
 
   &--toys {
     background-color: var(--dark-accent-color);
+  }
+
+  &--interior::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    display: block;
+    @include global.sizer(100%); /* stylelint-disable-line */
+    background: url("../img/icons/icon-interior.svg") no-repeat top right;
+    opacity: 0.5;
+  }
+
+  &--toys::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 27px;
+    display: block;
+    @include global.sizer(100%); /* stylelint-disable-line */
+    background: url("../img/icons/icon-toy.svg") no-repeat top right;
+    opacity: 0.5;
+  }
+
+  &--interior:hover {
+    background-color: var(--action-accent-color);
+  }
+
+  &--toys:hover {
+    background-color: var(--action-dark-accent-color);
+  }
+
+  &--interior:hover::after {
+    opacity: 0.7;
+  }
+
+  &--toys:hover::after {
+    opacity: 0.7;
+  }
+
+  &--interior:active {
+    background-color: var(--action-accent-color);
+  }
+
+  &--toys:active {
+    background-color: var(--action-dark-accent-color);
+  }
+
+  &--interior:active::after {
+    opacity: var(--active-opacity);
+  }
+
+  &--toys:active::after {
+    opacity: var(--active-opacity);
   }
 }

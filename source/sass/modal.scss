@@ -1,0 +1,10 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+
+.modal {
+  display: none;
+}
+
+.modal__message {
+  box-shadow: var(--modal-shadow);
+}

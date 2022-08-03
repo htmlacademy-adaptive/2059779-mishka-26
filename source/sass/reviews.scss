@@ -1,0 +1,16 @@
+@use "global.scss"; /* stylelint-disable-line */
+
+.reviews {
+  padding: 31px 30px 45px;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 14px;
+  @include global.fonter(700, 25px, 30px); /* stylelint-disable-line */
+  color: var(--dark);
+}
+
+.reviews__slider {
+  margin-bottom: 38px;
+}
