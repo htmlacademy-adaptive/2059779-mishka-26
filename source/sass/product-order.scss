@@ -8,7 +8,7 @@
 
 .product-order__message {
   margin: 0;
-  @include global.fonter(400, 17px, 30px); /* stylelint-disable-line */
+  @include global.fonter(400, 17px, 30px);
 }
 
 .product-order__size-choser {

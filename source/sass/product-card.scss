@@ -41,19 +41,19 @@
 .product-card__features {
   margin: 0;
   margin-bottom: 18px;
-  @include global.fonter(400, 13px, 30px); /* stylelint-disable-line */
+  @include global.fonter(400, 13px, 30px);
 }
 
 .product-card__order {
   display: flex;
-  @include global.centerer(space-between, center); /* stylelint-disable-line */
+  @include global.centerer(space-between, center);
   padding-top: 22px;
   border-top: 1px solid var(--neutral);
 }
 
 .product-card__price {
   margin: 0;
-  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 24px);
 }
 
 .product-card__button {

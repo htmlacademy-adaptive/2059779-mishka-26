@@ -9,7 +9,7 @@
   @include global.centerer(center, initial);
   margin: 0;
   padding: 73px 30px 120px 30px;
-  @include global.fonter(700, 27px, 30px); /* stylelint-disable-line */
+  @include global.fonter(700, 27px, 30px);
   text-align: center;
   color: var(--dark);
 }
@@ -18,7 +18,7 @@
   position: relative;
   display: block;
   padding: 24px 160px 31px 30px;
-  @include global.fonter(700, 19px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 19px, 24px);
   color: var(--light);
   text-decoration: none;
 
@@ -36,7 +36,7 @@
     top: 23px;
     right: 36px;
     display: block;
-    @include global.sizer(100%); /* stylelint-disable-line */
+    @include global.sizer(100%);
     background: url("../img/icons/icon-interior.svg") no-repeat top right;
     opacity: 0.5;
   }
@@ -47,7 +47,7 @@
     top: 21px;
     right: 27px;
     display: block;
-    @include global.sizer(100%); /* stylelint-disable-line */
+    @include global.sizer(100%);
     background: url("../img/icons/icon-toy.svg") no-repeat top right;
     opacity: 0.5;
   }

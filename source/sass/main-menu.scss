@@ -8,7 +8,7 @@
   display: block;
   padding-top: 29px;
   padding-bottom: 27px;
-  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 24px);
   text-decoration: none;
   color: var(--black);
 

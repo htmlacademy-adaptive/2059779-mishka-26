@@ -9,7 +9,7 @@
   margin: 0;
   margin-bottom: 27px;
   padding-left: 91px;
-  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 24px);
   color: var(--dark);
 
   &::before {
@@ -18,7 +18,7 @@
     top: 25%;
     left: 34px;
     display: block;
-    @include global.sizer(32px, 22px); /* stylelint-disable-line */
+    @include global.sizer(32px, 22px);
     background: url("../img/icons/camera.svg") no-repeat transparent center center;
   }
 }

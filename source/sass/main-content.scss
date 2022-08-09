@@ -3,6 +3,6 @@
 .main-content__item::after {
   content: "";
   display: block;
-  @include global.sizer(100%, 6px); /* stylelint-disable-line */
+  @include global.sizer(100%, 6px);
   background: url("../img/divider.svg") repeat transparent;
 }

@@ -6,14 +6,14 @@
 
 .promo-card__title {
   margin: 0;
-  @include global.fonter(700, 25px, 30px); /* stylelint-disable-line */
+  @include global.fonter(700, 25px, 30px);
   color: var(--dark);
 }
 
 .promo-card__subtitle {
   margin: 0;
   margin-bottom: 18px;
-  @include global.fonter(700, 17px, 20px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 20px);
   color: var(--accent-color);
 }
 
@@ -37,5 +37,5 @@
   @include global.centerer(center, center);
   margin: 0;
   margin-bottom: 25px;
-  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 24px);
 }

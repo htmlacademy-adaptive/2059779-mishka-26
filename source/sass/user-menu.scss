@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .user-menu {
   @include global.list-reseter;
@@ -8,7 +8,7 @@
   display: block;
   padding-top: 29px;
   padding-bottom: 27px;
-  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  @include global.fonter(700, 17px, 24px);
   text-decoration: none;
   color: var(--dark);
 

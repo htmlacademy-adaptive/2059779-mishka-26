@@ -11,7 +11,7 @@
 
   &:active .video__icon {
     transform: scale(0.8);
-    color: var(--accent-color-03);
+    opacity: var(--opacity-active);
   }
 }
 
@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  @include global.sizer(100%, 100%); /* stylelint-disable-line */
+  @include global.sizer(100%, 100%);
 }
 
 .video__play {
@@ -32,7 +32,7 @@
   left: 50%;
   z-index: 1;
   display: block;
-  @include global.sizer(101px, 77px); /* stylelint-disable-line */
+  @include global.sizer(101px, 77px);
   color: var(--accent-color);
   background-color: transparent;
   border: none;
