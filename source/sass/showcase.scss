@@ -1,0 +1,36 @@
+@use "global.scss";
+
+.showcase {
+  padding: 22px 30px 58px;
+}
+
+.showcase__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 27px;
+  padding-left: 91px;
+  @include global.fonter(700, 17px, 24px); /* stylelint-disable-line */
+  color: var(--dark);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 34px;
+    display: block;
+    @include global.sizer(32px, 22px); /* stylelint-disable-line */
+    background: url("../img/icons/camera.svg") no-repeat transparent center center;
+  }
+}
+
+.showcase__description {
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 41px;
+  padding-left: 34px;
+}
+
+.showcase__button {
+  margin-left: 34px;
+  margin-right: 34px;
+}

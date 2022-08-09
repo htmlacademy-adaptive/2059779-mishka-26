@@ -1,0 +1,45 @@
+@use "global.scss";
+
+.video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  &:hover .video__icon {
+    transform: scale(1.2);
+  }
+
+  &:active .video__icon {
+    transform: scale(0.8);
+    color: var(--accent-color-03);
+  }
+}
+
+.video__icon {
+  transition: 0.2s ease-in-out;
+}
+
+.video__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include global.sizer(100%, 100%); /* stylelint-disable-line */
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  @include global.sizer(101px, 77px); /* stylelint-disable-line */
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video__icon-background {
+  color: var(--light);
+}
