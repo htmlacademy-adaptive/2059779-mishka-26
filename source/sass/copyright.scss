@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .copyright__link {
   @include global.centerer;
@@ -6,12 +6,12 @@
   text-decoration: none;
 
   &:hover .copyright__img {
-    color: var(--dark-accent-color);
+    color: var(--accent-color-dark);
   }
 
   &:active .copyright__img {
-    color: var(--dark-accent-color);
-    opacity: var(--active-opacity);
+    color: var(--accent-color-dark);
+    opacity: var(--opacity-active);
   }
 }
 

@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .slider__list {
   @include global.list-reseter;
@@ -33,10 +33,10 @@
   }
 
   &:hover {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
   }
 
   &:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
   }
 }

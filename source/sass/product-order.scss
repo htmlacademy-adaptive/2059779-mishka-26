@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .product-order__title {
   @include global.fonter(700, 30px, 57px);

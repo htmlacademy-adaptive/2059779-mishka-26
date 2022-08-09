@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .logo {
   display: block;
@@ -10,13 +10,13 @@
 
   &:hover {
     .logo__img {
-      opacity: var(--hover-opacity);
+      opacity: var(--opacity-hover);
     }
   }
 
   &:active {
     .logo__img {
-      opacity: var(--active-opacity);
+      opacity: var(--opacity-active);
     }
   }
 
@@ -25,11 +25,11 @@
   }
 
   &--footer:hover {
-    color: var(--dark-accent-color);
+    color: var(--accent-color-dark);
   }
 
   &--footer:active {
-    color: var(--dark-accent-color);
-    opacity: var(--active-opacity);
+    color: var(--accent-color-dark);
+    opacity: var(--opacity-active);
   }
 }

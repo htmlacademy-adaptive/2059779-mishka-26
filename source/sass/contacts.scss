@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .contacts {
   padding: 38px 30px 55px;
@@ -31,13 +31,13 @@
   border-bottom: 1px solid var(--accent-color);
 
   &:hover {
-    color: var(--action-dark-accent-color);
-    border-bottom: 1px solid var(--action-dark-accent-color);
+    color: var(--accent-color-action-dark);
+    border-bottom: 1px solid var(--accent-color-action-dark);
   }
 
   &:active {
-    color: var(--action-dark-accent-color);
-    border-bottom: 1px solid var(--action-dark-accent-color-01); /* Я так понял, что цветовыми функциями пользоваться нельзя. */
+    color: var(--accent-color-action-dark);
+    border-bottom: 1px solid var(--accent-color-action-dark-01); /* Я так понял, что цветовыми функциями пользоваться нельзя. */
   }
 }
 

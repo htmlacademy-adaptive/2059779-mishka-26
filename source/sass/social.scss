@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .social {
   @include global.list-reseter;
@@ -11,11 +11,11 @@
   color: var(--social-dark);
 
   &:hover {
-    color: var(--action-dark-accent-color);
+    color: var(--accent-color-action-dark);
   }
 
   &:active {
-    color: var(--action-dark-accent-color);
-    opacity: var(--active-opacity);
+    color: var(--accent-color-action-dark);
+    opacity: var(--opacity-active);
   }
 }

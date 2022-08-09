@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .review {
   margin: 0;
@@ -21,10 +21,10 @@
   color: var(--semi-dark);
 
   &:hover {
-    opacity: var(--hover-opacity);
+    opacity: var(--opacity-hover);
   }
 
   &:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
   }
 }

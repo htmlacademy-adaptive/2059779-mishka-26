@@ -19,29 +19,29 @@
 
   &:hover {
     .user-menu__search-text {
-      opacity: var(--hover-opacity);
+      opacity: var(--opacity-hover);
     }
 
     .user-menu__cart-text {
-      opacity: var(--hover-opacity);
+      opacity: var(--opacity-hover);
     }
 
     .user-menu__cart-counter {
-      opacity: var(--hover-opacity);
+      opacity: var(--opacity-hover);
     }
 
     .user-menu__icon {
       color: var(--accent-color);
-      opacity: var(--icon-hover-opacity);
+      opacity: var(--icon-opacity-hover);
     }
   }
 
   &:active {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
 
     .user-menu__icon {
       color: var(--accent-color);
-      opacity: var(--icon-active-opacity);
+      opacity: var(--icon-opacity-active);
     }
   }
 }

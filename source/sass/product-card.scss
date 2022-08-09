@@ -1,5 +1,8 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .product-card {
-  border-bottom: 1px solid var(--neutral);
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  border: 1px solid var(--neutral);
 }

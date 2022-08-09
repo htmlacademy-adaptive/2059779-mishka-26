@@ -1,4 +1,4 @@
-@use "global.scss"; /* stylelint-disable-line */
+@use "global.scss";
 
 .main-hero {
   padding-top: 72px;
@@ -27,7 +27,7 @@
   }
 
   &--toys {
-    background-color: var(--dark-accent-color);
+    background-color: var(--accent-color-dark);
   }
 
   &--interior::after {
@@ -53,11 +53,11 @@
   }
 
   &--interior:hover {
-    background-color: var(--action-accent-color);
+    background-color: var(--accent-color-action);
   }
 
   &--toys:hover {
-    background-color: var(--action-dark-accent-color);
+    background-color: var(--accent-color-action-dark);
   }
 
   &--interior:hover::after {
@@ -69,18 +69,18 @@
   }
 
   &--interior:active {
-    background-color: var(--action-accent-color);
+    background-color: var(--accent-color-action);
   }
 
   &--toys:active {
-    background-color: var(--action-dark-accent-color);
+    background-color: var(--accent-color-action-dark);
   }
 
   &--interior:active::after {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
   }
 
   &--toys:active::after {
-    opacity: var(--active-opacity);
+    opacity: var(--opacity-active);
   }
 }
