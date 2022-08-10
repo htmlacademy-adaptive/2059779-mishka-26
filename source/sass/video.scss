@@ -16,7 +16,7 @@
 }
 
 .video__icon {
-  transition: 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
 .video__link {

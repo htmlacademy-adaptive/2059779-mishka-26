@@ -1,7 +1,14 @@
 @use "global.scss";
 
 .showcase {
-  padding: 22px 30px 58px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.showcase__content {
+  padding-top: 22px;
+  padding-bottom: 33px;
+  border: 1px solid var(--neutral);
 }
 
 .showcase__title {
@@ -19,7 +26,7 @@
     left: 34px;
     display: block;
     @include global.sizer(32px, 22px);
-    background: url("../img/icons/camera.svg") no-repeat transparent center center;
+    background: url("../img/icons/icon-camera.svg") no-repeat transparent center center;
   }
 }
 
@@ -28,9 +35,11 @@
   margin-top: 35px;
   margin-bottom: 41px;
   padding-left: 34px;
+  padding-right: 34px;
+  @include global.fonter(400, 13px, 24px);
 }
 
-.showcase__button {
-  margin-left: 34px;
-  margin-right: 34px;
+.showcase__button-container {
+  padding-left: 34px;
+  padding-right: 34px;
 }

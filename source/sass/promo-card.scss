@@ -23,6 +23,8 @@
 }
 
 .promo-card__feature {
+  display: grid;
+  grid-template-columns: auto auto;
   margin: 0;
   margin-bottom: 41px;
   padding: 0;

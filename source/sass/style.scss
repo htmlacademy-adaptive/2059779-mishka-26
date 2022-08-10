@@ -7,13 +7,16 @@
 @use "social.scss";
 @use "review.scss";
 @use "copyright.scss";
+@use "video.scss";
+@use "image.scss";
 @use "main-header.scss";
 @use "main-menu.scss";
 @use "user-menu.scss";
 @use "promo-menu.scss";
 @use "main-hero.scss";
-@use "promo-card.scss";
 @use "main-content.scss";
+@use "promo-card.scss";
+@use "divider.scss";
 @use "accomplishments.scss";
 @use "features-list.scss";
 @use "reviews.scss";
@@ -24,4 +27,6 @@
 @use "product-card.scss";
 @use "catalog.scss";
 @use "showcase.scss";
-@use "video.scss";
+@use "order-form.scss";
+@use "fieldset.scss";
+@use "form.scss";

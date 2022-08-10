@@ -1,17 +1,22 @@
 @use "global.scss";
 
 .contacts {
-  padding: 38px 30px 55px;
+  padding-top: 38px;
+  padding-bottom: 39px;
 }
 
 .contacts__title {
   margin: 0;
   margin-bottom: 28px;
+  padding-left: 30px;
+  padding-right: 30px;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
 }
 
 .contacts__adress {
+  padding-left: 30px;
+  padding-right: 30px;
   @include global.fonter(400, 14px, 30px);
   color: var(--main-font-color);
 }
@@ -43,4 +48,9 @@
 
 .contacts__map {
   margin-bottom: 42px;
+}
+
+.contacts__button {
+  padding-left: 30px;
+  padding-right: 30px;
 }
