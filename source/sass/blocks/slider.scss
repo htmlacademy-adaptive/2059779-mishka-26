@@ -1,4 +1,4 @@
-@use "global.scss";
+@use "../utils/global.scss";
 
 .slider__list {
   @include global.list-reseter;

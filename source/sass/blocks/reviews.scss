@@ -1,13 +1,12 @@
-@use "global.scss";
+@use "../utils/global.scss";
 
-.accomplishments {
+.reviews {
   padding: 31px 30px 45px;
 }
 
-.accomplishments__title {
+.reviews__title {
   margin: 0;
-  margin-bottom: 28px;
-
+  margin-bottom: 14px;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
 }
