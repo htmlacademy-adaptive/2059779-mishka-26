@@ -1,0 +1,86 @@
+@use "../utils/global.scss";
+
+.main-hero {
+  padding-top: 72px;
+  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center 55px;
+}
+
+.main-hero__title {
+  @include global.centerer(center, initial);
+  margin: 0;
+  padding: 73px 30px 120px 30px;
+  @include global.fonter(700, 27px, 30px);
+  text-align: center;
+  color: var(--dark);
+}
+
+.main-hero__button {
+  position: relative;
+  display: block;
+  padding: 24px 160px 31px 30px;
+  @include global.fonter(700, 19px, 24px);
+  color: var(--light);
+  text-decoration: none;
+
+  &--interior {
+    background-color: var(--accent-color);
+  }
+
+  &--toys {
+    background-color: var(--accent-color-dark);
+  }
+
+  &--interior::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    display: block;
+    @include global.sizer(100%);
+    background: url("../img/icons/icon-interior.svg") no-repeat top right;
+    opacity: 0.5;
+  }
+
+  &--toys::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 27px;
+    display: block;
+    @include global.sizer(100%);
+    background: url("../img/icons/icon-toy.svg") no-repeat top right;
+    opacity: 0.5;
+  }
+
+  &--interior:hover {
+    background-color: var(--accent-color-action);
+  }
+
+  &--toys:hover {
+    background-color: var(--accent-color-action-dark);
+  }
+
+  &--interior:hover::after {
+    opacity: 0.7;
+  }
+
+  &--toys:hover::after {
+    opacity: 0.7;
+  }
+
+  &--interior:active {
+    background-color: var(--accent-color-action);
+  }
+
+  &--toys:active {
+    background-color: var(--accent-color-action-dark);
+  }
+
+  &--interior:active::after {
+    opacity: var(--opacity-active);
+  }
+
+  &--toys:active::after {
+    opacity: var(--opacity-active);
+  }
+}

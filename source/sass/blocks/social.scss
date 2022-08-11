@@ -1,0 +1,21 @@
+@use "../utils/global.scss";
+
+.social {
+  @include global.list-reseter;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.social__img {
+  color: var(--social-dark);
+
+  &:hover {
+    color: var(--accent-color-action-dark);
+  }
+
+  &:active {
+    color: var(--accent-color-action-dark);
+    opacity: var(--opacity-active);
+  }
+}

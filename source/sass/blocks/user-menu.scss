@@ -1,0 +1,47 @@
+@use "../utils/global.scss";
+
+.user-menu {
+  @include global.list-reseter;
+}
+
+.user-menu__link {
+  display: block;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  @include global.fonter(700, 17px, 24px);
+  text-decoration: none;
+  color: var(--dark);
+
+  .user-menu__icon {
+    color: var(--dark);
+    opacity: var(--icon-opacity);
+  }
+
+  &:hover {
+    .user-menu__search-text {
+      opacity: var(--opacity-hover);
+    }
+
+    .user-menu__cart-text {
+      opacity: var(--opacity-hover);
+    }
+
+    .user-menu__cart-counter {
+      opacity: var(--opacity-hover);
+    }
+
+    .user-menu__icon {
+      color: var(--accent-color);
+      opacity: var(--icon-opacity-hover);
+    }
+  }
+
+  &:active {
+    opacity: var(--opacity-active);
+
+    .user-menu__icon {
+      color: var(--accent-color);
+      opacity: var(--icon-opacity-active);
+    }
+  }
+}

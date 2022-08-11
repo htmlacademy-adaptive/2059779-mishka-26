@@ -1,0 +1,82 @@
+@use "../utils/global.scss";
+
+.features-list {
+  @include global.list-reseter;
+}
+
+.features-list__item {
+  position: relative;
+  padding-top: 55px;
+  @include global.fonter(700, 17px, 20px);
+  color: var(--dark);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &--eco::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-eco.svg") no-repeat transparent top left;
+  }
+
+  &--style::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-style.svg") no-repeat transparent top left;
+  }
+
+  &--like::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-like.svg") no-repeat transparent top left;
+  }
+
+  &--handmade::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-handmade.svg") no-repeat transparent top left;
+  }
+
+  &--patriot::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-patriot.svg") no-repeat transparent top left;
+  }
+
+  &--packing::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: url("../img/icons/icon-packing.svg") no-repeat transparent top left;
+  }
+}

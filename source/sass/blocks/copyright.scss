@@ -1,0 +1,25 @@
+@use "../utils/global.scss";
+
+.copyright__link {
+  @include global.centerer;
+  gap: 27px;
+  text-decoration: none;
+
+  &:hover .copyright__img {
+    color: var(--accent-color-dark);
+  }
+
+  &:active .copyright__img {
+    color: var(--accent-color-dark);
+    opacity: var(--opacity-active);
+  }
+}
+
+.copyright__text {
+  @include global.fonter(700, 19px, 18px);
+  color: var(--dark);
+}
+
+.copyright__img {
+  color: var(--accent-color);
+}

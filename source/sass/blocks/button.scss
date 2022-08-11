@@ -1,0 +1,63 @@
+@use "../utils/global.scss";
+
+.button {
+  display: flex;
+  justify-content: center;
+  @include global.sizer(100%); /* Не могу понять, почему ссылка a сама занимает всё пространство, а кнопка button нет. */
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include global.fonter(700, 18px, 20px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--main-font-color);
+  background-color: transparent;
+  border: 2px solid var(--semi-dark);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--light);
+    background-color: var(--semi-dark);
+  }
+
+  &:active {
+    color: var(--light-03);
+    background-color: var(--semi-dark);
+  }
+
+  &--disabled {
+    opacity: 0.2;
+    cursor: auto;
+  }
+
+  &--disabled:hover {
+    color: var(--main-font-color);
+    background-color: transparent;
+    opacity: 0.2;
+    cursor: auto;
+  }
+
+  &--disabled:active {
+    color: var(--main-font-color);
+    background-color: transparent;
+    opacity: 0.2;
+    cursor: auto;
+  }
+
+  &--select {
+    color: var(--semi-dark);
+    background-color: transparent;
+    border: 2px solid var(--semi-dark-01);
+  }
+
+  &--select:hover {
+    color: var(--semi-dark);
+    background-color: transparent;
+    border: 2px solid var(--semi-dark-03);
+  }
+
+  &--select:active {
+    color: var(--semi-dark);
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+  }
+}

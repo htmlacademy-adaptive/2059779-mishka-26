@@ -1,0 +1,30 @@
+@use "../utils/global.scss";
+
+.review {
+  margin: 0;
+}
+
+.review__text {
+  margin: 0;
+  margin-bottom: 33px;
+  @include global.fonter(400, 15px, 30px);
+}
+
+.review__author {
+  @include global.fonter(700, 17px, 24px);
+  color: var(--dark);
+}
+
+.review__link {
+  @include global.fonter(400, 17px, 30px);
+  text-decoration: none;
+  color: var(--semi-dark);
+
+  &:hover {
+    opacity: var(--opacity-hover);
+  }
+
+  &:active {
+    opacity: var(--opacity-active);
+  }
+}

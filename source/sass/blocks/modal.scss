@@ -1,0 +1,10 @@
+@use "../utils/global.scss";
+
+
+.modal {
+  display: none;
+}
+
+.modal__message {
+  box-shadow: var(--modal-shadow);
+}

@@ -1,0 +1,54 @@
+@forward "mixins.scss";
+@forward "fonts.scss";
+
+/* Colors */
+:root {
+  --page-background: #ffffff;
+  --page-content-background: #f1f1f1;
+  --hero-background: #fafafa;
+  --dark: #000000;
+  --dark-03: #0000004d;
+  --semi-dark: #444444;
+  --semi-dark-01: #4444441a;
+  --semi-dark-03: #4444444d;
+  --social-dark: #231f20;
+  --neutral: #ececec;
+  --neutral-dark: #6c6c6c;
+  --light: #ffffff;
+  --light-03: #ffffff4d;
+  --accent-color: #63d1bb;
+  --accent-color-dark: #56c3b2;
+  --accent-color-action: #59d5bc;
+  --accent-color-action-dark: #46c1ae;
+  --accent-color-action-dark-01: #46c1ae1a;
+  --opacity-hover: 0.6;
+  --opacity-active: 0.3;
+  --icon-opacity: 0.2;
+  --icon-opacity-hover: 1;
+  --icon-opacity-active: 0.3;
+  --modal-shadow: 0px 5px 10px #00010140;
+  --card-shadow-hover: 0px 6px 10px #0000001a;
+  --card-shadow-active: 0px 3px 5px #0000001a;
+  --transition: 120ms ease-in-out;
+}
+
+/* В чате один наставник упоминал, что это неправильно, не по БЭМу, но критерии разрешают, и я не вижу особого смысла страдать с указанием отдельным элементам этого свойства. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Не вижу смысла делать этот класс в отдельном файле или миксином. В рамках БЭМа это блок, но утилитарный. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

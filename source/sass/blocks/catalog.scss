@@ -1,0 +1,8 @@
+@use "../utils/global.scss";
+
+.catalog {
+  display: grid;
+  gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}

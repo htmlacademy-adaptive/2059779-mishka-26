@@ -1,0 +1,30 @@
+@use "../utils/global.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  @include global.sizer(320px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  @include global.fonter(400, 15px, 24px);
+  color: var(--semi-dark);
+  background-color: var(--page-background);
+}
+
+.page__container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 320px;
+  min-height: 100%;
+}
+
+.page__title {
+  @include global.centerer;
+  margin: 0;
+  padding-top: 74px;
+  padding-bottom: 74px;
+  @include global.fonter(700, 27px, 30px);
+  background-color: var(--page-content-background);
+}

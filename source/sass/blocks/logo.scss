@@ -1,0 +1,35 @@
+@use "../utils/global.scss";
+
+.logo {
+  display: block;
+  background-color: transparent;
+
+  .logo__img {
+    color: var(--dark);
+  }
+
+  &:hover {
+    .logo__img {
+      opacity: var(--opacity-hover);
+    }
+  }
+
+  &:active {
+    .logo__img {
+      opacity: var(--opacity-active);
+    }
+  }
+
+  &--footer {
+    color: var(--dark);
+  }
+
+  &--footer:hover {
+    color: var(--accent-color-dark);
+  }
+
+  &--footer:active {
+    color: var(--accent-color-dark);
+    opacity: var(--opacity-active);
+  }
+}
