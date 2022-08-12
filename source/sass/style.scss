@@ -1,6 +1,7 @@
 @use "utils/global.scss";
 @use "blocks/page.scss";
 @use "blocks/button.scss";
+@use "blocks/toggle.scss";
 @use "blocks/logo.scss";
 @use "blocks/slider.scss";
 @use "blocks/map.scss";
@@ -10,6 +11,7 @@
 @use "blocks/video.scss";
 @use "blocks/image.scss";
 @use "blocks/main-header.scss";
+@use "blocks/main-navigation.scss";
 @use "blocks/main-menu.scss";
 @use "blocks/user-menu.scss";
 @use "blocks/promo-menu.scss";

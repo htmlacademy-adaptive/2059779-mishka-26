@@ -8,17 +8,37 @@
 .contacts__title {
   margin: 0;
   margin-bottom: 28px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }
 
 .contacts__adress {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
   @include global.fonter(400, 14px, 30px);
   color: var(--main-font-color);
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }
 
 .contacts__fields {
@@ -51,6 +71,16 @@
 }
 
 .contacts__button {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }

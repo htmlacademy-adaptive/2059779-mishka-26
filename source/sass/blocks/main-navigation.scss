@@ -1,0 +1,35 @@
+@use "../utils/global.scss";
+
+.main-navigation__toggle {
+  @include global.sizer(30px, 20px);
+  padding: 5px 3px;
+}
+
+.main-navigation__container {
+  position: relative;
+}
+
+@media (min-width: global.$width-small) {
+  .main-navigation {
+    align-self: baseline;
+    justify-self: end;
+  }
+
+  .main-navigation__main-menu {
+    position: absolute;
+    display: none;
+  }
+
+  .main-navigation__user-menu {
+    position: absolute;
+    display: none;
+  }
+
+  .main-navigation__promo {
+    display: none;
+  }
+
+  .main-navigation__delivery {
+    display: none;
+  }
+}

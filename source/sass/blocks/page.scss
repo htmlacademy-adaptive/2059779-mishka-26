@@ -5,7 +5,8 @@
 }
 
 .page__body {
-  @include global.sizer(320px, 100%);
+  min-width: 320px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
   @include global.fonter(400, 15px, 24px);
@@ -16,7 +17,7 @@
 .page__container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 320px;
+  min-width: 320px;
   min-height: 100%;
 }
 

@@ -1,5 +1,6 @@
 @forward "mixins.scss";
 @forward "fonts.scss";
+@forward "variables.scss";
 
 /* Colors */
 :root {
@@ -11,8 +12,9 @@
   --semi-dark: #444444;
   --semi-dark-01: #4444441a;
   --semi-dark-03: #4444444d;
-  --social-dark: #231f20;
+  --dark-action: #231f20;
   --neutral: #ececec;
+  --neutral-light: #e5e5e5;
   --neutral-dark: #6c6c6c;
   --light: #ffffff;
   --light-03: #ffffff4d;

@@ -1,8 +1,18 @@
 @use "../utils/global.scss";
 
 .order-form {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }
 
 .order-form__lead {

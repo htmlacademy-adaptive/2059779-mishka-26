@@ -8,15 +8,38 @@
 .main-hero__title {
   @include global.centerer(center, initial);
   margin: 0;
-  padding: 73px 30px 120px 30px;
+  padding: 73px global.$padding-small 120px;
   @include global.fonter(700, 27px, 30px);
   text-align: center;
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    padding: 73px global.$padding-medium 120px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 73px global.$padding-big 120px;
+  }
+}
+
+.main-hero__buttons {
+  display: block;
+
+  @media (min-width: global.$width-medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .main-hero__button {
   position: relative;
   display: block;
+  min-height: 103px;
   padding: 24px 160px 31px 30px;
   @include global.fonter(700, 19px, 24px);
   color: var(--light);

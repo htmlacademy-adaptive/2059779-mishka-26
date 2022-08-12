@@ -1,0 +1,41 @@
+@use "../utils/global.scss";
+
+.toggle {
+  @include global.sizer(30px, 20px);
+  padding: 3px 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: var(--opacity-hover);
+  }
+
+  &:active {
+    opacity: var(--opacity-active);
+  }
+}
+
+.toggle__button {
+    display: block;
+    @include global.sizer(20px, 2px);
+    padding: 0;
+    background-color: var(--dark-action);
+    border: none;
+
+  &::before {
+    content: "";
+    display: block;
+    @include global.sizer(20px, 2px);
+    background-color: var(--dark-action);
+    transform: translateY(-6px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    @include global.sizer(20px, 2px);
+    background-color: var(--dark-action);
+    transform: translateY(4px);
+  }
+}

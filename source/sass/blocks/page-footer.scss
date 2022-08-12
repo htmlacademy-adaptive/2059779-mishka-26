@@ -1,10 +1,32 @@
 @use "../utils/global.scss";
 
 .page-footer {
-  padding: 25px 30px 23px;
+  padding: 25px global.$padding-small 23px;
   background-color: var(--page-content-background);
+
+  @media (min-width: global.$width-medium) {
+    padding: 25px global.$padding-medium 23px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 25px global.$padding-big 23px;
+  }
 }
 
 .page-footer__social {
-  margin-bottom: 28px;
+  padding-bottom: 28px;
+}
+
+@media (min-width: global.$width-small) {
+  .page-footer__logo {
+    display: none;
+  }
+
+  .page-footer__social {
+    border-bottom: 1px solid var(--neutral-light);
+  }
+
+  .page-footer__copyright {
+    padding-top: 30px;
+  }
 }

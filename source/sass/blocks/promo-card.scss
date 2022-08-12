@@ -1,7 +1,15 @@
 @use "../utils/global.scss";
 
 .promo-card {
-  padding: 31px 30px 36px;
+  padding: 31px global.$padding-small 36px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 31px global.$padding-medium 36px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 31px global.$padding-big 36px;
+  }
 }
 
 .promo-card__title {
@@ -32,7 +40,7 @@
 
 .promo-card__image {
   display: block;
-  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .promo-card__price {

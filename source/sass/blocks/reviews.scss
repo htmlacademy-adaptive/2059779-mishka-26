@@ -1,7 +1,15 @@
 @use "../utils/global.scss";
 
 .reviews {
-  padding: 31px 30px 45px;
+  padding: 31px global.$padding-small 45px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 31px global.$padding-medium 45px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 31px global.$padding-big 45px;
+  }
 }
 
 .reviews__title {

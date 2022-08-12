@@ -1,14 +1,28 @@
 @use "../utils/global.scss";
 
 .showcase {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }
 
 .showcase__content {
   padding-top: 22px;
   padding-bottom: 33px;
   border: 1px solid var(--neutral);
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover); /* Как сделать active при нажатии на ребёнка у родителя, пока не понимаю.*/
+  }
 }
 
 .showcase__title {

@@ -1,6 +1,30 @@
 @use "../utils/global.scss";
 
 .main-header {
-  padding: 22px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 22px global.$padding-small;
   background-color: var(--page-background);
+  border-bottom: 2px solid var(--neutral);
+
+  @media (min-width: global.$width-medium) {
+    padding: 22px global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 22px global.$padding-big;
+  }
+}
+
+.main-header__logo {
+  height: 35px;
+}
+
+@media (min-width: global.$width-small) {
+  .main-header::before {
+    content: "";
+    display: block;
+  }
+
 }

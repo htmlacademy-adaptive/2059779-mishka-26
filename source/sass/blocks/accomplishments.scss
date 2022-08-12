@@ -1,7 +1,15 @@
 @use "../utils/global.scss";
 
 .accomplishments {
-  padding: 31px 30px 45px;
+  padding: 31px global.$padding-small 45px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 31px global.$padding-medium 45px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 31px global.$padding-big 45px;
+  }
 }
 
 .accomplishments__title {
@@ -10,4 +18,22 @@
 
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
+}
+
+.accomplishments__list {
+  display: block;
+
+  @media (min-width: global.$width-medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+  }
+
+  @media (min-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+  }
 }
