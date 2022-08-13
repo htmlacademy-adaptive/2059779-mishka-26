@@ -1,7 +1,15 @@
 @use "../utils/global.scss";
 
 .features-list {
+  display: grid;
+  row-gap: 32px;
   @include global.list-reseter;
+
+  @media (min-width: global.$width-medium) {
+    grid-template-columns: 1fr 1fr;
+    gap: 57px 70px;
+    grid-auto-flow: row;
+  }
 }
 
 .features-list__item {
@@ -9,10 +17,6 @@
   padding-top: 55px;
   @include global.fonter(700, 17px, 20px);
   color: var(--dark);
-
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
 
   &--eco::before {
     content: "";
@@ -47,6 +51,12 @@
     background: url("../img/icons/icon-like.svg") no-repeat transparent top left;
   }
 
+  &--handmade {
+    @media (max-width: global.$width-small) {
+      order: 2;
+    }
+  }
+
   &--handmade::before {
     content: "";
     position: absolute;
@@ -56,6 +66,12 @@
     top: 0;
     left: 0;
     background: url("../img/icons/icon-handmade.svg") no-repeat transparent top left;
+  }
+
+  &--patriot {
+    @media (max-width: global.$width-small) {
+      order: 3;
+    }
   }
 
   &--patriot::before {
@@ -69,6 +85,12 @@
     background: url("../img/icons/icon-patriot.svg") no-repeat transparent top left;
   }
 
+  &--packing {
+    @media (max-width: global.$width-small) {
+      order: 4;
+    }
+  }
+
   &--packing::before {
     content: "";
     position: absolute;
@@ -78,5 +100,9 @@
     top: 0;
     left: 0;
     background: url("../img/icons/icon-packing.svg") no-repeat transparent top left;
+  }
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(700, 20px, 22px);
   }
 }

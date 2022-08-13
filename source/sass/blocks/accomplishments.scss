@@ -4,7 +4,7 @@
   padding: 31px global.$padding-small 45px;
 
   @media (min-width: global.$width-medium) {
-    padding: 31px global.$padding-medium 45px;
+    padding: 56px global.$padding-medium 83px;
   }
 
   @media (min-width: global.$width-big) {
@@ -15,25 +15,11 @@
 .accomplishments__title {
   margin: 0;
   margin-bottom: 28px;
-
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
-}
-
-.accomplishments__list {
-  display: block;
 
   @media (min-width: global.$width-medium) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: column;
-  }
-
-  @media (min-width: global.$width-big) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: column;
+    @include global.fonter(700, 43px, 50px);
+    margin-bottom: 42px;
   }
 }

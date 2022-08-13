@@ -8,11 +8,21 @@
   margin: 0;
   margin-bottom: 33px;
   @include global.fonter(400, 15px, 30px);
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(400, 17px, 30px);
+  }
 }
 
 .review__author {
   @include global.fonter(700, 17px, 24px);
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    flex-direction: column;
+    @include global.fonter(700, 18px, 24px);
+  }
 }
 
 .review__link {
@@ -26,5 +36,9 @@
 
   &:active {
     opacity: var(--opacity-active);
+  }
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(400, 17px, 30px);
   }
 }

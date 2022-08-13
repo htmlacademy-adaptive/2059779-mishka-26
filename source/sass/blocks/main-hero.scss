@@ -1,24 +1,56 @@
 @use "../utils/global.scss";
 
 .main-hero {
-  padding-top: 72px;
-  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center 55px;
+  position: relative;
+  padding-top: 73px;
+  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center -15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    display: none;
+    @include global.sizer(100%, 24px);
+    background: url("../img/divider-hero.svg") repeat-x center;
+
+    @media (min-width: global.$width-medium) {
+      display: block;
+    }
+
+     @media (min-width: global.$width-big) {
+      display: block;
+    }
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding-top: 140px;
+    background: url("../img/main-hero__medium.jpg") no-repeat var(--hero-background) center -15px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 158px global.$padding-big 120px;
+  }
 }
 
 .main-hero__title {
-  @include global.centerer(center, initial);
-  margin: 0;
-  padding: 73px global.$padding-small 120px;
+  margin: 0 auto;
+  min-height: 212px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
   @include global.fonter(700, 27px, 30px);
   text-align: center;
   color: var(--dark);
 
   @media (min-width: global.$width-medium) {
-    padding: 73px global.$padding-medium 120px;
+    max-width: 650px;
+    min-height: 472px;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+    @include global.fonter(700, 43px, 50px);
   }
 
   @media (min-width: global.$width-big) {
-    padding: 73px global.$padding-big 120px;
+    padding: 158px global.$padding-big 120px;
   }
 }
 
@@ -26,8 +58,10 @@
   display: block;
 
   @media (min-width: global.$width-medium) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
   }
 
   @media (min-width: global.$width-big) {
@@ -105,5 +139,17 @@
 
   &--toys:active::after {
     opacity: var(--opacity-active);
+  }
+
+  @media (min-width: global.$width-medium) {
+    min-height: 119px;
+    flex-basis: 50%;
+    padding: 25px 167px 34px 36px;
+    @include global.fonter(700, 20px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 25px 350px 34px 37px;
+    @include global.fonter(700, 20px, 30px);
   }
 }

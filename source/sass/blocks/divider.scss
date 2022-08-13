@@ -2,4 +2,9 @@
 
 .divider {
   background: url("../img/divider.svg") repeat-x transparent bottom;
+
+  @media (min-width: global.$width-medium) {
+    background: url("../img/divider__medium.svg") repeat-x transparent bottom;
+  }
 }
+
