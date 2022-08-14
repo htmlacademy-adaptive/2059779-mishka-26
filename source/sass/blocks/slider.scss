@@ -7,11 +7,12 @@
     display: grid;
     grid-template-columns: 73.8% 26.2%;
     grid-template-rows: auto auto;
-    padding: 31px global.$padding-medium 45px;
+    padding: 82px global.$padding-medium 132px;
+    background: url("../img/reviews-background.jpg") no-repeat left top transparent;
   }
 
   @media (min-width: global.$width-big) {
-    padding: 31px global.$padding-big 45px;
+    padding: 82px global.$padding-big 45px;
   }
 }
 

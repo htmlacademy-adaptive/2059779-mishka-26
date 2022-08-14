@@ -1,15 +1,25 @@
 @use "../utils/global.scss";
 
 .main-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  position: relative;
   padding: 22px global.$padding-small;
   background-color: var(--page-background);
   border-bottom: 2px solid var(--neutral);
 
+  @media (min-width: global.$width-small) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 23px global.$padding-medium 20px;
+  }
+
   @media (min-width: global.$width-medium) {
-    padding: 22px global.$padding-medium;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
   }
 
   @media (min-width: global.$width-big) {
@@ -26,5 +36,11 @@
     content: "";
     display: block;
   }
+}
 
+@media (min-width: global.$width-medium) {
+  .main-header::before {
+    content: "";
+    display: none;
+  }
 }

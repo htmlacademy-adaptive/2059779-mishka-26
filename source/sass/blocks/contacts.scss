@@ -3,8 +3,12 @@
 .contacts {
   padding-top: 38px;
   padding-bottom: 39px;
-}
 
+  @media (min-width: global.$width-medium) {
+    padding-top: 68px;
+    padding-bottom: 57px;
+  }
+}
 .contacts__title {
   margin: 0;
   margin-bottom: 28px;
@@ -14,8 +18,10 @@
   color: var(--dark);
 
   @media (min-width: global.$width-medium) {
+    margin-bottom: 49px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
+    @include global.fonter(700, 43px, 50px);
   }
 
   @media (min-width: global.$width-big) {
@@ -33,6 +39,7 @@
   @media (min-width: global.$width-medium) {
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
+    @include global.fonter(400, 17px, 30px);
   }
 
   @media (min-width: global.$width-big) {
@@ -44,10 +51,32 @@
 .contacts__fields {
   margin: 0;
   margin-bottom: 62px;
+
+  @media (min-width: global.$width-medium) {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    margin-bottom: 49px;
+  }
+}
+
+.contacts__item {
+  overflow-wrap: anywhere;
+
+  @media (min-width: global.$width-medium) {
+    padding-right: 20px;
+  }
 }
 
 .contacts__text {
   margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: global.$width-medium) {
+  .contacts__text:not(:last-child) {
+    padding-right: 50px;
+  }
 }
 
 .contacts__link {
@@ -68,19 +97,30 @@
 
 .contacts__map {
   margin-bottom: 42px;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 55px;
+  }
 }
 
-.contacts__button {
+.contacts__action {
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    @include global.centerer(center, center);
   }
 
   @media (min-width: global.$width-big) {
     padding-left: global.$padding-big;
     padding-right: global.$padding-big;
+  }
+}
+
+.contacts__button {
+  @media (min-width: global.$width-medium) {
+    width: max-content;
+    padding-left: 26px;
+    padding-right: 26px;
   }
 }

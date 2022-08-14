@@ -1,11 +1,15 @@
 @use "../utils/global.scss";
 
 .page-footer {
+  position: relative;
   padding: 25px global.$padding-small 23px;
   background-color: var(--page-content-background);
 
   @media (min-width: global.$width-medium) {
-    padding: 25px global.$padding-medium 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 51px global.$padding-medium 58px;
   }
 
   @media (min-width: global.$width-big) {
@@ -13,20 +17,35 @@
   }
 }
 
-.page-footer__social {
-  padding-bottom: 28px;
-}
-
-@media (min-width: global.$width-small) {
-  .page-footer__logo {
+.page-footer__logo {
+  @media (min-width: global.$width-small) {
     display: none;
   }
 
-  .page-footer__social {
+  @media (min-width: global.$width-medium) {
+    display: block;
+  }
+}
+
+.page-footer__social {
+  padding-bottom: 28px;
+
+  @media (min-width: global.$width-small) {
     border-bottom: 1px solid var(--neutral-light);
   }
 
-  .page-footer__copyright {
+  @media (min-width: global.$width-medium) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: global.$width-small) {
     padding-top: 30px;
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding: 0;
   }
 }
