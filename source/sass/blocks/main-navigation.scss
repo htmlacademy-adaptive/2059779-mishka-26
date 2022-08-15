@@ -1,7 +1,7 @@
 @use "../utils/global.scss";
 
 .main-navigation {
-    @media (max-width: global.$width-small) {
+    @media (min-width: global.$width-small) {
       align-self: baseline;
       justify-self: end;
     }
@@ -39,7 +39,6 @@
   }
 }
 
-
 .main-navigation__toggle {
   @media (min-width: global.$width-medium) {
     display: none;
@@ -47,11 +46,15 @@
 }
 
 .main-navigation__container {
-  @media (max-width: global.$width-small) {
+  @media (min-width: global.$width-small) {
     position: absolute;
     left: 0;
     right: 0;
     top: 81px;
     z-index: 2;
+  }
+
+  @media (min-width: global.$width-medium) {
+    position: static;
   }
 }

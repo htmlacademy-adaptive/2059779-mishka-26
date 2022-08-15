@@ -214,3 +214,17 @@
     border: 2px solid var(--accent-color);
   }
 }
+
+.fieldset--question {
+  display: grid;
+  grid-template-columns: 25.15% 75.85%;
+
+}
+
+.fieldset__title--question {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  align-self: first baseline;
+  margin: 0;
+  padding: 0;
+}
