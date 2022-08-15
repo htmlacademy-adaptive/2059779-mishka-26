@@ -20,6 +20,12 @@
   padding-top: 17px;
   padding-bottom: 29px;
   @include global.fonter(400, 13px, 24px);
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    padding-top: 54px;
+    padding-bottom: 63px;
+    @include global.fonter(400, 17px, 30px);
+  }
 }
 
 .order-form__inputs {

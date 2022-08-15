@@ -1,10 +1,19 @@
 @use "../utils/global.scss";
 
 .main-content__catalog {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    padding-top: 67px;
+    padding-bottom: 53px;
+  }
 }
 
 .main-content__showcase {
   margin-bottom: 58px;
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    margin-bottom: 64px;
+  }
 }

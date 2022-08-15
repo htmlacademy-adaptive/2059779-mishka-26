@@ -4,7 +4,7 @@
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
-  @media (min-width: global.$width-medium) {
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
   }
@@ -23,37 +23,73 @@
   &:hover {
     box-shadow: var(--card-shadow-hover); /* Как сделать active при нажатии на ребёнка у родителя, пока не понимаю.*/
   }
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 46px;
+  }
 }
 
 .showcase__title {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
   margin: 0;
   margin-bottom: 27px;
-  padding-left: 91px;
+  padding-left: 34px;
   @include global.fonter(700, 17px, 24px);
   color: var(--dark);
 
   &::before {
     content: "";
-    position: absolute;
-    top: 25%;
-    left: 34px;
+    flex-basis: 40px;
     display: block;
     @include global.sizer(32px, 22px);
     background: url("../img/icons/icon-camera.svg") no-repeat transparent center center;
+  }
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    gap: 33px;
+    margin-bottom: 25px;
+    @include global.fonter(700, 20px, 24px);
+  }
+}
+
+.showcase__video {
+  margin-bottom: 35px;
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    order: -1;
+    margin-bottom: 41px;
   }
 }
 
 .showcase__description {
   margin: 0;
-  margin-top: 35px;
   margin-bottom: 41px;
   padding-left: 34px;
   padding-right: 34px;
   @include global.fonter(400, 13px, 24px);
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    @include global.fonter(400, 15px, 30px);
+  }
 }
 
 .showcase__button-container {
   padding-left: 34px;
   padding-right: 34px;
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+.showcase__button {
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    @include global.fonter(700, 17px, 17px);
+  }
 }

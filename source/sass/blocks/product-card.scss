@@ -1,14 +1,24 @@
 @use "../utils/global.scss";
 
 .product-card {
+
   &:hover .product-card__info {
     box-shadow: var(--card-shadow-hover);
+  }
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    display: flex;
+    width: 100%;
   }
 }
 
 .product-card__image-link {
   &:active .product-card__info {
     box-shadow: var(--card-shadow-active);
+  }
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    flex-basis: 334px;
   }
 }
 
@@ -20,6 +30,12 @@
   padding: 28px 28px 27px;
   border: 1px solid var(--neutral);
   border-top: none;
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
 
 .product-card__title {
@@ -41,6 +57,10 @@
   margin: 0;
   margin-bottom: 18px;
   @include global.fonter(400, 13px, 30px);
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: auto;
+  }
 }
 
 .product-card__order {

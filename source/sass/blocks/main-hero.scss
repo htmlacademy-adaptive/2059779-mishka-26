@@ -11,7 +11,7 @@
     bottom: -12px;
     display: none;
     @include global.sizer(100%, 24px);
-    background: url("../img/divider-hero.svg") repeat-x center;
+    background: url("../img/divider-header.svg") repeat-x center;
 
     @media (min-width: global.$width-medium) {
       display: block;
