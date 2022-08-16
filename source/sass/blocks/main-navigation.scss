@@ -5,17 +5,72 @@
       align-self: baseline;
       justify-self: end;
     }
+
+    @media (min-width: global.$width-medium) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+    }
+}
+
+.main-navigation__logo {
+  height: 35px;
+
+  @media (min-width: global.$width-small) and (max-width: global.$width-medium) {
+    justify-self: center;
+  }
+
+  @media (min-width: global.$width-medium) {
+    position: relative;
+    z-index: 99; /* Мда, это не лучшее решение. Меню в гриде перекрывает логотип. */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-left: global.$padding-medium;
+    border-bottom: 2px solid var(--neutral);
+  }
+}
+
+.main-navigation__container {
+  @media (min-width: global.$width-small) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 81px;
+    z-index: 2;
+  }
+
+  @media (min-width: global.$width-medium) {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
 }
 
 .main-navigation__main-menu {
   @media (min-width: global.$width-small) {
     display: block;
   }
+
+  @media (min-width: global.$width-medium) {
+    order: 2;
+    max-width: 48%;
+  }
 }
 
 .main-navigation__user-menu {
   @media (min-width: global.$width-small) {
     display: block;
+  }
+
+  @media (min-width: global.$width-medium) {
+    min-width: 55%;
+    border-bottom: 2px solid var(--neutral);
   }
 }
 
@@ -31,30 +86,18 @@
   }
 
   @media (min-width: global.$width-medium) {
-    position: absolute;
+/*     position: absolute;
     z-index: 2;
     top: 118px;
-    right: global.$padding-medium;
+    right: global.$padding-medium; */
     display: block;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 }
 
 .main-navigation__toggle {
   @media (min-width: global.$width-medium) {
     display: none;
-  }
-}
-
-.main-navigation__container {
-  @media (min-width: global.$width-small) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 81px;
-    z-index: 2;
-  }
-
-  @media (min-width: global.$width-medium) {
-    position: static;
   }
 }

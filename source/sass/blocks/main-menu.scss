@@ -5,15 +5,16 @@
   width: 100%;
 
   @media (min-width: global.$width-medium) {
-    position: absolute;
+/*     position: absolute;
     top: 89px;
     left: 0;
     right: 0;
     z-index: 2;
+
+    max-width: 60%;
+    padding-left: global.$padding-medium; */
     display: flex;
     gap: 36px;
-    max-width: 60%;
-    padding-left: global.$padding-medium;
   }
 }
 

@@ -14,12 +14,9 @@
   }
 
   @media (min-width: global.$width-medium) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
     padding: 0;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    border: none;
   }
 
   @media (min-width: global.$width-big) {
@@ -27,15 +24,7 @@
   }
 }
 
-.main-header__logo {
-  height: 35px;
-
-  @media (min-width: global.$width-small) and (max-width: global.$width-medium) {
-    justify-self: center;
-  }
-}
-
-  .main-header::before {
+.main-header::before {
   @media (min-width: global.$width-small) {
     content: "";
     display: block;
