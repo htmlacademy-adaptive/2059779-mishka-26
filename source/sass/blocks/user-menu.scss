@@ -5,6 +5,8 @@
 
   @media (min-width: global.$width-medium) {
     display: flex;
+    flex-wrap: wrap;
+    padding-right: global.$padding-medium; /* Не могу в примиксованном элементе перебить каскад, потому что файл с ним подключен раньше, чем файл блока. Чё делать? */
   }
 }
 
@@ -15,38 +17,31 @@
   }
 
   @media (min-width: global.$width-medium) {
+    padding: 0;
     @include global.centerer(initial, center);
   }
 }
 
 .user-menu__item:not(:last-child) {
-    border-bottom: 2px solid var(--neutral);
+  border-bottom: 2px solid var(--neutral);
 
   @media (min-width: global.$width-medium) {
     border-bottom: none;
   }
 }
 
-.user-menu__item--serch {
-  @media (min-width: global.$width-medium) {
-    padding-left: 33px;
-    padding-right: 31px;
-    border-left: 1px solid var(--dark-01);
-    border-right: 1px solid var(--dark-01);
-  }
-}
-
 .user-menu__link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 29px;
   padding-bottom: 27px;
   @include global.fonter(700, 17px, 24px);
   text-decoration: none;
   color: var(--dark);
 
-  .user-menu__icon {
-    color: var(--dark);
-    opacity: var(--icon-opacity);
+  @media (min-width: global.$width-medium) {
+    padding: 0;
+    min-height: 89px;
   }
 
   &:hover {
@@ -77,11 +72,25 @@
     }
   }
 
-  @media (min-width: global.$width-medium) {
-    padding: 0;
-    padding-top: 33px;
-    padding-bottom: 31px;
+  &--search {
+    @media (min-width: global.$width-medium) {
+      padding-left: 33px;
+      padding-right: 31px;
+      border-left: 1px solid var(--dark-01);
+      border-right: 1px solid var(--dark-01);
+    }
   }
+
+  &--cart {
+    @media (min-width: global.$width-medium) {
+      padding-left: 31px;
+    }
+  }
+}
+
+.user-menu__icon {
+  color: var(--dark);
+  opacity: var(--icon-opacity);
 }
 
 .user-menu__search-text {
