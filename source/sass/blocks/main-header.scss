@@ -2,19 +2,15 @@
 
 .main-header {
   position: relative;
-  padding: 22px global.$padding-small;
   background-color: var(--page-background);
   border-bottom: 2px solid var(--neutral);
 
   @media (min-width: global.$width-small) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 23px global.$padding-medium 20px;
+    min-height: 79px;
+    padding: 0;
   }
 
   @media (min-width: global.$width-medium) {
-    display: block;
     padding: 0;
     border: none;
   }
@@ -22,16 +18,4 @@
   @media (min-width: global.$width-big) {
     padding: 22px global.$padding-big;
   }
-}
-
-.main-header::before {
-  @media (min-width: global.$width-small) {
-    content: "";
-    display: block;
-  }
-
-  @media (min-width: global.$width-medium) {
-    content: "";
-    display: none;
- }
 }
