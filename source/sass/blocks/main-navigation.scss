@@ -60,7 +60,13 @@
   @media (min-width: global.$width-medium) {
     order: 2;
     flex-basis: 60%;
-    background-color: var(--hero-background);
+    background-color: var(--page-content-background);
+  }
+
+  &--home-page {
+    @media (min-width: global.$width-medium) {
+      background-color: var(--hero-background);
+    }
   }
 }
 
@@ -96,6 +102,12 @@
     align-items: center;
     justify-content: flex-end;
     padding-right: global.$padding-medium;
-    background-color: var(--hero-background);
+    background-color: var(--page-content-background);
+  }
+
+  &--home-page {
+    @media (min-width: global.$width-medium) {
+      background-color: var(--hero-background);
+    }
   }
 }

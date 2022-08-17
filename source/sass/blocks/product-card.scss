@@ -4,6 +4,10 @@
 
   &:hover .product-card__info {
     box-shadow: var(--card-shadow-hover);
+
+    @media (min-width: global.$width-medium) {
+      box-shadow: var(--card-shadow-hover-right);
+    }
   }
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
@@ -18,12 +22,16 @@
   }
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-    flex-basis: 334px;
+    flex-basis: auto;
+    min-width: 334px;
+    border-bottom: 1px solid var(--neutral); /* Если описание товара во высоте больше картинки, то получается некрасиво. А картинку растянуть во всю высоту пока не получается. */
+    border-left: 1px solid var(--neutral);
   }
 }
 
 .product-card__image {
   background-color: var(--neutral-dark);
+  object-fit: cover;
 }
 
 .product-card__info {
@@ -35,6 +43,8 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    border: 1px solid var(--neutral);
+    border-left: none;
   }
 }
 
@@ -51,6 +61,11 @@
   &:active .product-card__info {
     box-shadow: var(--card-shadow-active);
   }
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 7px;
+    @include global.fonter(700, 20px, 24px);
+  }
 }
 
 .product-card__features {
@@ -60,15 +75,20 @@
 
   @media (min-width: global.$width-medium) {
     margin-bottom: auto;
+    @include global.fonter(400, 15px, 30px);
   }
 }
 
 .product-card__order {
   display: flex;
-  align-items: space-between;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 22px;
   border-top: 1px solid var(--neutral);
+
+  @media (min-width: global.$width-medium) {
+    padding-top: 24px;
+  }
 }
 
 .product-card__price {
