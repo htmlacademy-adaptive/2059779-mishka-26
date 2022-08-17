@@ -5,7 +5,7 @@
   @media (min-width: global.$width-medium) {
     display: flex;
     flex-wrap: wrap;
-    padding-right: global.$padding-medium; /* Не могу в примиксованном элементе перебить каскад, потому что файл с ним подключен раньше, чем файл блока. Чё делать? */
+    padding-right: global.$padding-medium;
   }
 }
 

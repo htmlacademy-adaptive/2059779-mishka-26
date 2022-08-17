@@ -14,7 +14,7 @@
 
     &--open {
       @media (min-width: global.$width-small) {
-        position: absolute;
+        position: absolute; /* Возможно лажа не по БЭМу. Другой класс навесить вообще может? */
         left: 0;
         right: 0;
         z-index: 2;

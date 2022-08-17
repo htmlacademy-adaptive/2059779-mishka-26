@@ -19,3 +19,18 @@
     padding: 22px global.$padding-big;
   }
 }
+
+.main-header__navigation--open {
+  @media (min-width: global.$width-small) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.main-header__navigation--close {
+  @media (min-width: global.$width-small) {
+    display: none;
+  }
+}
