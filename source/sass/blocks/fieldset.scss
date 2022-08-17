@@ -102,7 +102,9 @@
   }
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-    align-self: first baseline;
+    display: flex;
+    column-gap: 25px;
+    width: 100%;
   }
 }
 
@@ -215,18 +217,8 @@
   &--textarea:active {
     border: 2px solid var(--accent-color);
   }
-}
 
-.fieldset--question {
-  display: grid;
-  grid-template-columns: 25.15% 75.85%;
-
-}
-
-.fieldset__title--question {
-  grid-row-start: 1;
-  grid-row-end: 3;
-  align-self: first baseline;
-  margin: 0;
-  padding: 0;
+  @media (min-width: global.$width-medium) {
+    flex-grow: 1;
+  }
 }
