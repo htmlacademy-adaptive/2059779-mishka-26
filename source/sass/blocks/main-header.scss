@@ -27,9 +27,19 @@
     right: 0;
     z-index: 2;
   }
+
+  @media (min-width: global.$width-medium) {
+    position: static;
+  }
 }
 
-.main-header__navigation--close {
+.main-header__navigation--close .main-navigation__main-menu {
+  @media (min-width: global.$width-small) {
+    display: none;
+  }
+}
+
+.main-header__navigation--close .main-navigation__user-menu {
   @media (min-width: global.$width-small) {
     display: none;
   }

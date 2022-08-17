@@ -7,7 +7,7 @@
 
   &::after {
     content: "";
-    position: absolute; /* Внимание, это лажа, если псевдик считается блоком. */
+    position: absolute;
     bottom: -12px;
     display: none;
     width: 100%;

@@ -11,27 +11,6 @@
       display: flex;
       flex-wrap: wrap;
     }
-
-    &--open {
-      @media (min-width: global.$width-small) {
-        position: absolute; /* Возможно лажа не по БЭМу. Другой класс навесить вообще может? */
-        left: 0;
-        right: 0;
-        z-index: 2;
-      }
-
-      @media (min-width: global.$width-medium) {
-        position: static;
-      }
-    }
-
-    &--close .main-navigation__main-menu {
-      display: none;
-    }
-
-    &--close .main-navigation__user-menu {
-      display: none;
-    }
 }
 
 .main-navigation__logo {
