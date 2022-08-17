@@ -173,7 +173,7 @@
   }
 
   &:checked::before {
-    transform: scale(1) rotate(45deg);
+    transform: rotate(45deg);
   }
 
   &:hover {
