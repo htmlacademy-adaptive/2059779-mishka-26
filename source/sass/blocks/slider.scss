@@ -31,7 +31,6 @@
 }
 
 .slider__list {
-  @include global.list-reseter;
   margin-bottom: 30px;
 
     @media (min-width: global.$width-medium) {
@@ -50,7 +49,9 @@
 }
 
 .slider__controls {
-  @include global.centerer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 38px;
 
   @media (min-width: global.$width-medium) {
@@ -64,7 +65,9 @@
 }
 
 .slider__control {
-  @include global.centerer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
   padding-top: 13px;
   padding-bottom: 13px;

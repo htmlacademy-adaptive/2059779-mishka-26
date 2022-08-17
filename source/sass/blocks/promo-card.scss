@@ -110,7 +110,9 @@
 
 .promo-card__price {
   grid-area: price;
-  @include global.centerer(center, center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-bottom: 25px;
   @include global.fonter(700, 17px, 24px);

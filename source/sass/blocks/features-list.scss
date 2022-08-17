@@ -3,7 +3,6 @@
 .features-list {
   display: grid;
   row-gap: 32px;
-  @include global.list-reseter;
 
   @media (min-width: global.$width-medium) {
     grid-template-columns: 1fr 1fr;

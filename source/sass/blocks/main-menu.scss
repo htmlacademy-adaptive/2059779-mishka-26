@@ -1,7 +1,6 @@
 @use "../utils/global.scss";
 
 .main-menu {
-  @include global.list-reseter;
   width: 100%;
 
   @media (min-width: global.$width-medium) {

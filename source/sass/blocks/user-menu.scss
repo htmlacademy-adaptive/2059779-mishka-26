@@ -1,7 +1,6 @@
 @use "../utils/global.scss";
 
 .user-menu {
-  @include global.list-reseter;
 
   @media (min-width: global.$width-medium) {
     display: flex;
@@ -17,8 +16,10 @@
   }
 
   @media (min-width: global.$width-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    @include global.centerer(initial, center);
   }
 }
 

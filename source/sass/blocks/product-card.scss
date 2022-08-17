@@ -65,7 +65,8 @@
 
 .product-card__order {
   display: flex;
-  @include global.centerer(space-between, center);
+  align-items: space-between;
+  justify-content: center;
   padding-top: 22px;
   border-top: 1px solid var(--neutral);
 }

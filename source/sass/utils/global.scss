@@ -1,6 +1,8 @@
 @forward "mixins.scss";
 @forward "fonts.scss";
 @forward "variables.scss";
+@forward "reset-list.scss";
+@forward "visually-hidden.scss";
 
 /* Colors */
 :root {
@@ -40,18 +42,4 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Не вижу смысла делать этот класс в отдельном файле или миксином. В рамках БЭМа это блок, но утилитарный. */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }

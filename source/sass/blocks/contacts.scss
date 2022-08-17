@@ -108,7 +108,9 @@
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
-    @include global.centerer(center, center);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: global.$width-big) {

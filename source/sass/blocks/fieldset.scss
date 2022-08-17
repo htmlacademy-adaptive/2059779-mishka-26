@@ -82,7 +82,8 @@
     position: absolute;
     right: 7px;
     display: block;
-    @include global.sizer(25px, 24px);
+    width: 25px;
+    height: 24px;
     background: url("../img/icons/icon-phone.svg") no-repeat center;
   }
 
@@ -95,7 +96,8 @@
     position: absolute;
     right: 3px;
     display: block;
-    @include global.sizer(32px, 21px);
+    width: 32px;
+    height: 21px;
     background: url("../img/icons/icon-email.svg") no-repeat center;
   }
 

@@ -1,7 +1,9 @@
 @use "../utils/global.scss";
 
 .copyright__link {
-  @include global.centerer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 27px;
   text-decoration: none;
 

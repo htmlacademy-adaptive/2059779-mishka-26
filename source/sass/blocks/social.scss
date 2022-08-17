@@ -1,7 +1,6 @@
 @use "../utils/global.scss";
 
 .social {
-  @include global.list-reseter;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
