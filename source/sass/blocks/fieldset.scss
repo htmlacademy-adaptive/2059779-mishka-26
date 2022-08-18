@@ -6,17 +6,37 @@
 
   &--radio {
     display: grid;
-    row-gap: 11px;
+    row-gap: 30px;
+    padding-bottom: 31px;
   }
 
   &--check {
     display: grid;
-    row-gap: 23px;
+    row-gap: 25px;
+    padding-bottom: 33px;
   }
 
   &--person {
     display: grid;
-    row-gap: 22px;
+    row-gap: 29px;
+    padding-bottom: 35px;
+  }
+
+  &--phone {
+    display: grid;
+    row-gap: 5px;
+    padding-bottom: 35px;
+  }
+
+  &--email {
+    display: grid;
+    row-gap: 5px;
+    padding-bottom: 35px;
+  }
+
+  &--additional {
+    display: grid;
+    row-gap: 23px;
   }
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
@@ -25,8 +45,9 @@
 }
 
 .fieldset__title {
+  display: flex;
+  column-gap: 22px;
   margin: 0;
-  margin-bottom: 22px;
   @include global.fonter(700, 17px, 17px);
   text-transform: uppercase;
   color: var(--accent-color);
@@ -35,23 +56,44 @@
     flex-basis: 25.15%;
     padding-top: 12px;
   }
+
+  &::after {
+    content: "";
+    display: block;
+    align-self: center;
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--accent-color);
+  }
+
 }
 
 .fieldset__list {
+  display: grid;
+
+  &--radio {
+    row-gap: 11px;
+  }
+
+  &--check {
+    row-gap: 23px;
+
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 50px;
+    }
+  }
+
+  &--text {
+    row-gap: 22px;
+  }
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
     flex-basis: 74.85%;
-  }
-
-  &--check {
-    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      column-gap: 50px;
-    }
   }
 }
 

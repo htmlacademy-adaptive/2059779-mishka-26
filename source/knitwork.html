@@ -72,8 +72,8 @@
         </p>
         <form class="order-form__inputs form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__fieldset fieldset fieldset--radio">
-            <h3 class="fieldset__title">Тип</h3>
-              <div class="fieldset__list">
+            <h3 class="fieldset__title fieldset__title--radio">Тип</h3>
+              <div class="fieldset__list fieldset__list--radio">
                 <label class="fieldset__label fieldset__label--radio">
                   <input class="fieldset__radio" type="radio" name="product-group" value="interior" checked />
                   <span class="fieldset__value">Аксессуар для интерьера</span>
@@ -85,7 +85,7 @@
              </div>
           </fieldset>
           <fieldset class="form__fieldset fieldset fieldset--check fieldset--accent">
-            <h3 class="fieldset__title">Цвет</h3>
+            <h3 class="fieldset__title fieldset__title--check">Цвет</h3>
             <div class="fieldset__list fieldset__list--check">
               <label class="fieldset__label fieldset__label--check">
                 <input class="fieldset__check" type="checkbox" name="product-color" value="white" checked />
@@ -115,7 +115,7 @@
           </fieldset>
           <fieldset class="form__fieldset fieldset fieldset--person">
             <h3 class="fieldset__title">ФИО</h3>
-            <div class="fieldset__list">
+            <div class="fieldset__list fieldset__list--text">
               <label class="fieldset__label">
                 <span class="fieldset__value">Имя:</span>
                 <input class="fieldset__input fieldset__input--text" type="text" name="customer-name" placeholder="Введите ваше имя*" pattern="[а-яА-ЯёЁa-zA-Z]" required />
@@ -130,7 +130,7 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--accent">
+          <fieldset class="form__fieldset fieldset fieldset--phone fieldset--accent">
             <h3 class="fieldset__title">Тел</h3>
             <div class="fieldset__list">
               <label class="fieldset__label fieldset__label--phone">
@@ -139,7 +139,7 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--accent">
+          <fieldset class="form__fieldset fieldset fieldset--email fieldset--accent">
             <h3 class="fieldset__title">E-mail</h3>
             <div class="fieldset__list">
               <label class="fieldset__label fieldset__label--email">
@@ -148,7 +148,7 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset fieldset fieldset--accent">
+          <fieldset class="form__fieldset fieldset fieldset--additional fieldset--accent">
             <h3 class="fieldset__title">Доп</h3>
             <div class="fieldset__list">
               <label class="fieldset__label">
