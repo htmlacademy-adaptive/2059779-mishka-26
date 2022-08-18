@@ -36,4 +36,29 @@
   margin-top: 17px;
   margin-bottom: 30px;
   @include global.fonter(400, 14px, 16px);
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    margin: 0;
+    @include global.fonter(400, 17px, 30px);
+    order: 2;
+    flex-grow: 1;
+    max-width: 50%;
+  }
+}
+
+.order-form__footer {
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 53px;
+  }
+}
+
+.order-form__button {
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    max-width: 40%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

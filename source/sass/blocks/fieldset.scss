@@ -64,8 +64,11 @@
     flex-grow: 1;
     height: 1px;
     background-color: var(--accent-color);
-  }
 
+    @media (min-width: global.$width-medium) {
+      display: none;
+    }
+  }
 }
 
 .fieldset__list {
@@ -77,12 +80,6 @@
 
   &--check {
     row-gap: 23px;
-
-    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      column-gap: 50px;
-    }
   }
 
   &--text {
@@ -94,6 +91,14 @@
     flex-direction: column;
     row-gap: 24px;
     flex-basis: 74.85%;
+  }
+
+  &--check {
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
+     }
   }
 }
 
@@ -113,6 +118,10 @@
   &--check {
     grid-template-columns: 38px auto;
     gap: 23px;
+
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      flex-basis: 40%;
+    }
   }
 
   &--phone {
@@ -153,6 +162,19 @@
 .fieldset__value {
   @include global.fonter(700, 17px, 18px);
   color: var(--dark);
+
+  &--radio {
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      max-width: 86%;
+    }
+  }
+
+  &--check {
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      max-width: 68%;
+      overflow-wrap: break-word;
+    }
+  }
 }
 
 .fieldset__radio {

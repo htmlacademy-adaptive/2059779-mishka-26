@@ -60,4 +60,8 @@
     background-color: transparent;
     border: 2px solid var(--accent-color);
   }
+
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    @include global.fonter(700, 17px, 17px);
+  }
 }
