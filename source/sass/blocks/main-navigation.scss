@@ -68,13 +68,13 @@
     order: 2;
     flex-basis: 60%;
     padding-left: global.$padding-big;
-    background-color: var(--page-background);
-    border-bottom: 2px solid var(--neutral);
+    background-color: var(--page-content-background);
   }
 
   @media (min-width: global.$width-big) {
     order: 1;
     flex-basis: 40%;
+    border-bottom: 2px solid var(--neutral);
   }
 
   &--home-page {
@@ -83,7 +83,7 @@
     }
 
     @media (min-width: global.$width-big) {
-      background-color: var(--page-background);
+      background-color: var(--page-content-background);
     }
   }
 }

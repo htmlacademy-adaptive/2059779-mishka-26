@@ -6,7 +6,7 @@
 
   @media (min-width: global.$width-medium) {
     display: grid;
-    grid-template-columns: 25.15% 75.85%;
+    grid-template-columns: 25.15% 74.85%;
     padding: 50px global.$padding-medium 50px;
   }
 
@@ -95,6 +95,12 @@
 .fieldset__list {
   display: grid;
 
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
   &--radio {
     row-gap: 11px;
   }
@@ -111,13 +117,6 @@
 
   &--text {
     row-gap: 22px;
-  }
-
-  @media (min-width: global.$width-medium) {
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-    flex-basis: 74.85%;
   }
 }
 
