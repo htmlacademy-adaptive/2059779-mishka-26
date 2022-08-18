@@ -1,7 +1,6 @@
 @use "../utils/global.scss";
 
 .product-card {
-
   &:hover .product-card__info {
     box-shadow: var(--card-shadow-hover);
 
@@ -10,7 +9,7 @@
     }
   }
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     display: flex;
     width: 100%;
   }
@@ -21,7 +20,7 @@
     box-shadow: var(--card-shadow-active);
   }
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     flex-basis: auto;
     min-width: 334px;
     border-bottom: 1px solid var(--neutral); /* Если описание товара во высоте больше картинки, то получается некрасиво. А картинку растянуть во всю высоту пока не получается. */
@@ -39,7 +38,7 @@
   border: 1px solid var(--neutral);
   border-top: none;
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     display: flex;
     flex-direction: column;
     flex-grow: 1;

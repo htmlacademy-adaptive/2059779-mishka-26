@@ -33,11 +33,11 @@
 .slider__list {
   margin-bottom: 30px;
 
-    @media (min-width: global.$width-medium) {
-      grid-column: 1 / -1;
-      grid-row: 2 / 3;
-      margin: 0;
-    }
+  @media (min-width: global.$width-medium) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
 }
 
 .slider__item {

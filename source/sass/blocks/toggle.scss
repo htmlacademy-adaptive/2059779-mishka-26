@@ -18,12 +18,12 @@
 }
 
 .toggle__button {
-    display: block;
-    width: 20px;
-    height: 2px;
-    padding: 0;
-    background-color: var(--dark-action);
-    border: none;
+  display: block;
+  width: 20px;
+  height: 2px;
+  padding: 0;
+  background-color: var(--dark-action);
+  border: none;
 
   &::before {
     content: "";

@@ -3,17 +3,19 @@
 .promo-card {
   padding: 31px global.$padding-small 36px;
 
+  /* stylelint-disable */
   @media (min-width: global.$width-medium) {
     display: grid;
     column-gap: 42px;
     grid-template-columns: 43.71% 50%;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header header"
+    grid-template-areas: "header header" /* Ругается тут на отступы */
                           "description image"
                           "price image"
                           "button image";
     padding: 40px global.$padding-medium 52px;
   }
+  /* stylelint-enable */
 
   @media (min-width: global.$width-big) {
     padding: 31px global.$padding-big 36px;

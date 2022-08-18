@@ -4,7 +4,7 @@
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
   }
@@ -24,7 +24,7 @@
     box-shadow: var(--card-shadow-hover); /* Как сделать active при нажатии на ребёнка у родителя, пока не понимаю.*/
   }
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     display: flex;
     flex-direction: column;
     padding-top: 0;
@@ -51,7 +51,7 @@
     background: url("../img/icons/icon-camera.svg") no-repeat transparent center center;
   }
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     gap: 33px;
     margin-bottom: 25px;
     @include global.fonter(700, 20px, 24px);
@@ -61,7 +61,7 @@
 .showcase__video {
   margin-bottom: 35px;
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     order: -1;
     margin-bottom: 41px;
   }
@@ -74,7 +74,7 @@
   padding-right: 34px;
   @include global.fonter(400, 13px, 24px);
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     @include global.fonter(400, 15px, 30px);
   }
 }
@@ -83,7 +83,7 @@
   padding-left: 34px;
   padding-right: 34px;
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     padding-left: 42px;
     padding-right: 42px;
   }

@@ -6,7 +6,7 @@
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
-    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+  @media (min-width: global.$width-medium) {
     gap: 54px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
