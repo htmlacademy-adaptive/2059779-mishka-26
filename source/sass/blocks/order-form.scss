@@ -5,13 +5,13 @@
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (min-width: global.$width-big) {
-    padding-left: global.$padding-big;
-    padding-right: global.$padding-big;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -22,8 +22,7 @@
   @include global.fonter(400, 13px, 24px);
 
   @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-    padding-top: 54px;
-    padding-bottom: 63px;
+    padding: 54px global.$padding-medium 13px;
     @include global.fonter(400, 17px, 30px);
   }
 }
@@ -51,7 +50,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 53px;
+    padding-top: 3px;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
   }
 }
 

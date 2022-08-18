@@ -1,6 +1,7 @@
 @use "../utils/global.scss";
 
 .main-menu {
+  display: block;
   width: 100%;
 
   @media (min-width: global.$width-medium) {

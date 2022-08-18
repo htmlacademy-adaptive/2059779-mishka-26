@@ -4,6 +4,12 @@
   padding: 0;
   border: none;
 
+  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 25.15% 75.85%;
+    padding: 50px global.$padding-medium 50px;
+  }
+
   &--radio {
     display: grid;
     row-gap: 30px;
@@ -20,18 +26,31 @@
     display: grid;
     row-gap: 29px;
     padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      padding-top: 66px;
+    }
   }
 
   &--phone {
     display: grid;
     row-gap: 5px;
     padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      padding-top: 64px;
+      padding-bottom: 12px;
+    }
   }
 
   &--email {
     display: grid;
     row-gap: 5px;
     padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      padding-top: 12px;
+    }
   }
 
   &--additional {
@@ -39,8 +58,10 @@
     row-gap: 23px;
   }
 
-  @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
-    display: flex;
+  &--accent {
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      background-color: var(--page-content-background);
+    }
   }
 }
 
@@ -98,7 +119,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 24px;
-     }
+    }
   }
 }
 
@@ -110,7 +131,8 @@
     grid-template-columns: 42px auto;
     gap: 17px;
 
-    @media (min-width: global.$width-medium) and (max-width: global.$width-big) { /* Вот в таких случаях можно вкладывать медиа внутрь? Не слишком глубоко получается? */
+    @media (min-width: global.$width-medium) and (max-width: global.$width-big) {
+      /* Вот в таких случаях можно вкладывать медиа внутрь? Не слишком глубоко получается? */
       gap: 26px;
     }
   }
@@ -267,6 +289,12 @@
 
   &:active {
     border-bottom: 2px solid var(--accent-color);
+  }
+
+  &--accent {
+    @media (min-width: global.$width-medium) {
+      background-color: var(--page-content-background);
+    }
   }
 
   &--textarea {
