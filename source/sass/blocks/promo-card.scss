@@ -9,10 +9,10 @@
     column-gap: 42px;
     grid-template-columns: 43.71% 50%;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header header" /* Ругается тут на отступы */
-                          "description image"
-                          "price image"
-                          "button image";
+    grid-template-areas: "card-header card-header" /* Ругается тут на отступы */
+                          "card-description card-image"
+                          "card-price card-image"
+                          "card-button card-image";
     padding: 40px 0 52px;
   }
   /* stylelint-enable */
@@ -21,13 +21,13 @@
     column-gap: 0;
     grid-template-columns: 40% 60%;
     grid-template-rows: repeat(4, auto);
-    padding: 40px 0 52px 173px;
+    padding: 40px 0 52px global.$padding-left-big;
   }
 }
 
 .promo-card__header {
   position: relative;
-  grid-area: header;
+  grid-area: card-header;
 
   @media (min-width: global.$width-medium) {
     display: flex;
@@ -45,7 +45,7 @@
 }
 
 .promo-card__title {
-  grid-area: title;
+  grid-area: card-title;
   margin: 0;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
@@ -62,7 +62,7 @@
 }
 
 .promo-card__subtitle {
-  grid-area: subtitle;
+  grid-area: card-subtitle;
   margin: 0;
   margin-bottom: 18px;
   @include global.fonter(700, 17px, 20px);
@@ -73,6 +73,7 @@
     align-self: center;
     max-width: min-content;
     margin-right: 13px;
+    margin-bottom: 35px;
     @include global.fonter(700, 17px, 17px);
     text-align: center;
   }
@@ -84,7 +85,7 @@
 }
 
 .promo-card__description {
-  grid-area: description;
+  grid-area: card-description;
 
   @media (min-width: global.$width-big) {
     grid-column: 1 / 2;
@@ -108,7 +109,7 @@
 
 .promo-card__feature {
   display: grid;
-  grid-template-columns: fit-content(50%) fit-content(50%);
+  grid-template-columns: auto auto;
   max-width: 100%;
   margin: 0;
   margin-bottom: 41px;
@@ -139,7 +140,8 @@
 
 .promo-card__feature-value {
   margin: 0;
-  padding-top: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   @include global.fonter(400, 15px, 20px);
   overflow-wrap: anywhere;
   border-bottom: 1px solid var(--neutral);
@@ -151,7 +153,7 @@
 }
 
 .promo-card__image {
-  grid-area: image;
+  grid-area: card-image;
   display: block;
   margin-bottom: 26px;
 
@@ -162,7 +164,7 @@
 }
 
 .promo-card__price {
-  grid-area: price;
+  grid-area: card-price;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +185,7 @@
 }
 
 .promo-card__button {
-  grid-area: button;
+  grid-area: card-button;
 
   @media (min-width: global.$width-big) {
     grid-column: 1 / 2;

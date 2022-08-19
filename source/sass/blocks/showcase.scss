@@ -1,10 +1,12 @@
 @use "../utils/global.scss";
 
 .showcase {
+  margin-bottom: 58px;
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
+    margin-bottom: 64px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
   }
@@ -29,6 +31,12 @@
     flex-direction: column;
     padding-top: 0;
     padding-bottom: 46px;
+  }
+
+  @media (min-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 65.05% 34.95%;
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -56,6 +64,19 @@
     margin-bottom: 25px;
     @include global.fonter(700, 20px, 24px);
   }
+
+  @media (min-width: global.$width-big) {
+    order: 2;
+    align-self: end;
+    flex-flow: column;
+    gap: 27px;
+    align-items: flex-start;
+    max-width: 180px;
+    height: max-content;
+    margin-bottom: 27px;
+    padding-top: 47px;
+    padding-left: 79px;
+  }
 }
 
 .showcase__video {
@@ -64,6 +85,11 @@
   @media (min-width: global.$width-medium) {
     order: -1;
     margin-bottom: 41px;
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
   }
 }
 
@@ -77,6 +103,13 @@
   @media (min-width: global.$width-medium) {
     @include global.fonter(400, 15px, 30px);
   }
+
+  @media (min-width: global.$width-big) {
+    order: 3;
+    margin-bottom: 50px;
+    padding-left: 79px;
+    padding-right: 0;
+  }
 }
 
 .showcase__button-container {
@@ -86,5 +119,10 @@
   @media (min-width: global.$width-medium) {
     padding-left: 42px;
     padding-right: 42px;
+  }
+
+  @media (min-width: global.$width-big) {
+    order: 4;
+    padding-left: 79px;
   }
 }

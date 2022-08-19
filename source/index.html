@@ -73,7 +73,7 @@
           <a class="main-hero__button main-hero__button--toys" href="catalog/toys.html">Детские игрушки</a>
         </div>
       </section>
-      <div class="container container--nodivider">
+      <div class="container">
         <aside class="promo-card divider">
           <h2 class="visually-hidden">Выгодные предложения</h2>
           <header class="promo-card__header">
@@ -112,7 +112,7 @@
         </section>
       </div>
       <div class="container">
-        <section class="slider">
+        <section class="slider divider">
           <h2 class="slider__title">Отзывы</h2>
           <ul class="slider__list reset-list">
             <li class="slider__item slider__item--current">
@@ -158,28 +158,26 @@
           <a class="slider__button button" href="#">Написать</a>
         </section>
       </div>
-      <div class="container">
-        <section class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <address class="contacts__adress">
-            <dl class="contacts__fields">
-              <dt class="contacts__item">e-mail:</dt>
-              <dd class="contacts__text"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-              <dt class="contacts__item">адрес:</dt>
-              <dd class="contacts__text">г.&nbsp;Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8, офис 101</dd>
-            </dl>
-          </address>
-          <div class="contacts__map map">
-            <a class="map__link" href="https://yandex.ru/maps/-/CCURYRgCGD"><img class="map__image" src="img/map.jpg" width="320" height="455" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу Волынского переулка и Большой Конюшенной улицы."></a><!-- Фоллбэк, если скрипт рухнет. -->
-            <!-- Яндекс даёт сейчас карту в таком виде с инлайн стилями. Стили потом перенесу, если нужно. Пока оставляю её под комментом и вставлю карту через API Яндекса. Серёдкин разрешил. Но если есть возражения, но оставлю iframe. -->
-            <!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&utm_medium=mapframe&utm_source=maps&z=17.32" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCURYRsbhA" width="320" height="455" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> -->
-            <div class="map__body" id="yandexmap"></div>
-          </div>
-          <div class="contacts__action">
-            <a class="contacts__button button" href="#">Напишите нам</a>
-          </div>
-        </section>
-      </div>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <address class="contacts__address">
+          <dl class="contacts__fields">
+            <dt class="contacts__item">e-mail:</dt>
+            <dd class="contacts__text"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+            <dt class="contacts__item">адрес:</dt>
+            <dd class="contacts__text">г.&nbsp;Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8, офис 101</dd>
+          </dl>
+        </address>
+        <div class="contacts__map map">
+          <a class="map__link" href="https://yandex.ru/maps/-/CCURYRgCGD"><img class="map__image" src="img/map.jpg" width="320" height="455" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу Волынского переулка и Большой Конюшенной улицы."></a><!-- Фоллбэк, если скрипт рухнет. -->
+          <!-- Яндекс даёт сейчас карту в таком виде с инлайн стилями. Стили потом перенесу, если нужно. Пока оставляю её под комментом и вставлю карту через API Яндекса. Серёдкин разрешил. Но если есть возражения, но оставлю iframe. -->
+          <!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&utm_medium=mapframe&utm_source=maps&z=17.32" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCURYRsbhA" width="320" height="455" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> -->
+          <div class="map__body" id="yandexmap"></div>
+        </div>
+        <div class="contacts__action">
+          <a class="contacts__button button" href="#">Напишите нам</a>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo logo logo--footer" href="/">

@@ -1,23 +1,19 @@
 @use "../utils/global.scss";
 
 .container { /* Не придумал, как без обёртки ограничить волнистый разделитель. Зато не нужно паддинги в куче мест прописывать. */
+  position: relative;
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
-    background: url("../img/divider__medium.svg") repeat-x transparent bottom;
   }
 
   @media (min-width: global.$width-big) {
+    position: static;
     padding-left: global.$padding-big;
     padding-right: global.$padding-big;
-  }
-
-  &--nodivider {
-    @media (min-width: global.$width-big) {
-      background: none;
-    }
+    background: none;
   }
 }

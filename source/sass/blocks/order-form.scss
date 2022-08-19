@@ -25,6 +25,10 @@
     padding: 54px global.$padding-medium 13px;
     @include global.fonter(400, 17px, 30px);
   }
+
+  @media (min-width: global.$width-big) {
+    padding: 99px 223px 30px 225px;
+  }
 }
 
 .order-form__inputs {
@@ -43,6 +47,10 @@
     flex-grow: 1;
     max-width: 50%;
   }
+
+  @media (min-width: global.$width-big) {
+    text-align: right;
+  }
 }
 
 .order-form__footer {
@@ -53,6 +61,10 @@
     padding-top: 3px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 49px 225px 50px 218px;
   }
 }
 
