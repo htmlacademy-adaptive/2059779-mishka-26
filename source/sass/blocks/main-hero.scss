@@ -29,7 +29,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 158px global.$padding-big 120px;
+    padding-top: 96;
   }
 }
 
@@ -51,7 +51,10 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 158px global.$padding-big 120px;
+    max-width: 715px;
+    padding: 0 global.$padding-big;
+    @include global.fonter(700, 53px, 57px);
+
   }
 }
 
@@ -95,6 +98,7 @@
     right: 36px;
     display: block;
     width: 100%;
+    height: 100%;
     background: url("../img/icons/icon-interior.svg") no-repeat top right;
     opacity: 0.5;
   }
@@ -106,6 +110,7 @@
     right: 27px;
     display: block;
     width: 100%;
+    height: 100%;
     background: url("../img/icons/icon-toy.svg") no-repeat top right;
     opacity: 0.5;
   }

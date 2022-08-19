@@ -20,10 +20,6 @@
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
-
-  @media (min-width: global.$width-big) {
-    max-width: 1150px;
-  }
 }
 
 .page__title {

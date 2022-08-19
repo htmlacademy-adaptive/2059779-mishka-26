@@ -13,4 +13,14 @@
   &:active {
     opacity: var(--opacity-hover);
   }
+
+  @media (min-width: global.$width-big) {
+    gap: 20px;
+  }
+}
+
+.promo-menu__item {
+  @media (min-width: global.$width-big) {
+    padding-right: 16px;
+  }
 }
