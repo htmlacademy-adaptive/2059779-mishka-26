@@ -6,20 +6,3 @@
   line-height: $line;
 }
 /* Я подумал, что название шрифта можно вынести в переменную, но с другой стороны всё равно его где-то нужно менять, если переиспользовать. А за переменной нужно идти в другой файл. Поэтому оставил здесь. */
-
-@mixin sizer($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-
-@mixin centerer($x-axis: center, $y-axis: center) {
-  display: flex;
-  align-items: $y-axis;
-  justify-content: $x-axis;
-}
-
-@mixin list-reseter {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}

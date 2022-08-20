@@ -1,10 +1,51 @@
 @use "../utils/global.scss";
 
 .page-footer {
-  padding: 25px 30px 23px;
+  position: relative;
+  padding: 25px global.$padding-small 23px;
   background-color: var(--page-content-background);
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 51px global.$padding-medium 58px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 25px global.$padding-big 23px;
+  }
+}
+
+.page-footer__logo {
+  @media (min-width: global.$width-small) {
+    display: none;
+  }
+
+  @media (min-width: global.$width-medium) {
+    display: block;
+  }
 }
 
 .page-footer__social {
-  margin-bottom: 28px;
+  padding-bottom: 28px;
+
+  @media (min-width: global.$width-small) {
+    border-bottom: 1px solid var(--neutral-light);
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: global.$width-small) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding: 0;
+  }
 }

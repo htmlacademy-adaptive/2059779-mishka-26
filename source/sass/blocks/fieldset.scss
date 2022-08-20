@@ -4,42 +4,163 @@
   padding: 0;
   border: none;
 
+  @media (min-width: global.$width-medium) {
+    display: grid;
+    grid-template-columns: 25.15% 74.85%;
+    padding: 50px global.$padding-medium 50px;
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-template-columns: 14.11% 85.89%;
+    padding: 50px 225px 50px 97px;
+  }
+
   &--radio {
     display: grid;
-    row-gap: 11px;
+    row-gap: 30px;
+    padding-bottom: 31px;
   }
 
   &--check {
     display: grid;
-    row-gap: 23px;
+    row-gap: 25px;
+    padding-bottom: 33px;
   }
 
   &--person {
     display: grid;
-    row-gap: 22px;
+    row-gap: 29px;
+    padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) {
+      padding-top: 66px;
+    }
+  }
+
+  &--phone {
+    display: grid;
+    row-gap: 5px;
+    padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) {
+      padding-top: 64px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &--email {
+    display: grid;
+    row-gap: 5px;
+    padding-bottom: 35px;
+
+    @media (min-width: global.$width-medium) {
+      padding-top: 12px;
+    }
+  }
+
+  &--additional {
+    display: grid;
+    row-gap: 23px;
+  }
+
+  &--accent {
+    @media (min-width: global.$width-medium) {
+      background-color: var(--page-content-background);
+    }
   }
 }
 
 .fieldset__title {
+  display: flex;
+  column-gap: 22px;
   margin: 0;
-  margin-bottom: 22px;
   @include global.fonter(700, 17px, 17px);
   text-transform: uppercase;
   color: var(--accent-color);
+
+  @media (min-width: global.$width-medium) {
+    flex-basis: 25.15%;
+    padding-top: 12px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    align-self: center;
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--accent-color);
+
+    @media (min-width: global.$width-medium) {
+      display: none;
+    }
+  }
+}
+
+.fieldset__list {
+  display: grid;
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &--radio {
+    row-gap: 11px;
+  }
+
+  &--check {
+    row-gap: 23px;
+
+    @media (min-width: global.$width-medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    @media (min-width: global.$width-big) {
+      column-gap: 68px;
+      row-gap: 24px;
+    }
+  }
+
+  &--text {
+    row-gap: 22px;
+  }
 }
 
 .fieldset__label {
   display: grid;
   align-items: center;
 
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    column-gap: 25px;
+    width: 100%;
+  }
+
   &--radio {
     grid-template-columns: 42px auto;
     gap: 17px;
+
+    @media (min-width: global.$width-medium) {
+      /* Вот в таких случаях можно вкладывать медиа внутрь? Не слишком глубоко получается? */
+      gap: 26px;
+    }
   }
 
   &--check {
     grid-template-columns: 38px auto;
     gap: 23px;
+
+    @media (min-width: global.$width-medium) {
+      flex-basis: 40%;
+    }
+
+    @media (min-width: global.$width-medium) {
+      flex-basis: 25%; /* Тут надпись выпадает дальше общего паддинга. Потом поправлю для PP. */
+    }
   }
 
   &--phone {
@@ -51,7 +172,8 @@
     position: absolute;
     right: 7px;
     display: block;
-    @include global.sizer(25px, 24px);
+    width: 25px;
+    height: 24px;
     background: url("../img/icons/icon-phone.svg") no-repeat center;
   }
 
@@ -64,7 +186,8 @@
     position: absolute;
     right: 3px;
     display: block;
-    @include global.sizer(32px, 21px);
+    width: 32px;
+    height: 21px;
     background: url("../img/icons/icon-email.svg") no-repeat center;
   }
 }
@@ -72,6 +195,19 @@
 .fieldset__value {
   @include global.fonter(700, 17px, 18px);
   color: var(--dark);
+
+  &--radio {
+    @media (min-width: global.$width-medium) {
+      max-width: 86%;
+    }
+  }
+
+  &--check {
+    @media (min-width: global.$width-medium) {
+      max-width: 68%;
+      overflow-wrap: break-word;
+    }
+  }
 }
 
 .fieldset__radio {
@@ -134,7 +270,7 @@
   }
 
   &:checked::before {
-    transform: scale(1) rotate(45deg);
+    transform: rotate(45deg);
   }
 
   &:hover {
@@ -166,6 +302,12 @@
     border-bottom: 2px solid var(--accent-color);
   }
 
+  &--accent {
+    @media (min-width: global.$width-medium) {
+      background-color: var(--page-content-background);
+    }
+  }
+
   &--textarea {
     padding: 17px;
     border: 2px solid var(--dark);
@@ -177,5 +319,9 @@
 
   &--textarea:active {
     border: 2px solid var(--accent-color);
+  }
+
+  @media (min-width: global.$width-medium) {
+    flex-grow: 1;
   }
 }

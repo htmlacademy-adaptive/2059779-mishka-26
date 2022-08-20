@@ -12,7 +12,9 @@
 }
 
 .product-order__size-choser {
-  @include global.centerer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 7px;
   border: none;
 }

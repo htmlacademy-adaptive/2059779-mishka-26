@@ -1,13 +1,25 @@
 @use "../utils/global.scss";
 
 .accomplishments {
-  padding: 31px 30px 45px;
+  padding: 31px 0 45px;
+
+  @media (min-width: global.$width-medium) {
+    padding: 56px 0 83px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 68px 200px 90px global.$padding-left-big;
+  }
 }
 
 .accomplishments__title {
   margin: 0;
   margin-bottom: 28px;
-
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(700, 43px, 50px);
+    margin-bottom: 42px;
+  }
 }

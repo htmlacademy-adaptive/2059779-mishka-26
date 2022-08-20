@@ -1,8 +1,18 @@
 @use "../utils/global.scss";
 
 .order-form {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .order-form__lead {
@@ -10,6 +20,15 @@
   padding-top: 17px;
   padding-bottom: 29px;
   @include global.fonter(400, 13px, 24px);
+
+  @media (min-width: global.$width-medium) {
+    padding: 54px global.$padding-medium 13px;
+    @include global.fonter(400, 17px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 99px 223px 30px 225px;
+  }
 }
 
 .order-form__inputs {
@@ -20,4 +39,39 @@
   margin-top: 17px;
   margin-bottom: 30px;
   @include global.fonter(400, 14px, 16px);
+
+  @media (min-width: global.$width-medium) {
+    margin: 0;
+    @include global.fonter(400, 17px, 30px);
+    order: 2;
+    flex-grow: 1;
+    max-width: 50%;
+  }
+
+  @media (min-width: global.$width-big) {
+    text-align: right;
+  }
+}
+
+.order-form__footer {
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 49px 225px 50px 218px;
+  }
+}
+
+.order-form__button {
+  @media (min-width: global.$width-medium) {
+    max-width: 40%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

@@ -1,18 +1,23 @@
 @forward "mixins.scss";
 @forward "fonts.scss";
+@forward "variables.scss";
+@forward "reset-list.scss";
+@forward "visually-hidden.scss";
 
 /* Colors */
 :root {
   --page-background: #ffffff;
   --page-content-background: #f1f1f1;
-  --hero-background: #fafafa;
+  --hero-background: #f9f9f9;
   --dark: #000000;
+  --dark-01: #0000001a;
   --dark-03: #0000004d;
   --semi-dark: #444444;
   --semi-dark-01: #4444441a;
   --semi-dark-03: #4444444d;
-  --social-dark: #231f20;
+  --dark-action: #231f20;
   --neutral: #ececec;
+  --neutral-light: #e5e5e5;
   --neutral-dark: #6c6c6c;
   --light: #ffffff;
   --light-03: #ffffff4d;
@@ -28,6 +33,7 @@
   --icon-opacity-active: 0.3;
   --modal-shadow: 0px 5px 10px #00010140;
   --card-shadow-hover: 0px 6px 10px #0000001a;
+  --card-shadow-hover-right: 6px 2px 14px -3px #0000001a;
   --card-shadow-active: 0px 3px 5px #0000001a;
   --transition: 120ms ease-in-out;
 }
@@ -37,18 +43,4 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Не вижу смысла делать этот класс в отдельном файле или миксином. В рамках БЭМа это блок, но утилитарный. */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }

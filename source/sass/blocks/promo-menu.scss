@@ -1,9 +1,5 @@
 @use "../utils/global.scss";
 
-.promo-menu {
-  @include global.list-reseter;
-}
-
 .promo-menu__link {
   display: block;
   @include global.fonter(700, 15px, 24px);
@@ -16,5 +12,15 @@
 
   &:active {
     opacity: var(--opacity-hover);
+  }
+
+  @media (min-width: global.$width-big) {
+    gap: 20px;
+  }
+}
+
+.promo-menu__item {
+  @media (min-width: global.$width-big) {
+    padding-right: 16px;
   }
 }

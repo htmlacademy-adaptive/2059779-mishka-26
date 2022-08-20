@@ -1,43 +1,196 @@
 @use "../utils/global.scss";
 
 .promo-card {
-  padding: 31px 30px 36px;
+  padding: 31px 0 36px;
+
+  /* stylelint-disable */
+  @media (min-width: global.$width-medium) {
+    display: grid;
+    column-gap: 42px;
+    grid-template-columns: 43.71% 50%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "card-header card-header" /* Ругается тут на отступы */
+                          "card-description card-image"
+                          "card-price card-image"
+                          "card-button card-image";
+    padding: 40px 0 52px;
+  }
+  /* stylelint-enable */
+
+  @media (min-width: global.$width-big) {
+    column-gap: 0;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(4, auto);
+    padding: 40px 0 52px global.$padding-left-big;
+  }
+}
+
+.promo-card__header {
+  position: relative;
+  grid-area: card-header;
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-self: start;
+    z-index: 1;
+    width: 100%;
+    padding-top: 61px;
+  }
 }
 
 .promo-card__title {
+  grid-area: card-title;
   margin: 0;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 37px;
+    @include global.fonter(700, 43px, 50px);
+  }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 35px;
+    @include global.fonter(700, 53px, 57px);
+  }
 }
 
 .promo-card__subtitle {
+  grid-area: card-subtitle;
   margin: 0;
   margin-bottom: 18px;
   @include global.fonter(700, 17px, 20px);
+  text-transform: uppercase;
   color: var(--accent-color);
+
+  @media (min-width: global.$width-medium) {
+    align-self: center;
+    max-width: min-content;
+    margin-right: 13px;
+    margin-bottom: 35px;
+    @include global.fonter(700, 17px, 17px);
+    text-align: center;
+  }
+
+  @media (min-width: global.$width-big) {
+    position: absolute;
+    left: -130px;
+  }
 }
 
 .promo-card__description {
+  grid-area: card-description;
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
+
+.promo-card__lead {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 13px;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 48px;
+    @include global.fonter(400, 17px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-right: 58px;
+  }
 }
 
 .promo-card__feature {
   display: grid;
   grid-template-columns: auto auto;
+  max-width: 100%;
   margin: 0;
   margin-bottom: 41px;
   padding: 0;
+
+  @media (min-width: global.$width-medium) {
+    grid-template-columns: fit-content(50%) auto;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-right: 58px;
+  }
+}
+
+.promo-card__feature-name {
+  margin: 0;
+  padding: 12px 30px 12px 0;
+  @include global.fonter(400, 15px, 20px);
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--neutral);
+
+  @media (min-width: global.$width-big) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+.promo-card__feature-value {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @include global.fonter(400, 15px, 20px);
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--neutral);
+
+  @media (min-width: global.$width-big) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 
 .promo-card__image {
+  grid-area: card-image;
   display: block;
-  margin-top: 26px;
+  margin-bottom: 26px;
+
+  @media (min-width: global.$width-big) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
 }
 
 .promo-card__price {
-  @include global.centerer(center, center);
+  grid-area: card-price;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-bottom: 25px;
   @include global.fonter(700, 17px, 24px);
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 33px;
+    @include global.fonter(700, 20px, 24px);
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    padding-right: 58px;
+  }
+}
+
+.promo-card__button {
+  grid-area: card-button;
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    max-width: 292px; /* Не знаю, что с этими кнопками делать. */
+    justify-self: start;
+  }
 }

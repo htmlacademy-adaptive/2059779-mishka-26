@@ -1,14 +1,14 @@
 @use "../utils/global.scss";
 
 .social {
-  @include global.list-reseter;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 29px;
 }
 
 .social__img {
-  color: var(--social-dark);
+  color: var(--dark-action);
 
   &:hover {
     color: var(--accent-color-action-dark);

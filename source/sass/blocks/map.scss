@@ -11,9 +11,11 @@
 }
 
 .map__image {
-  @include global.sizer(320px, 455px);
+  width: 100%;
+  height: 455px;
 }
 
 .map__body {
-  @include global.sizer(320px, 455px);
+  width: 100%;
+  height: 455px;
 }

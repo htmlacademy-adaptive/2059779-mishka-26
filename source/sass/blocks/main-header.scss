@@ -1,6 +1,46 @@
 @use "../utils/global.scss";
 
 .main-header {
-  padding: 22px 30px;
+  position: relative;
   background-color: var(--page-background);
+  border-bottom: 2px solid var(--neutral);
+
+  @media (min-width: global.$width-small) {
+    min-height: 79px;
+    padding: 0;
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding: 0;
+  }
+}
+
+.main-header__navigation--open {
+  @media (min-width: global.$width-small) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  @media (min-width: global.$width-medium) {
+    position: static;
+  }
+}
+
+.main-header__navigation--close .main-navigation__main-menu {
+  @media (min-width: global.$width-small) {
+    display: none;
+  }
+}
+
+.main-header__navigation--close .main-navigation__user-menu {
+  @media (min-width: global.$width-small) {
+    display: none;
+  }
 }

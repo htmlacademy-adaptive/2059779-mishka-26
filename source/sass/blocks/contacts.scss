@@ -3,31 +3,132 @@
 .contacts {
   padding-top: 38px;
   padding-bottom: 39px;
+
+  @media (min-width: global.$width-medium) {
+    padding-top: 68px;
+    padding-bottom: 57px;
+  }
+
+  /* stylelint-disable */
+  @media (min-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas: "contacts-title contacts-map"
+                          "contacts-address contacts-map"
+                          "contacts-action contacts-map";
+    padding: 71px global.$padding-big 105px global.$padding-left-big;
+  }
 }
+  /* stylelint-enable */
 
 .contacts__title {
+  grid-area: contacts-title;
   margin: 0;
   margin-bottom: 28px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
   @include global.fonter(700, 25px, 30px);
   color: var(--dark);
+
+  &::after {
+    @media (min-width: global.$width-medium) {
+      content: "";
+      display: block;
+      width: 47px;
+      height: 81px;
+      background: url("../img/icons/icon-map-flag.svg") no-repeat center center transparent;
+    }
+
+    @media (min-width: global.$width-big) {
+      position: absolute;
+      left: -80px;
+    }
+  }
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 49px;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+    @include global.fonter(700, 43px, 50px);
+  }
+
+  @media (min-width: global.$width-big) {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.contacts__adress {
-  padding-left: 30px;
-  padding-right: 30px;
+.contacts__address {
+  grid-area: contacts-address;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
   @include global.fonter(400, 14px, 30px);
   color: var(--main-font-color);
+
+  @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+    @include global.fonter(400, 17px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .contacts__fields {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 42px;
   margin: 0;
   margin-bottom: 62px;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 49px;
+  }
+}
+
+.contacts__item {
+  flex-basis: 29.35%;
+  padding-right: 10px;
+  overflow-wrap: anywhere;
+
+  @media (min-width: global.$width-medium) {
+    flex-basis: 12%;
+    padding-right: 20px;
+  }
+
+  @media (min-width: global.$width-big) {
+    flex-basis: 25%;
+    padding-right: 10px;
+  }
 }
 
 .contacts__text {
+  flex-basis: 70.65%;
   margin: 0;
+  overflow-wrap: anywhere;
+
+  @media (min-width: global.$width-medium) {
+    flex-basis: 38%;
+  }
+
+  @media (min-width: global.$width-big) {
+    flex-basis: 75%;
+    padding-left: 10px;
+  }
+}
+
+.contacts__text:not(:last-child) {
+  @media (min-width: global.$width-medium) {
+    padding-right: 20px;
+  }
 }
 
 .contacts__link {
@@ -47,10 +148,40 @@
 }
 
 .contacts__map {
+  grid-area: contacts-map;
   margin-bottom: 42px;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__action {
+  grid-area: contacts-action;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: global.$width-big) {
+    justify-self: start;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .contacts__button {
-  padding-left: 30px;
-  padding-right: 30px;
+  @media (min-width: global.$width-medium) {
+    width: max-content;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }

@@ -1,7 +1,28 @@
 @use "../utils/global.scss";
 
 .main-menu {
-  @include global.list-reseter;
+  display: block;
+  width: 100%;
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    padding-left: global.$padding-medium;
+  }
+}
+
+.main-menu__item {
+  @media (min-width: global.$width-small) {
+    padding-left: 76px;
+    background-color: var(--page-background);
+    border-bottom: 2px solid var(--neutral);
+  }
+  @media (min-width: global.$width-medium) {
+    padding-left: 0;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .main-menu__link {
@@ -18,5 +39,13 @@
 
   &:active {
     opacity: var(--opacity-active);
+  }
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(700, 15px, 24px);
+  }
+
+  @media (min-width: global.$width-big) {
+    @include global.fonter(700, 17px, 24px);
   }
 }

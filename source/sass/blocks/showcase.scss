@@ -1,45 +1,128 @@
 @use "../utils/global.scss";
 
 .showcase {
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-bottom: 58px;
+  padding-left: global.$padding-small;
+  padding-right: global.$padding-small;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 64px;
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-left: global.$padding-big;
+    padding-right: global.$padding-big;
+  }
 }
 
 .showcase__content {
   padding-top: 22px;
   padding-bottom: 33px;
   border: 1px solid var(--neutral);
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover); /* Как сделать active при нажатии на ребёнка у родителя, пока не понимаю.*/
+  }
+
+  @media (min-width: global.$width-medium) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 46px;
+  }
+
+  @media (min-width: global.$width-big) {
+    display: grid;
+    grid-template-columns: 65.05% 34.95%;
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 .showcase__title {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
   margin: 0;
   margin-bottom: 27px;
-  padding-left: 91px;
+  padding-left: 34px;
   @include global.fonter(700, 17px, 24px);
   color: var(--dark);
 
   &::before {
     content: "";
-    position: absolute;
-    top: 25%;
-    left: 34px;
+    flex-basis: 40px;
     display: block;
-    @include global.sizer(32px, 22px);
+    width: 32px;
+    height: 22px;
     background: url("../img/icons/icon-camera.svg") no-repeat transparent center center;
+  }
+
+  @media (min-width: global.$width-medium) {
+    gap: 33px;
+    margin-bottom: 25px;
+    @include global.fonter(700, 20px, 24px);
+  }
+
+  @media (min-width: global.$width-big) {
+    order: 2;
+    align-self: end;
+    flex-flow: column;
+    gap: 27px;
+    align-items: flex-start;
+    max-width: 180px;
+    height: max-content;
+    margin-bottom: 27px;
+    padding-top: 47px;
+    padding-left: 79px;
+  }
+}
+
+.showcase__video {
+  margin-bottom: 35px;
+
+  @media (min-width: global.$width-medium) {
+    order: -1;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: global.$width-big) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
   }
 }
 
 .showcase__description {
   margin: 0;
-  margin-top: 35px;
   margin-bottom: 41px;
   padding-left: 34px;
   padding-right: 34px;
   @include global.fonter(400, 13px, 24px);
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(400, 15px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    order: 3;
+    margin-bottom: 50px;
+    padding-left: 79px;
+    padding-right: 0;
+  }
 }
 
 .showcase__button-container {
   padding-left: 34px;
   padding-right: 34px;
+
+  @media (min-width: global.$width-medium) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  @media (min-width: global.$width-big) {
+    order: 4;
+    padding-left: 79px;
+  }
 }

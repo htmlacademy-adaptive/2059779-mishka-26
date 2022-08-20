@@ -1,6 +1,8 @@
 @use "utils/global.scss";
 @use "blocks/page.scss";
+@use "blocks/container.scss";
 @use "blocks/button.scss";
+@use "blocks/toggle.scss";
 @use "blocks/logo.scss";
 @use "blocks/slider.scss";
 @use "blocks/map.scss";
@@ -10,16 +12,15 @@
 @use "blocks/video.scss";
 @use "blocks/image.scss";
 @use "blocks/main-header.scss";
+@use "blocks/main-navigation.scss";
 @use "blocks/main-menu.scss";
 @use "blocks/user-menu.scss";
 @use "blocks/promo-menu.scss";
 @use "blocks/main-hero.scss";
-@use "blocks/main-content.scss";
 @use "blocks/promo-card.scss";
 @use "blocks/divider.scss";
 @use "blocks/accomplishments.scss";
 @use "blocks/features-list.scss";
-@use "blocks/reviews.scss";
 @use "blocks/contacts.scss";
 @use "blocks/page-footer.scss";
 @use "blocks/modal.scss";
@@ -29,4 +30,3 @@
 @use "blocks/showcase.scss";
 @use "blocks/order-form.scss";
 @use "blocks/fieldset.scss";
-@use "blocks/form.scss";
