@@ -13,6 +13,6 @@
   @media (min-width: global.$width-big) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 51px;
-    padding: 111px global.$padding-big 57px;
+    padding: 111px var(--page-padding-big) 57px;
   }
 }

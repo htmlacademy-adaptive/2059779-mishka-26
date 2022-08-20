@@ -12,7 +12,7 @@
 
   @media (min-width: global.$width-big) {
     grid-template-columns: 14.11% 85.89%;
-    padding: 50px 225px 50px 97px;
+    padding: 50px var(--page-padding-x-big) 50px var(--page-padding-left-medium);
   }
 
   &--radio {

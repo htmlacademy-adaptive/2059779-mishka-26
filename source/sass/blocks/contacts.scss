@@ -19,6 +19,10 @@
                           "contacts-action contacts-map";
     padding: 71px global.$padding-big 105px global.$padding-left-big;
   }
+
+  @media (min-width: global.$width-x-big) { /* Не очень изящно вводить переменную ради одного места, но не знаю, как обойти это. */
+    padding-right: 0;
+  }
 }
   /* stylelint-enable */
 

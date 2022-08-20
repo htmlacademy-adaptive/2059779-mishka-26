@@ -33,14 +33,14 @@
   }
 }
 
-.main-header__navigation--close .main-navigation__main-menu {
-  @media (min-width: global.$width-small) {
+.main-header__navigation--close .main-navigation__main-menu { /* А так вообще можно, что у меня в классе блока упоминается чужой элемент? */
+  @media not all and (min-width: global.$width-medium) {
     display: none;
   }
 }
 
 .main-header__navigation--close .main-navigation__user-menu {
-  @media (min-width: global.$width-small) {
+  @media not all and (min-width: global.$width-medium) {
     display: none;
   }
 }

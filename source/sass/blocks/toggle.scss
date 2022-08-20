@@ -24,6 +24,7 @@
   padding: 0;
   background-color: var(--dark-action);
   border: none;
+  transition: var(--transition);
 
   &::before {
     content: "";
@@ -41,5 +42,19 @@
     height: 2px;
     background-color: var(--dark-action);
     transform: translateY(4px);
+  }
+
+  &--close {
+    transform-origin: center center;
+    transform: rotate(45deg);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      transform-origin: center center;
+      transform: translateY(0) rotate(-90deg);
+    }
   }
 }
