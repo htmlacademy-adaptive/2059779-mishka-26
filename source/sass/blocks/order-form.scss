@@ -9,7 +9,7 @@
     padding-right: 0;
   }
 
-  @media (min-width: global.$width-big) {
+  @media (min-width: global.$width-x-big) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -27,7 +27,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 99px 223px 30px 225px;
+    padding: 99px var(--page-padding-x-big) 30px var(--page-padding-x-big);
   }
 }
 
@@ -64,7 +64,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 49px 225px 50px 218px;
+    padding: 49px var(--page-padding-x-big) 50px var(--page-padding-x-big);
   }
 }
 

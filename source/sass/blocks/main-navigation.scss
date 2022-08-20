@@ -76,6 +76,7 @@
     flex-basis: 40%;
     border-bottom: 2px solid var(--neutral);
     background-color: var(--page-background);
+    padding-left: var(--page-padding-big);
   }
 
   &--home-page {
@@ -99,12 +100,14 @@
     flex-basis: 50%;
     flex-grow: 1;
     justify-content: flex-end;
+    padding-right: global.$padding-medium;
     border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-big) {
     order: 3;
     flex-basis: 40%;
+    padding-right: var(--page-padding-big);
   }
 }
 
@@ -118,7 +121,7 @@
     flex-wrap: wrap;
     order: 4;
     flex-basis: 60%;
-    padding: 19px global.$padding-big;
+    padding: 19px global.$padding-big 19px var(--page-padding-big);
     background-color: var(--page-content-background);
   }
 
@@ -147,6 +150,7 @@
   @media (min-width: global.$width-big) {
     order: 5;
     flex-basis: 40%;
+    padding-right: var(--page-padding-big);
   }
 
   &--home-page {

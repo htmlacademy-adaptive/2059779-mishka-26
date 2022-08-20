@@ -12,8 +12,8 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding-left: global.$padding-big;
-    padding-right: global.$padding-big;
+    padding-left: var(--page-padding-big);
+    padding-right: var(--page-padding-big);
   }
 }
 

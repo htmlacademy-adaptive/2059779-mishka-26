@@ -12,14 +12,16 @@
     display: none;
     width: 100%;
     height: 24px;
-    background: url("../img/divider-header.svg") repeat-x center;
 
     @media (min-width: global.$width-medium) {
       display: block;
+      background: url("../img/hero-divider-medium.png") repeat-x center;
     }
 
     @media (min-width: global.$width-big) {
       display: block;
+      height: 34px;
+      background: url("../img/hero-divider-big.png") repeat-x center;
     }
   }
 
@@ -70,6 +72,8 @@
   @media (min-width: global.$width-big) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: var(--page-padding-big);
+    padding-right: var(--page-padding-big);
   }
 }
 

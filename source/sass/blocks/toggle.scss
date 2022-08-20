@@ -42,4 +42,18 @@
     background-color: var(--dark-action);
     transform: translateY(4px);
   }
+
+  &--close {
+    transform-origin: center center;
+    transform: rotate(45deg);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      transform-origin: center center;
+      transform: translateY(0px) rotate(-90deg);
+    }
+  }
 }
