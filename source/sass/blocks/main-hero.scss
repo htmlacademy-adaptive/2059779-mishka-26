@@ -80,11 +80,13 @@
 .main-hero__button {
   position: relative;
   display: block;
-  min-height: 103px;
-  padding: 24px 160px 31px 30px;
+  min-height: 108px;
+  margin-bottom: -5px;
+  padding: 24px 160px 36px 30px;
   @include global.fonter(700, 19px, 24px);
   color: var(--light);
   text-decoration: none;
+  transition: var(--transition);
 
   &--interior {
     background-color: var(--accent-color);
@@ -116,6 +118,10 @@
     height: 100%;
     background: url("../img/icons/icon-toy.svg") no-repeat top right;
     opacity: 0.5;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
   }
 
   &--interior:hover {
