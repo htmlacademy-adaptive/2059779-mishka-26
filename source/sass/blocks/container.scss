@@ -15,4 +15,22 @@
     padding-left: var(--page-padding-big);
     padding-right: var(--page-padding-big);
   }
+
+  &--full-width-small {
+    @media (min-width: global.$width-small) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media (min-width: global.$width-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media (min-width: global.$width-big) {
+      position: static;
+      padding-left: var(--page-padding-big);
+      padding-right: var(--page-padding-big);
+    }
+  }
 }
