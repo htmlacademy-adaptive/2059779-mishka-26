@@ -35,6 +35,16 @@
   }
 }
 
+.main-menu__item:first-child {
+  @media (min-width: global.$width-small) {
+    border-top: 2px solid var(--neutral);
+  }
+
+  @media (min-width: global.$width-medium) {
+    border-top: none;
+  }
+}
+
 .main-menu__item:not(:last-child) {
   @media (min-width: global.$width-big) {
     border-right: 1px solid var(--dark-01);

@@ -44,6 +44,7 @@
   border: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  pointer-events: none; /* Чтобы нажатие по кнопке попадало в ссылку под ней. */
 }
 
 .video__icon-background {

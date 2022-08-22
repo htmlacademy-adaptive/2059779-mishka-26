@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 79px auto;
+    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-medium) {
@@ -40,6 +41,7 @@
 }
 
 .main-navigation__logo {
+  position: relative;
   height: 35px;
 
   @media (min-width: global.$width-small) and (max-width: global.$width-medium) {
@@ -56,9 +58,8 @@
     align-self: stretch;
     flex-basis: 30%;
     height: auto;
-    min-height: 91px; /* Если ставить 89 как у соседнего блока, то у бордера ступенька. Хз почему. */
+    min-height: 91px;
     padding-left: global.$padding-medium;
-    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-big) {
@@ -67,6 +68,23 @@
     max-width: 20%;
     justify-content: center;
     padding: 0;
+  }
+}
+
+.main-navigation__logo::after {
+  @media (min-width: global.$width-medium) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    margin-left: - global.$padding-medium;
+    background-color: var(--neutral);
+  }
+
+  @media (min-width: global.$width-big) {
+    content: "";
+    margin: 0;
   }
 }
 
@@ -101,7 +119,6 @@
     flex-basis: 40%;
     flex-grow: 1;
     margin-left: -33px;
-    border-bottom: 2px solid var(--neutral);
     background-color: var(--page-background);
     padding-left: var(--page-padding-big);
   }
@@ -128,7 +145,6 @@
     flex-grow: 1;
     justify-content: flex-end;
     padding-right: global.$padding-medium;
-    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-big) {

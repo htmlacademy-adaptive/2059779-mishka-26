@@ -3,10 +3,9 @@
 .main-header {
   position: relative;
   background-color: var(--page-background);
-  border-bottom: 2px solid var(--neutral);
 
   @media (min-width: global.$width-small) {
-    min-height: 79px;
+    min-height: 81px;
     padding: 0;
   }
 

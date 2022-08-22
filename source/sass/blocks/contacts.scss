@@ -55,8 +55,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 49px;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: 0;
+    padding-right: 0;
     @include global.fonter(700, 43px, 50px);
   }
 
@@ -75,8 +75,8 @@
   color: var(--main-font-color);
 
   @media (min-width: global.$width-medium) {
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: 0;
+    padding-right: 0;
     @include global.fonter(400, 17px, 30px);
   }
 

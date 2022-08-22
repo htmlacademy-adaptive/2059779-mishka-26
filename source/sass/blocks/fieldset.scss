@@ -158,7 +158,7 @@
       flex-basis: 40%;
     }
 
-    @media (min-width: global.$width-medium) {
+    @media (min-width: global.$width-big) {
       flex-basis: 25%; /* Тут надпись выпадает дальше общего паддинга. Потом поправлю для PP. */
     }
   }
