@@ -9,6 +9,10 @@
     flex-wrap: wrap;
     column-gap: 36px;
   }
+
+  @media (min-width: global.$width-big) {
+    column-gap: 0;
+  }
 }
 
 .main-menu__item {
@@ -17,10 +21,23 @@
     background-color: var(--page-background);
     border-bottom: 2px solid var(--neutral);
   }
+
   @media (min-width: global.$width-medium) {
     padding-left: 0;
     background-color: transparent;
     border: none;
+  }
+
+  @media (min-width: global.$width-big) {
+    flex-basis: 50%;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+
+.main-menu__item:not(:last-child) {
+  @media (min-width: global.$width-big) {
+    border-right: 1px solid var(--dark-01);
   }
 }
 
