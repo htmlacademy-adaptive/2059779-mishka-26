@@ -16,6 +16,12 @@
 }
 
 .map__body {
-  width: 100%;
+  width: 100vw;
   height: 455px;
+
+  @media (min-width: global.$width-big) {
+    width: 100%;
+    height: 457px;
+  }
 }
+

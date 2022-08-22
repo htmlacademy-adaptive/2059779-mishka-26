@@ -1,6 +1,8 @@
 @use "../utils/global.scss";
 
 .main-navigation {
+  overflow-x: hidden; /* Убирает горизонтальную прокрутку от псевдика, который шириной 100vw */
+
   @media (min-width: global.$width-small) {
     display: grid;
     grid-template-columns: 25% 50% 25%;

@@ -12,7 +12,6 @@
   @include global.fonter(400, 15px, 24px);
   color: var(--semi-dark);
   background-color: var(--page-background);
-  overflow-x: hidden; /* Нужно, чтобы псевдоэлементы с 100vw не вызывали горизонтальной прокрутки. */
 }
 
 .page__container {
