@@ -70,7 +70,7 @@
     grid-row: 1 / 2;
     align-self: center;
     justify-self: center;
-    padding-right: global.$padding-small;
+    margin-right: global.$padding-small;
   }
 
   @media (min-width: global.$width-medium) {

@@ -38,12 +38,6 @@
       display: none;
     }
   }
-
-  &--close .main-header__menu {
-    @media not all and (min-width: global.$width-medium) {
-      display: none;
-    }
-  }
 }
 
 .main-header__toggle {
