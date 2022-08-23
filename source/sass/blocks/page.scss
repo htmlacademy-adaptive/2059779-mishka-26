@@ -12,6 +12,7 @@
   @include global.fonter(400, 15px, 24px);
   color: var(--semi-dark);
   background-color: var(--page-background);
+  overflow-x: hidden; /* Убирает горизонтальную прокрутку от псевдика, который шириной 100vw */
 }
 
 .page__container {

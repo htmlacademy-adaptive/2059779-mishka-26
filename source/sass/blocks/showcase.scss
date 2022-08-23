@@ -1,12 +1,12 @@
 @use "../utils/global.scss";
 
 .showcase {
-  margin-bottom: 58px;
+  padding-bottom: 58px;
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
   @media (min-width: global.$width-medium) {
-    margin-bottom: 64px;
+    padding-bottom: 64px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
   }

@@ -18,3 +18,38 @@
     padding: 0;
   }
 }
+
+.main-header__navigation {
+  &--open {
+    @media (min-width: global.$width-small) {
+      position: absolute; /* Блин, это нарушение БЭМа! */
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    @media (min-width: global.$width-medium) {
+      position: static;
+    }
+  }
+
+  &--close .main-header__menu {
+    @media not all and (min-width: global.$width-medium) {
+      display: none;
+    }
+  }
+
+  &--close .main-header__menu {
+    @media not all and (min-width: global.$width-medium) {
+      display: none;
+    }
+  }
+}
+
+.main-header__toggle {
+  display: none;
+
+  &--open {
+    display: block;
+  }
+}

@@ -22,6 +22,7 @@
 
 .promo-menu__item {
   @media (min-width: global.$width-big) {
+    display: flex;
     flex-basis: 50%; /* Переполняется пункт меню некрасиво вниз, но при увеличении экрана сохраняется горизонтальная синхронизация с пунктами меню сайта, которые стоят выше. */
     padding-left: 31px;
     padding-right: 31px;
