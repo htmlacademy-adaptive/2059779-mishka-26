@@ -61,6 +61,12 @@
     border: 2px solid var(--accent-color);
   }
 
+  &--accent {
+    color: var(--light);
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
   @media (min-width: global.$width-medium) {
     @include global.fonter(700, 17px, 17px);
   }
