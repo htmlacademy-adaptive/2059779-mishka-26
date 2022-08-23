@@ -179,6 +179,29 @@
       </div>
     </footer>
   </div>
+  <div class="modal modal--close">
+    <div class="modal__message">
+      <section class="product-order">
+        <h2 class="product-order__title">Добавить в&nbsp;корзину</h2>
+        <p class="product-order__message">Выберите размер:</p>
+        <form class="product-order__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="product-order__size-choser">
+            <legend class="visually-hidden">Варианты размеров:</legend>
+            <label class="product-order__label">
+              <input class="product-order__input product-order__input--size-s" type="radio" name="product-size" value="S" checked>
+            </label>
+            <label class="product-order__label">
+              <input class="product-order__input product-order__input--size-m" type="radio" name="product-size" value="M">
+            </label>
+            <label class="product-order__label">
+              <input class="product-order__input product-order__input--size-l" type="radio" name="product-size" value="L">
+            </label>
+          </fieldset>
+          <button class="product-order__add-button button button--accent" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
+  </div>
   <script src="js/menu-toggle.js"></script>
 </body>
 

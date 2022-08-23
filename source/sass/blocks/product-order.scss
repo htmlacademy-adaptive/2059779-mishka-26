@@ -34,4 +34,59 @@
 
 .product-order__label {
   flex-grow: 1;
+  display: flex;
+}
+
+.product-order__input {
+  display: grid;
+  justify-content: center;
+  place-content: center;
+  flex-grow: 1;
+  appearance: none;
+  margin: 0;
+  width: 38px;
+  height: 38px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font: inherit;
+  color: var(--semi-dark);
+  background-color: transparent;
+  border: 2px solid var(--semi-dark-01);
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    @include global.fonter(700, 17px, 17px);
+  }
+
+  &:hover {
+    border: 2px solid var(--accent-color);
+  }
+
+  &:checked {
+    border: 2px solid var(--accent-color);
+  }
+
+  &:active {
+    border: 2px solid var(--dark-03);
+  }
+
+  &--size-s {
+    &::before {
+      content: "S"; /* Не знаю, как там JS работает. Может лучше было запихивать это в span? */
+    }
+  }
+
+  &--size-m {
+    &::before {
+      content: "M";
+    }
+  }
+
+  &--size-l {
+    &::before {
+      content: "L";
+    }
+  }
 }
