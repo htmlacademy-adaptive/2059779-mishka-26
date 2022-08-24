@@ -3,7 +3,15 @@
 .video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 26 / 15;
+
+  @media (min-width: global.$width-medium) {
+    aspect-ratio: 668 / 455; /* Убогие числа, поищу общий знаменатель. А всё потому что не получается забороть размеры обложки. */
+  }
+
+  @media (min-width: global.$width-big) {
+    aspect-ratio: 682 / 455;
+  }
 
   &:hover .video__icon {
     transform: scale(1.2);
@@ -15,7 +23,7 @@
   }
 }
 
-.video__cover { /* Здесь не получается побороть размеры обложки. Расползается на десктопной версии, и по высоте не добирает. */
+.video__cover {
   position: absolute;
   top: 0;
   left: 0;
