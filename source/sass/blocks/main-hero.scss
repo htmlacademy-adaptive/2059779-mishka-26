@@ -5,6 +5,11 @@
   padding-top: 73px;
   background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center -15px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-hero@2x.jpg");
+    background-size: 320px auto;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -15,23 +20,33 @@
 
     @media (min-width: global.$width-medium) {
       display: block;
-      background: url("../img/hero-divider-medium.png") repeat-x center;
+      background: url("../img/hero-divider-medium.svg") repeat-x center;
     }
 
     @media (min-width: global.$width-big) {
       display: block;
       height: 34px;
-      background: url("../img/hero-divider-big.png") repeat-x center;
+      background: url("../img/hero-divider-big.svg") repeat-x center;
     }
   }
 
   @media (min-width: global.$width-medium) {
     padding-top: 140px;
-    background: url("../img/main-hero__medium.jpg") no-repeat var(--hero-background) center -15px;
+    background: url("../img/main-hero-medium.jpg") no-repeat var(--hero-background) center -15px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-hero-medium@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   @media (min-width: global.$width-big) {
     padding-top: 96;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-hero-big@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 }
 

@@ -25,6 +25,7 @@
 
 .product-card__image-link {
   display: block;
+  background-color: var(--neutral);
 
   &:active .product-card__info {
     box-shadow: var(--card-shadow-active);
@@ -42,8 +43,14 @@
 }
 
 .product-card__image {
-  background-color: var(--neutral-dark);
+  background-color: var(--neutral);
+  max-width: 300px; /* Пусть на мобилке чуть-чуть тянется, на планшете фиксирован, а на десктопе снова тянется. Я размытия на таких размерах не увидел. */
+  margin: 0 auto;
   object-fit: cover;
+
+  @media (min-width: global.$width-medium) {
+    max-width: initial;
+  }
 }
 
 .product-card__info {

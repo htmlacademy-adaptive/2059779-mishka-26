@@ -15,7 +15,12 @@
   }
 }
 
-.video__cover {
+.video__cover { /* Здесь не получается побороть размеры обложки. Расползается на десктопной версии, и по высоте не добирает. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--neutral);
 }
 

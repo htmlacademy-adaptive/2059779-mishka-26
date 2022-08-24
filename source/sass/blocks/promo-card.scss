@@ -156,11 +156,14 @@
 .promo-card__image {
   grid-area: card-image;
   display: block;
+  max-width: 335px; /* Пусть чуть тянется, до того момента, как начинается размытие. */
+  margin: 0 auto;
   margin-bottom: 26px;
 
   @media (min-width: global.$width-big) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
+    max-width: 525px;
   }
 }
 
@@ -187,6 +190,7 @@
 
 .promo-card__button {
   grid-area: card-button;
+  align-self: start;
 
   @media (min-width: global.$width-big) {
     grid-column: 1 / 2;
