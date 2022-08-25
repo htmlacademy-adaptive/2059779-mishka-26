@@ -22,4 +22,9 @@
     @include global.fonter(700, 43px, 50px);
     margin-bottom: 42px;
   }
+
+  @media (min-width: global.$width-big) {
+    @include global.fonter(700, 53px, 57px);
+    margin-bottom: 39px;
+  }
 }

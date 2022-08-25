@@ -11,7 +11,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 78px 0 max(186px, 18%) global.$padding-left-big;
+    padding: 75px 0 max(186px, 18%) global.$padding-left-big;
   }
 
   &::before {
@@ -51,6 +51,11 @@
     @include global.fonter(700, 43px, 50px);
     margin-bottom: 39px;
   }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 35px;
+    @include global.fonter(700, 53px, 57px);
+  }
 }
 
 .slider__list {
@@ -88,6 +93,10 @@
     justify-self: end;
     width: 100%;
     margin: 0;
+  }
+
+  @media (min-width: global.$width-medium) {
+    max-width: 173px;
   }
 }
 
@@ -130,5 +139,9 @@
     margin-top: -6px; /* Не могу сообразить, как сделать так, чтобы крышка грида строилась по этому элементу. */
     padding-left: 26px;
     padding-right: 26px;
+  }
+
+  @media (min-width: global.$width-big) {
+    margin-top: 0;
   }
 }

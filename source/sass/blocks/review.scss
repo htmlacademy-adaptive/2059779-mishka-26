@@ -10,6 +10,10 @@
     @include global.fonter(400, 17px, 30px);
     text-shadow: 0 0 2px #ffffffbf; /* Эффекта не вижу. Возможно потому что фон вставлен через позиционированный псевдоэлемент. */
   }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 46px;
+  }
 }
 
 .review__author {
@@ -20,6 +24,10 @@
     display: flex;
     flex-direction: column;
     @include global.fonter(700, 18px, 24px);
+  }
+
+  @media (min-width: global.$width-big) {
+    @include global.fonter(700, 17px, 24px);
   }
 }
 

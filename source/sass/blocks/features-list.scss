@@ -9,6 +9,10 @@
     gap: 57px 2px;
     grid-auto-flow: row;
   }
+
+  @media (min-width: global.$width-big) {
+    gap: 57px 24px;
+  }
 }
 
 .features-list__item {

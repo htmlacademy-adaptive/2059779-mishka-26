@@ -24,6 +24,7 @@
     }
 
     @media (min-width: global.$width-big) {
+      bottom: -19px;
       display: block;
       height: 34px;
       background: url("../img/hero-divider-big.svg") repeat-x center;
