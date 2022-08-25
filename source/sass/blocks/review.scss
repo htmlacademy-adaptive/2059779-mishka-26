@@ -6,6 +6,7 @@
   @include global.fonter(400, 15px, 30px);
 
   @media (min-width: global.$width-medium) {
+    margin-bottom: 61px;
     @include global.fonter(400, 17px, 30px);
     text-shadow: 0 0 2px #ffffffbf; /* Эффекта не вижу. Возможно потому что фон вставлен через позиционированный псевдоэлемент. */
   }
@@ -23,7 +24,7 @@
 }
 
 .review__link {
-  @include global.fonter(400, 17px, 30px);
+  @include global.fonter(400, 17px, 34px);
   text-decoration: none;
   color: var(--semi-dark);
 
