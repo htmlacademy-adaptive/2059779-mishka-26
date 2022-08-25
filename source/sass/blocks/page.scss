@@ -12,6 +12,7 @@
   @include global.fonter(400, 15px, 24px);
   color: var(--semi-dark);
   background-color: var(--page-background);
+  overflow-x: hidden; /* Убирает горизонтальную прокрутку от псевдика, который шириной 100vw */
 }
 
 .page__container {
@@ -56,12 +57,12 @@
 
   @media (min-width: global.$width-medium) {
     display: block;
-    background: url("../img/hero-divider-medium.png") repeat-x center;
+    background: url("../img/hero-divider-medium.svg") repeat-x center;
   }
 
   @media (min-width: global.$width-big) {
     display: block;
     height: 34px;
-    background: url("../img/hero-divider-big.png") repeat-x center;
+    background: url("../img/hero-divider-big.svg") repeat-x center;
   }
 }

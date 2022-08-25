@@ -4,20 +4,12 @@
   display: block;
   background-color: transparent;
 
-  .logo__img {
-    color: var(--dark);
-  }
-
   &:hover {
-    .logo__img {
-      opacity: var(--opacity-hover);
-    }
+    opacity: var(--opacity-hover);
   }
 
   &:active {
-    .logo__img {
-      opacity: var(--opacity-active);
-    }
+    opacity: var(--opacity-active);
   }
 
   &--footer {

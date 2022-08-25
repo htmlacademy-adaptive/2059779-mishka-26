@@ -5,16 +5,19 @@
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 79px auto;
+    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-medium) {
     display: flex;
     flex-wrap: wrap;
     min-height: 89px;
+    border-bottom: none;
   }
 }
 
 .main-navigation__logo {
+  position: relative;
   height: 35px;
 
   @media (min-width: global.$width-small) and (max-width: global.$width-medium) {
@@ -31,16 +34,33 @@
     align-self: stretch;
     flex-basis: 30%;
     height: auto;
-    min-height: 91px; /* Если ставить 89 как у соседнего блока, то у бордера ступенька. Хз почему. */
+    min-height: 91px;
     padding-left: global.$padding-medium;
-    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-big) {
     order: 2;
     flex-basis: 20%;
+    max-width: 20%;
     justify-content: center;
     padding: 0;
+  }
+}
+
+.main-navigation__logo::after {
+  @media (min-width: global.$width-medium) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    margin-left: - global.$padding-medium;
+    background-color: var(--neutral);
+  }
+
+  @media (min-width: global.$width-big) {
+    content: "";
+    margin: 0;
   }
 }
 
@@ -50,7 +70,7 @@
     grid-row: 1 / 2;
     align-self: center;
     justify-self: center;
-    padding-right: global.$padding-small;
+    margin-right: global.$padding-small;
   }
 
   @media (min-width: global.$width-medium) {
@@ -59,9 +79,9 @@
 }
 
 .main-navigation__main-menu {
-
   @media (min-width: global.$width-small) {
     grid-column: 1 / -1;
+    background-color: var(--page-background);
   }
 
   @media (min-width: global.$width-medium) {
@@ -74,7 +94,8 @@
   @media (min-width: global.$width-big) {
     order: 1;
     flex-basis: 40%;
-    border-bottom: 2px solid var(--neutral);
+    flex-grow: 1;
+    margin-left: -33px;
     background-color: var(--page-background);
     padding-left: var(--page-padding-big);
   }
@@ -94,6 +115,7 @@
   @media (min-width: global.$width-small) {
     grid-column: 1 / -1;
     display: block;
+    background-color: var(--page-background);
   }
 
   @media (min-width: global.$width-medium) {
@@ -101,12 +123,12 @@
     flex-grow: 1;
     justify-content: flex-end;
     padding-right: global.$padding-medium;
-    border-bottom: 2px solid var(--neutral);
   }
 
   @media (min-width: global.$width-big) {
     order: 3;
     flex-basis: 40%;
+    max-width: 40%;
     padding-right: var(--page-padding-big);
   }
 }
@@ -119,9 +141,11 @@
   @media (min-width: global.$width-big) {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 40%;
+    flex-grow: 1;
     order: 4;
-    flex-basis: 60%;
-    padding: 19px global.$padding-big 19px var(--page-padding-big);
+    margin-left: -33px;
+    padding: 9px 0 19px var(--page-padding-big);
     background-color: var(--page-content-background);
   }
 
@@ -149,7 +173,8 @@
 
   @media (min-width: global.$width-big) {
     order: 5;
-    flex-basis: 40%;
+    flex-basis: 60%;
+    min-width: 60%;
     padding-right: var(--page-padding-big);
   }
 

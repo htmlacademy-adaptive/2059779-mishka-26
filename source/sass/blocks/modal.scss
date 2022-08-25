@@ -1,9 +1,17 @@
 @use "../utils/global.scss";
 
 .modal {
-  display: none;
-}
+  position: fixed; /* Не могу понять, в данном случае это нарушение БЭМа или нет? По идее да, но от этого блока же и ожидается такое поведение. */
+  top: 0;
+  left: 0;
+  z-index: 10; /* Не очень хорошее решение, но на главной странице есть грид-дети, у которых z-index перебивает модалку. */
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-09);
 
-.modal__message {
-  box-shadow: var(--modal-shadow);
+  &--close {
+    display: none;
+  }
 }

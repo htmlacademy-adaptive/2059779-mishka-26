@@ -1,6 +1,7 @@
 @use "../utils/global.scss";
 
 .container {
+  position: relative;
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
@@ -10,14 +11,26 @@
   }
 
   @media (min-width: global.$width-big) {
+    position: static;
     padding-left: var(--page-padding-big);
     padding-right: var(--page-padding-big);
   }
 
-  &--padding-big-only {
-    @media (min-width: global.$width-small) and (max-width: global.$width-big) {
+  &--full-width-small {
+    @media (min-width: global.$width-small) {
       padding-left: 0;
       padding-right: 0;
+    }
+
+    @media (min-width: global.$width-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media (min-width: global.$width-big) {
+      position: static;
+      padding-left: var(--page-padding-big);
+      padding-right: var(--page-padding-big);
     }
   }
 }

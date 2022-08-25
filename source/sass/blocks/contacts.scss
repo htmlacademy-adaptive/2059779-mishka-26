@@ -17,7 +17,7 @@
     grid-template-areas: "contacts-title contacts-map"
                           "contacts-address contacts-map"
                           "contacts-action contacts-map";
-    padding: 71px global.$padding-big 105px global.$padding-left-big;
+    padding: 71px 0 105px global.$padding-left-big;
   }
 
   @media (min-width: global.$width-x-big) { /* Не очень изящно вводить переменную ради одного места, но не знаю, как обойти это. */
@@ -63,7 +63,7 @@
   @media (min-width: global.$width-big) {
     position: relative;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 45px;
   }
 }
 
@@ -82,7 +82,7 @@
 
   @media (min-width: global.$width-big) {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 45px;
   }
 }
 
@@ -132,6 +132,10 @@
 .contacts__text:not(:last-child) {
   @media (min-width: global.$width-medium) {
     padding-right: 20px;
+  }
+
+  @media (min-width: global.$width-big) {
+    padding-right: 5px;
   }
 }
 

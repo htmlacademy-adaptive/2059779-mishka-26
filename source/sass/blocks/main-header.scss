@@ -3,10 +3,9 @@
 .main-header {
   position: relative;
   background-color: var(--page-background);
-  border-bottom: 2px solid var(--neutral);
 
   @media (min-width: global.$width-small) {
-    min-height: 79px;
+    min-height: 81px;
     padding: 0;
   }
 
@@ -20,27 +19,31 @@
   }
 }
 
-.main-header__navigation--open {
-  @media (min-width: global.$width-small) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 2;
+.main-header__navigation {
+  &--open {
+    @media (min-width: global.$width-small) {
+      position: absolute; /* Блин, это нарушение БЭМа! */
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    @media (min-width: global.$width-medium) {
+      position: static;
+    }
   }
 
-  @media (min-width: global.$width-medium) {
-    position: static;
+  &--close .main-header__menu {
+    @media not all and (min-width: global.$width-medium) {
+      display: none;
+    }
   }
 }
 
-.main-header__navigation--close .main-navigation__main-menu { /* А так вообще можно, что у меня в классе блока упоминается чужой элемент? */
-  @media not all and (min-width: global.$width-medium) {
-    display: none;
-  }
-}
+.main-header__toggle {
+  display: none;
 
-.main-header__navigation--close .main-navigation__user-menu {
-  @media not all and (min-width: global.$width-medium) {
-    display: none;
+  &--open {
+    display: block;
   }
 }
