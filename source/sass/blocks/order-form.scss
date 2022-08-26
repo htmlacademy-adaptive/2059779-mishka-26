@@ -17,22 +17,26 @@
 
 .order-form__lead {
   margin: 0;
-  padding-top: 17px;
+  padding-top: 14px;
   padding-bottom: 29px;
   @include global.fonter(400, 13px, 24px);
 
   @media (min-width: global.$width-medium) {
-    padding: 54px global.$padding-medium 13px;
+    padding: 67px global.$padding-medium 19px;
     @include global.fonter(400, 17px, 30px);
   }
 
   @media (min-width: global.$width-big) {
-    padding: 99px var(--page-padding-x-big) 30px var(--page-padding-x-big);
+    padding: 108px var(--page-padding-x-big) 30px var(--page-padding-x-big);
   }
 }
 
 .order-form__inputs {
   margin-bottom: 55px;
+
+  @media (min-width: global.$width-medium) {
+    margin-bottom: 49px;
+  }
 }
 
 .order-form__note {
@@ -56,6 +60,7 @@
 .order-form__footer {
   @media (min-width: global.$width-medium) {
     display: flex;
+    column-gap: 138px;
     align-items: center;
     justify-content: space-between;
     padding-top: 3px;
@@ -70,8 +75,8 @@
 
 .order-form__button {
   @media (min-width: global.$width-medium) {
-    max-width: 40%;
-    padding-left: 32px;
-    padding-right: 32px;
+    max-width: 34%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

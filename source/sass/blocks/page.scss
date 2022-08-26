@@ -41,7 +41,7 @@
     @include global.fonter(700, 43px, 50px);
   }
 
-  @media (min-width: global.$width-medium) {
+  @media (min-width: global.$width-big) {
     min-height: 192px;
     padding-bottom: 73px;
     padding-left: var(--page-padding-big);
