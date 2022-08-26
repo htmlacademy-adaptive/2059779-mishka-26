@@ -28,20 +28,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 178px;
   margin: 0;
-  padding: 74px global.$padding-small;
+  padding: 15px global.$padding-small 20px;
   @include global.fonter(700, 27px, 30px);
   background-color: var(--page-content-background);
 
   @media (min-width: global.$width-medium) {
-    padding-top: 21px;
-    padding-bottom: 75px;
+    min-height: 161px;
+    padding-top: 0;
+    padding-bottom: 38px;
     @include global.fonter(700, 43px, 50px);
   }
 
   @media (min-width: global.$width-medium) {
+    min-height: 192px;
+    padding-bottom: 73px;
     padding-left: var(--page-padding-big);
     padding-right: var(--page-padding-big);
+    @include global.fonter(700, 53px, 57px);
   }
 }
 

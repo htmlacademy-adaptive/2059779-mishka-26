@@ -2,17 +2,17 @@
 
 .catalog {
   display: grid;
-  gap: 30px;
-  padding: global.$padding-small;
+  gap: 22px;
+  padding: 27px global.$padding-small global.$padding-small;
 
   @media (min-width: global.$width-medium) {
-    gap: 54px;
-    padding-top: 67px global.$padding-medium 53px;
+    gap: 53px;
+    padding: 78px global.$padding-medium 53px;
   }
 
   @media (min-width: global.$width-big) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 51px;
-    padding: 111px var(--page-padding-big) 57px;
+    padding: 120px var(--page-padding-big) 57px;
   }
 }
