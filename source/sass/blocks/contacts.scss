@@ -1,11 +1,11 @@
 @use "../utils/global.scss";
 
 .contacts {
-  padding-top: 38px;
+  padding-top: 42px;
   padding-bottom: 39px;
 
   @media (min-width: global.$width-medium) {
-    padding-top: 68px;
+    padding-top: 51px;
     padding-bottom: 57px;
   }
 
@@ -13,7 +13,7 @@
   @media (min-width: global.$width-big) {
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
+    grid-template-rows: minmax(136px, min-content) minmax(269px, min-content) minmax(52px, min-content);
     grid-template-areas: "contacts-title contacts-map"
                           "contacts-address contacts-map"
                           "contacts-action contacts-map";
@@ -41,12 +41,14 @@
       display: block;
       width: 47px;
       height: 81px;
+      margin-right: 3px;
       background: url("../img/icons/icon-map-flag.svg") no-repeat center center transparent;
     }
 
     @media (min-width: global.$width-big) {
       position: absolute;
-      left: -80px;
+      top: 21px;
+      left: -112px;
     }
   }
 
@@ -54,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 49px;
+    margin-bottom: 34px;
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
     @include global.fonter(700, 43px, 50px);
@@ -62,8 +64,12 @@
 
   @media (min-width: global.$width-big) {
     position: relative;
+    align-self: end;
+    margin: 0;
+    padding-top: 40px;
     padding-left: 0;
     padding-right: 45px;
+    @include global.fonter(700, 53px, 57px);
   }
 }
 
@@ -81,6 +87,7 @@
   }
 
   @media (min-width: global.$width-big) {
+    padding-top: 32px;
     padding-left: 0;
     padding-right: 45px;
   }
@@ -89,7 +96,7 @@
 .contacts__fields {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 42px;
+  row-gap: 30px;
   margin: 0;
   margin-bottom: 62px;
 
@@ -125,7 +132,6 @@
 
   @media (min-width: global.$width-big) {
     flex-basis: 75%;
-    padding-left: 10px;
   }
 }
 
@@ -140,6 +146,7 @@
 }
 
 .contacts__link {
+  padding-bottom: 3px;
   text-decoration: none;
   color: var(--main-font-color);
   border-bottom: 1px solid var(--accent-color);
@@ -153,11 +160,15 @@
     color: var(--accent-color-action-dark);
     border-bottom: 1px solid var(--accent-color-action-dark-01); /* Я так понял, что цветовыми функциями пользоваться нельзя. */
   }
+
+  @media (min-width: global.$width-big) {
+    padding-bottom: 8px;
+  }
 }
 
 .contacts__map {
   grid-area: contacts-map;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 
   @media (min-width: global.$width-medium) {
     margin-bottom: 55px;
@@ -189,7 +200,11 @@
 .contacts__button {
   @media (min-width: global.$width-medium) {
     width: max-content;
-    padding-left: 26px;
-    padding-right: 26px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: global.$width-big) {
+    align-self: end;
   }
 }

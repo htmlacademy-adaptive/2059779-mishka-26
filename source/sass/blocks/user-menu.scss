@@ -22,7 +22,7 @@
 }
 
 .user-menu__item:not(:last-child) {
-  border-bottom: 2px solid var(--neutral);
+  border-bottom: 1px solid var(--neutral);
 
   @media (min-width: global.$width-medium) {
     border-bottom: none;
@@ -32,7 +32,7 @@
 .user-menu__link {
   display: flex;
   align-items: center;
-  padding-top: 29px;
+  padding-top: 27px;
   padding-bottom: 27px;
   @include global.fonter(700, 17px, 24px);
   text-decoration: none;
@@ -94,7 +94,7 @@
 
 .user-menu__search-text {
   @media (min-width: global.$width-small) {
-    padding-left: 25px;
+    padding-left: 28px;
   }
 
   @media (min-width: global.$width-medium) {
@@ -105,5 +105,9 @@
 .user-menu__cart-text {
   @media (min-width: global.$width-small) {
     padding-left: 25px;
+  }
+
+  @media (min-width: global.$width-medium) {
+    padding-left: 33px;
   }
 }

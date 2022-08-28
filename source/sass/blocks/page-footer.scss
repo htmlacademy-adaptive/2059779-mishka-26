@@ -9,11 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 51px global.$padding-medium 58px;
+    padding: 49px global.$padding-medium 58px;
   }
 
   @media (min-width: global.$width-big) {
-    padding: 25px var(--page-padding-big) 23px;
+    padding: 46px var(--page-padding-big) 23px;
   }
 }
 
@@ -35,14 +35,18 @@
   }
 
   @media (min-width: global.$width-medium) {
+    margin-left: 4px;
     padding: 0;
+    padding-top: 9px;
     border: none;
   }
 }
 
 .page-footer__copyright {
   @media (min-width: global.$width-small) {
-    padding-top: 30px;
+    display: grid;
+    place-items: center;
+    padding-top: 17px;
   }
 
   @media (min-width: global.$width-medium) {

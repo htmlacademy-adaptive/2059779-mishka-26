@@ -19,7 +19,7 @@
   @media (min-width: global.$width-small) {
     padding-left: 76px;
     background-color: var(--page-background);
-    border-bottom: 2px solid var(--neutral);
+    border-bottom: 1px solid var(--neutral);
   }
 
   @media (min-width: global.$width-medium) {
@@ -37,7 +37,7 @@
 
 .main-menu__item:first-child {
   @media (min-width: global.$width-small) {
-    border-top: 2px solid var(--neutral);
+    border-top: 1px solid var(--neutral);
   }
 
   @media (min-width: global.$width-medium) {
@@ -53,7 +53,7 @@
 
 .main-menu__link {
   display: block;
-  padding-top: 29px;
+  padding-top: 27px;
   padding-bottom: 27px;
   @include global.fonter(700, 17px, 24px);
   text-decoration: none;
@@ -68,10 +68,13 @@
   }
 
   @media (min-width: global.$width-medium) {
+    padding-top: 19px;
+    padding-bottom: 19px;
     @include global.fonter(700, 15px, 24px);
   }
 
   @media (min-width: global.$width-big) {
+    padding-top: 34px;
     @include global.fonter(700, 17px, 24px);
   }
 }

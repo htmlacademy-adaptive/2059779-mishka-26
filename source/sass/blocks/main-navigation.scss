@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 79px auto;
-    border-bottom: 2px solid var(--neutral);
+    border-bottom: 1px solid var(--neutral);
   }
 
   @media (min-width: global.$width-medium) {
@@ -70,7 +70,6 @@
     grid-row: 1 / 2;
     align-self: center;
     justify-self: center;
-    margin-right: global.$padding-small;
   }
 
   @media (min-width: global.$width-medium) {
@@ -176,6 +175,7 @@
     flex-basis: 60%;
     min-width: 60%;
     padding-right: var(--page-padding-big);
+    padding-bottom: 8px;
   }
 
   &--home-page {

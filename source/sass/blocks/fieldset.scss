@@ -7,24 +7,37 @@
   @media (min-width: global.$width-medium) {
     display: grid;
     grid-template-columns: 25.15% 74.85%;
-    padding: 50px global.$padding-medium 50px;
+    padding: 50px 0 50px;
   }
 
   @media (min-width: global.$width-big) {
     grid-template-columns: 14.11% 85.89%;
-    padding: 50px var(--page-padding-x-big) 50px var(--page-padding-left-medium);
+    padding: 50px 173px 50px 61px;
   }
 
   &--radio {
     display: grid;
     row-gap: 30px;
     padding-bottom: 31px;
+
+    @media (min-width: global.$width-medium) {
+      padding-top: 44px;
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: global.$width-big) {
+      padding-top: 34px;
+    }
   }
 
   &--check {
     display: grid;
     row-gap: 25px;
     padding-bottom: 33px;
+
+    @media (min-width: global.$width-medium) {
+      padding-bottom: 50px;
+    }
   }
 
   &--person {
@@ -33,7 +46,7 @@
     padding-bottom: 35px;
 
     @media (min-width: global.$width-medium) {
-      padding-top: 66px;
+      padding-bottom: 50px;
     }
   }
 
@@ -43,8 +56,7 @@
     padding-bottom: 35px;
 
     @media (min-width: global.$width-medium) {
-      padding-top: 64px;
-      padding-bottom: 12px;
+      padding-bottom: 13px;
     }
   }
 
@@ -54,7 +66,8 @@
     padding-bottom: 35px;
 
     @media (min-width: global.$width-medium) {
-      padding-top: 12px;
+      padding-top: 13px;
+      padding-bottom: 50px;
     }
   }
 
@@ -68,6 +81,10 @@
       background-color: var(--page-content-background);
     }
   }
+
+  &--wide {
+    padding-right: 140px;
+  }
 }
 
 .fieldset__title {
@@ -80,7 +97,7 @@
 
   @media (min-width: global.$width-medium) {
     flex-basis: 25.15%;
-    padding-top: 12px;
+    padding-top: 17px;
   }
 
   &::after {
@@ -107,7 +124,11 @@
   }
 
   &--radio {
-    row-gap: 11px;
+    row-gap: 14px;
+
+    @media (min-width: global.$width-medium) {
+      row-gap: 27px;
+    }
   }
 
   &--check {
@@ -116,17 +137,22 @@
     @media (min-width: global.$width-medium) {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 24px;
+      column-gap: 62px;
+      row-gap: 24px;
     }
 
     @media (min-width: global.$width-big) {
-      column-gap: 68px;
+      column-gap: 80px;
       row-gap: 24px;
     }
   }
 
   &--text {
-    row-gap: 22px;
+    row-gap: 25px;
+
+    @media (min-width: global.$width-medium) {
+      row-gap: 24px;
+    }
   }
 }
 
@@ -156,6 +182,7 @@
 
     @media (min-width: global.$width-medium) {
       flex-basis: 40%;
+      gap: 28px;
     }
 
     @media (min-width: global.$width-big) {
@@ -175,6 +202,11 @@
     width: 25px;
     height: 24px;
     background: url("../img/icons/icon-phone.svg") no-repeat center;
+
+    @media (min-width: global.$width-medium) {
+      top: 11px;
+      right: 26px;
+    }
   }
 
   &--email {
@@ -189,12 +221,20 @@
     width: 32px;
     height: 21px;
     background: url("../img/icons/icon-email.svg") no-repeat center;
+
+    @media (min-width: global.$width-medium) {
+      right: 23px;
+    }
   }
 }
 
 .fieldset__value {
   @include global.fonter(700, 17px, 18px);
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(700, 19px, 19px);
+  }
 
   &--radio {
     @media (min-width: global.$width-medium) {
@@ -215,13 +255,18 @@
   place-content: center;
   appearance: none;
   margin: 0;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   font: inherit;
   color: var(--semi-dark);
   background-color: transparent;
   border: 2px solid var(--semi-dark);
   border-radius: 50%;
+
+  @media (min-width: global.$width-medium) {
+    width: 50px;
+    height: 50px;
+  }
 
   &::before {
     content: "";
@@ -258,15 +303,26 @@
   background-color: transparent;
   border: 2px solid var(--semi-dark);
 
+
+  @media (min-width: global.$width-medium) {
+    width: 52px;
+    height: 52px;
+  }
+
   &::before {
     content: "";
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     width: 11px;
     height: 21px;
     border-bottom: 1px solid var(--dark);
     border-right: 1px solid var(--dark);
     transform: rotate(0deg) scale(0);
     transition: var(--transition);
+
+    @media (min-width: global.$width-medium) {
+      width: 16px;
+      height: 29px;
+    }
   }
 
   &:checked::before {
@@ -283,15 +339,25 @@
 }
 
 .fieldset__input {
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   @include global.fonter(400, 17px, 17px);
   color: var(--semi-dark);
   border: none;
   border-bottom: 2px solid var(--dark);
 
+  @media (min-width: global.$width-medium) {
+    flex-grow: 1;
+    padding-left: 16px;
+    @include global.fonter(400, 19px, 19px);
+  }
+
   &::placeholder {
     color: var(--semi-dark-03);
+
+    @media (min-width: global.$width-medium) {
+      @include global.fonter(400, 19px, 19px);
+    }
   }
 
   &:hover {
@@ -311,6 +377,11 @@
   &--textarea {
     padding: 17px;
     border: 2px solid var(--dark);
+
+    @media (min-width: global.$width-medium) {
+      padding: 14px;
+      padding-bottom: 8px;
+    }
   }
 
   &--textarea:hover {
@@ -319,9 +390,5 @@
 
   &--textarea:active {
     border: 2px solid var(--accent-color);
-  }
-
-  @media (min-width: global.$width-medium) {
-    flex-grow: 1;
   }
 }
