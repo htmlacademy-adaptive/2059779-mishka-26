@@ -160,6 +160,10 @@
     color: var(--accent-color-action-dark);
     border-bottom: 1px solid var(--accent-color-action-dark-01); /* Я так понял, что цветовыми функциями пользоваться нельзя. */
   }
+
+  @media (min-width: global.$width-big) {
+    padding-bottom: 8px;
+  }
 }
 
 .contacts__map {

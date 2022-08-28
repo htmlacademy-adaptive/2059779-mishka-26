@@ -1,17 +1,21 @@
 @use "../utils/global.scss";
 
-.order-form {
+.order-form__container {
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
-  @media (min-width: global.$width-medium) {
-    padding-left: 0;
-    padding-right: 0;
+    @media (min-width: global.$width-medium) {
+    padding-left: global.$padding-medium;
+    padding-right: global.$padding-medium;
   }
 
-  @media (min-width: global.$width-x-big) {
-    padding-left: 0;
-    padding-right: 0;
+  @media (min-width: global.$width-big) {
+    padding-left: var(--page-padding-big);
+    padding-right: var(--page-padding-big);
+  }
+
+  &--accent {
+    background-color: var(--page-content-background);
   }
 }
 
@@ -22,12 +26,12 @@
   @include global.fonter(400, 13px, 24px);
 
   @media (min-width: global.$width-medium) {
-    padding: 67px global.$padding-medium 19px;
+    padding: 67px 0 19px;
     @include global.fonter(400, 17px, 30px);
   }
 
   @media (min-width: global.$width-big) {
-    padding: 108px var(--page-padding-x-big) 30px var(--page-padding-x-big);
+    padding: 108px 173px 30px 61px;
   }
 }
 
@@ -36,6 +40,10 @@
 
   @media (min-width: global.$width-medium) {
     margin-bottom: 49px;
+  }
+
+  @media (min-width: global.$width-big) {
+    margin-bottom: 0;
   }
 }
 
@@ -53,6 +61,7 @@
   }
 
   @media (min-width: global.$width-big) {
+    max-width: 100%;
     text-align: right;
   }
 }
@@ -64,12 +73,23 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 3px;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
   }
 
   @media (min-width: global.$width-big) {
-    padding: 49px var(--page-padding-x-big) 50px var(--page-padding-x-big);
+    padding: 0 173px 50px 61px;
+    display: grid;
+    grid-template-columns: 14.11% 30% 55%;
+    gap: 0;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    width: 100%;
+
+    @media (min-width: global.$width-big) {
+      display: block;
+    }
   }
 }
 
@@ -78,5 +98,9 @@
     max-width: 34%;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  @media (min-width: global.$width-big) {
+    max-width: 100%;
   }
 }

@@ -4,6 +4,10 @@
   padding: 30px global.$padding-small 46px;
   background-color: var(--page-background);
   box-shadow: var(--modal-shadow);
+
+  @media (min-width: global.$width-medium) {
+    padding: 30px 108px 46px;
+  }
 }
 
 .product-order__title {
@@ -13,6 +17,10 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    @include global.fonter(700, 30px, 57px);
+  }
 }
 
 .product-order__message {

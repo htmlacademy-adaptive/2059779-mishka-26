@@ -7,22 +7,27 @@
   @media (min-width: global.$width-medium) {
     display: grid;
     grid-template-columns: 25.15% 74.85%;
-    padding: 50px global.$padding-medium 50px;
+    padding: 50px 0 50px;
   }
 
   @media (min-width: global.$width-big) {
     grid-template-columns: 14.11% 85.89%;
-    padding: 50px var(--page-padding-x-big) 50px var(--page-padding-left-medium);
+    padding: 50px 173px 50px 61px;
   }
 
   &--radio {
     display: grid;
     row-gap: 30px;
-    padding-top: 44px;
+    padding-bottom: 31px;
+
+    @media (min-width: global.$width-medium) {
+      padding-top: 44px;
+      padding-bottom: 50px;
+    }
 
     @media (min-width: global.$width-big) {
       padding-top: 34px;
-  }
+    }
   }
 
   &--check {
@@ -76,6 +81,10 @@
       background-color: var(--page-content-background);
     }
   }
+
+  &--wide {
+    padding-right: 140px;
+  }
 }
 
 .fieldset__title {
@@ -115,7 +124,11 @@
   }
 
   &--radio {
-    row-gap: 27px;
+    row-gap: 14px;
+
+    @media (min-width: global.$width-medium) {
+      row-gap: 27px;
+    }
   }
 
   &--check {
@@ -129,7 +142,7 @@
     }
 
     @media (min-width: global.$width-big) {
-      column-gap: 68px;
+      column-gap: 80px;
       row-gap: 24px;
     }
   }
@@ -137,8 +150,9 @@
   &--text {
     row-gap: 25px;
 
-    @media (min-width: global.$width-medium) {}
+    @media (min-width: global.$width-medium) {
       row-gap: 24px;
+    }
   }
 }
 
