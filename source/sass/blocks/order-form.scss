@@ -4,7 +4,7 @@
   padding-left: global.$padding-small;
   padding-right: global.$padding-small;
 
-    @media (min-width: global.$width-medium) {
+  @media (min-width: global.$width-medium) {
     padding-left: global.$padding-medium;
     padding-right: global.$padding-medium;
   }
