@@ -15,7 +15,9 @@
   }
 
   &--accent {
-    background-color: var(--page-content-background);
+    @media (min-width: global.$width-medium) {
+      background-color: var(--page-content-background);
+    }
   }
 }
 

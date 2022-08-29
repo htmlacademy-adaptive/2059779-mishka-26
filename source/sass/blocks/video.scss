@@ -6,11 +6,11 @@
   aspect-ratio: 26 / 15;
 
   @media (min-width: global.$width-medium) {
-    aspect-ratio: 668 / 455; /* Убогие числа, поищу общий знаменатель. А всё потому что не получается забороть размеры обложки. */
+    aspect-ratio: 37 / 25;
   }
 
   @media (min-width: global.$width-big) {
-    aspect-ratio: 682 / 455;
+    aspect-ratio: 37 / 25;
   }
 
   &:hover .video__icon {
@@ -57,7 +57,7 @@
   border: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  pointer-events: none; /* Чтобы нажатие по кнопке попадало в ссылку под ней. */
+  pointer-events: none;
 }
 
 .video__icon-background {

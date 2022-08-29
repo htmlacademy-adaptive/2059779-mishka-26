@@ -83,7 +83,9 @@
   }
 
   &--wide {
-    padding-right: 140px;
+    @media (min-width: global.$width-big) {
+      padding-right: 140px;
+    }
   }
 }
 

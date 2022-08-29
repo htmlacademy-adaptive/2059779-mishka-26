@@ -20,7 +20,7 @@
     padding: 71px 0 105px global.$padding-left-big;
   }
 
-  @media (min-width: global.$width-x-big) { /* Не очень изящно вводить переменную ради одного места, но не знаю, как обойти это. */
+  @media (min-width: global.$width-x-big) {
     padding-right: 0;
   }
 }
