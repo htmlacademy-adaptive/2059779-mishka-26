@@ -30,7 +30,7 @@
   justify-content: center;
   min-height: 178px;
   margin: 0;
-  padding: 15px global.$padding-small 20px;
+  padding: 15px var(--padding-small) 20px;
   @include global.fonter(700, 27px, 30px);
   background-color: var(--page-content-background);
 

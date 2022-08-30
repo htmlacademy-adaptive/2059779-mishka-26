@@ -39,6 +39,10 @@
   --transition: 120ms ease-in-out;
   --max-width-big: 1440px;
   --page-padding-big: max(50px, calc((100vw - var(--max-width-big)) / 2)); /* Может все паддинги уже сюда перенести? */
+  --padding-small: 30px;
+  --padding-medium: 50px;
+  --padding-big: 50px;
+  --padding-left-big: 16.67%;
 }
 
 *,

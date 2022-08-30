@@ -1,7 +1,7 @@
 @use "../utils/global.scss";
 
 .product-order {
-  padding: 30px global.$padding-small 46px;
+  padding: 30px var(--padding-small) 46px;
   background-color: var(--page-background);
   box-shadow: var(--modal-shadow);
 

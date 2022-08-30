@@ -2,13 +2,13 @@
 
 .showcase {
   padding-bottom: 58px;
-  padding-left: global.$padding-small;
-  padding-right: global.$padding-small;
+  padding-left: var(--padding-small);
+  padding-right: var(--padding-small);
 
   @media (min-width: global.$width-medium) {
     padding-bottom: 64px;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
   }
 
   @media (min-width: global.$width-big) {

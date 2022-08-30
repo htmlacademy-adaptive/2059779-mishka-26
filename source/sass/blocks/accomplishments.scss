@@ -8,7 +8,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 68px 200px 90px global.$padding-left-big;
+    padding: 68px 200px 90px var(--padding-left-big);
   }
 }
 

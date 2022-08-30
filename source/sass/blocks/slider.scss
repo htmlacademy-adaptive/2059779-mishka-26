@@ -11,7 +11,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 75px 0 max(186px, 18%) global.$padding-left-big;
+    padding: 75px 0 max(186px, 18%) var(--padding-left-big);
   }
 
   &::before {

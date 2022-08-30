@@ -1,12 +1,12 @@
 @use "../utils/global.scss";
 
 .order-form__container {
-  padding-left: global.$padding-small;
-  padding-right: global.$padding-small;
+  padding-left: var(--padding-small);
+  padding-right: var(--padding-small);
 
   @media (min-width: global.$width-medium) {
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
   }
 
   @media (min-width: global.$width-big) {
@@ -80,7 +80,7 @@
   @media (min-width: global.$width-big) {
     padding: 0 173px 50px 61px;
     display: grid;
-    grid-template-columns: 14.11% 30% 55%;
+    grid-template-columns: 14.11% 30% 55.89%;
     gap: 0;
   }
 

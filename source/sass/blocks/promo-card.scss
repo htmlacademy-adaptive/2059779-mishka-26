@@ -21,7 +21,7 @@
     column-gap: 0;
     grid-template-columns: 40% 60%;
     grid-template-rows: minmax(140px, min-content) minmax(355px, min-content) minmax(89px, min-content) minmax(52px, min-content); /* Не знаю, как тут ещё быть. */
-    padding: 75px 0 max(96px, 9%) global.$padding-left-big;
+    padding: 75px 0 max(96px, 9%) var(--padding-left-big);
   }
 }
 

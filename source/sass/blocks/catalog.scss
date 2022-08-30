@@ -3,11 +3,11 @@
 .catalog {
   display: grid;
   gap: 22px;
-  padding: 27px global.$padding-small global.$padding-small;
+  padding: 27px var(--padding-small) var(--padding-small);
 
   @media (min-width: global.$width-medium) {
     gap: 53px;
-    padding: 78px global.$padding-medium 53px;
+    padding: 78px var(--padding-medium) 53px;
   }
 
   @media (min-width: global.$width-big) {
