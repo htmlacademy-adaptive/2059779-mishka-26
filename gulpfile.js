@@ -7,6 +7,8 @@ import browser from 'browser-sync';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -24,11 +26,27 @@ export const styles = () => {
 }
 
 //HTML
- export const htmlminimizer = () => {
+ const htmlminimizer = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin ({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
+ }
+
+//Scripts
+
+const jsminimizer = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
 }
+
+//Images
+const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
+}
+
 
 // Server
 
@@ -53,5 +71,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  htmlminimizer, styles, server, watcher
+  htmlminimizer, jsminimizer, images, styles, server, watcher
 );
