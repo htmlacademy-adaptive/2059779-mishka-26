@@ -4,6 +4,9 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -12,10 +15,19 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//HTML
+ export const htmlminimizer = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin ({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 // Server
@@ -23,7 +35,7 @@ export const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -41,5 +53,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  htmlminimizer, styles, server, watcher
 );
