@@ -2,14 +2,14 @@
 
 .page-footer {
   position: relative;
-  padding: 25px global.$padding-small 23px;
+  padding: 25px var(--padding-small) 23px;
   background-color: var(--page-content-background);
 
   @media (min-width: global.$width-medium) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 49px global.$padding-medium 58px;
+    padding: 49px var(--padding-medium) 58px;
   }
 
   @media (min-width: global.$width-big) {

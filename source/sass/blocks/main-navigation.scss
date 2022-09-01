@@ -1,12 +1,10 @@
 @use "../utils/global.scss";
 
 .main-navigation {
-  @media (min-width: global.$width-small) {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 79px auto;
-    border-bottom: 1px solid var(--neutral);
-  }
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 81px auto;
+  border-bottom: 1px solid var(--neutral);
 
   @media (min-width: global.$width-medium) {
     display: flex;
@@ -35,7 +33,7 @@
     flex-basis: 30%;
     height: auto;
     min-height: 91px;
-    padding-left: global.$padding-medium;
+    padding-left: var(--padding-medium);
   }
 
   @media (min-width: global.$width-big) {
@@ -54,7 +52,7 @@
     bottom: 0;
     width: 100vw;
     height: 1px;
-    margin-left: - global.$padding-medium;
+    margin-left: - var(--padding-medium);
     background-color: var(--neutral);
   }
 
@@ -70,6 +68,8 @@
     grid-row: 1 / 2;
     align-self: center;
     justify-self: center;
+    margin-right: 2px;
+    margin-bottom: 1px;
   }
 
   @media (min-width: global.$width-medium) {
@@ -86,7 +86,7 @@
   @media (min-width: global.$width-medium) {
     order: 2;
     flex-basis: 60%;
-    padding-left: global.$padding-big;
+    padding-left: var(--padding-big);
     background-color: var(--page-content-background);
   }
 
@@ -121,7 +121,7 @@
     flex-basis: 50%;
     flex-grow: 1;
     justify-content: flex-end;
-    padding-right: global.$padding-medium;
+    padding-right: var(--padding-medium);
   }
 
   @media (min-width: global.$width-big) {
@@ -166,7 +166,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: global.$padding-medium;
+    padding-right: var(--padding-medium);
     background-color: var(--page-content-background);
   }
 

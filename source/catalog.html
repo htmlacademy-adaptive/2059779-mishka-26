@@ -7,7 +7,7 @@
   <title>Каталог товаров магазина «Мишка»</title>
   <meta name="description" content="Каталог товаров магазина Мишка">
   <meta name="keywords" content="Мишка, вязание, мишки, медведи, медведы, корзинки, вязаные корзинки, вязаные игрушки, вязаные аксессуары, вязаный декор, предметы интерьера">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -71,8 +71,7 @@
           <a class="product-card__image-link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-bunny-jumper-big.webp 1x, img/catalog/catalog-bunny-jumper-big@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper-medium.webp, img/catalog/catalog-bunny-jumper-medium@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper.webp, img/catalog/catalog-bunny-jumper@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper-medium.webp 1x, img/catalog/catalog-bunny-jumper-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-bunny-jumper-big.jpg 1x, img/catalog/catalog-bunny-jumper-big@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper-medium.jpg, img/catalog/catalog-bunny-jumper-medium@2x.jpg 2x">
               <img class="product-card__image image" src="img/catalog/catalog-bunny-jumper.jpg" width="260" height="195" alt="Вязаный заяц в синем комбинезоне.">
@@ -95,6 +94,8 @@
         <article class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-laundry-basket-big.webp 1x, img/catalog/catalog-laundry-basket-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-laundry-basket-medium.webp 1x, img/catalog/catalog-laundry-basket-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-laundry-basket-big.jpg 1x, img/catalog/catalog-laundry-basket-big@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/catalog/catalog-laundry-basket-medium.jpg, img/catalog/catalog-laundry-basket-medium@2x.jpg 2x">
               <img class="product-card__image image" src="img/catalog/catalog-laundry-basket.jpg" width="260" height="195" alt="Корзина с белым верхом и розовым низом.">
@@ -117,6 +118,8 @@
         <article class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-large-toy-basket-big.webp 1x, img/catalog/catalog-large-toy-basket-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-large-toy-basket-medium.webp 1x, img/catalog/catalog-large-toy-basket-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-large-toy-basket-big.jpg 1x, img/catalog/catalog-large-toy-basket-big@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/catalog/catalog-large-toy-basket-medium.jpg, img/catalog/catalog-large-toy-basket-medium@2x.jpg 2x">
               <img class="product-card__image image" src="img/catalog/catalog-large-toy-basket.jpg" width="260" height="195" alt="Большая корзина с белым верхом, зелёным низом и игрушками внутри.">
@@ -144,6 +147,8 @@
             <span class="visually-hidden">Видео о производстве</span>
             <a class="video__link" href="https://youtu.be/x8v4EhYe7Rs">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-cover-big.webp 1x, img/video-cover-big@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-cover-medium.webp 1x, img/video-cover-medium@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/video-cover-big.jpg 1x, img/video-cover-big@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/video-cover-medium.jpg, img/video-cover-medium@2x.jpg 2x">
                 <img class="video__cover" src="img/video-cover.jpg" width="260" height="150" alt="Заставка видео с корзинкой.">
@@ -157,7 +162,6 @@
           </div>
           <p class="showcase__description">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
           <div class="showcase__button-container">
-            <!-- Не удаётся сжать кнопку без этой обёртки. А точные размеры кнопке тоже не хочется задавать. -->
             <a class="showcase__button button" href="#">Сделать заказ</a>
           </div>
         </div>

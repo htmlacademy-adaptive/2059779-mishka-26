@@ -3,10 +3,10 @@
 .main-hero {
   position: relative;
   padding-top: 71px;
-  background: url("../img/main-hero.jpg") no-repeat var(--hero-background) center -15px;
+  background: url("../img/backgrounds/main-hero.jpg") no-repeat var(--hero-background) center -15px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/main-hero@2x.jpg");
+    background-image: url("../img/backgrounds/main-hero@2x.jpg");
     background-size: 320px auto;
   }
 
@@ -33,11 +33,11 @@
 
   @media (min-width: global.$width-medium) {
     padding-top: 91px;
-    background: url("../img/main-hero-medium.jpg") no-repeat var(--hero-background) center -15px;
+    background: url("../img/backgrounds/main-hero-medium.jpg") no-repeat var(--hero-background) center -15px;
     background-position: bottom -4px center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-hero-medium@2x.jpg");
+      background-image: url("../img/backgrounds/main-hero-medium@2x.jpg");
       background-size: 768px auto;
     }
   }
@@ -46,7 +46,7 @@
     padding-top: 87px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/main-hero-big@2x.jpg");
+      background-image: url("../img/backgrounds/main-hero-big@2x.jpg");
       background-size: 1150px auto;
     }
   }
@@ -55,8 +55,8 @@
 .main-hero__title {
   margin: 0 auto;
   min-height: 212px;
-  padding-left: global.$padding-small;
-  padding-right: global.$padding-small;
+  padding-left: var(--padding-small);
+  padding-right: var(--padding-small);
   @include global.fonter(700, 27px, 30px);
   text-align: center;
   color: var(--dark);
@@ -64,15 +64,15 @@
   @media (min-width: global.$width-medium) {
     max-width: 650px;
     min-height: 472px;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
     @include global.fonter(700, 43px, 50px);
   }
 
   @media (min-width: global.$width-big) {
     max-width: 715px;
     min-height: 470px;
-    padding: 0 global.$padding-big;
+    padding: 0 var(--padding-big);
     @include global.fonter(700, 53px, 57px);
   }
 }
@@ -83,8 +83,8 @@
   @media (min-width: global.$width-medium) {
     display: flex;
     justify-content: center;
-    padding-left: global.$padding-medium;
-    padding-right: global.$padding-medium;
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
   }
 
   @media (min-width: global.$width-big) {

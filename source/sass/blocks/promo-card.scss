@@ -1,6 +1,8 @@
 @use "../utils/global.scss";
 
 .promo-card {
+  display: flex;
+  flex-direction: column;
   padding: 37px 0 36px;
 
   /* stylelint-disable */
@@ -18,10 +20,19 @@
   /* stylelint-enable */
 
   @media (min-width: global.$width-big) {
-    column-gap: 0;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: minmax(140px, min-content) minmax(355px, min-content) minmax(89px, min-content) minmax(52px, min-content); /* Не знаю, как тут ещё быть. */
-    padding: 75px 0 max(96px, 9%) global.$padding-left-big;
+    column-gap: 58px;
+    grid-template-columns: 33% 60%;
+    grid-template-rows: min-content auto;
+    padding: 75px 0 max(96px, 9%) var(--padding-left-big);
+  }
+}
+
+.promo-card__text {
+  display: contents;
+
+  @media (min-width: global.$width-big) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -37,14 +48,13 @@
   }
 
   @media (min-width: global.$width-big) {
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
     grid-row: 1 / 2;
-    align-self: end;
-    justify-self: start;
     z-index: 1;
     width: 100%;
+    height: min-content;
     margin: 0;
-    padding-bottom: 22px;
+    padding-bottom: 0;
   }
 }
 
@@ -102,8 +112,8 @@
   @media (min-width: global.$width-big) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin-bottom: 0;
-    padding-top: 12px;
+    margin-bottom: auto;
+    padding-top: 0;
   }
 }
 
@@ -117,8 +127,8 @@
   }
 
   @media (min-width: global.$width-big) {
-    margin-bottom: 50px;
-    padding-right: 58px;
+    margin-bottom: 0;
+    padding-right: 0;
   }
 }
 
@@ -136,7 +146,7 @@
 
   @media (min-width: global.$width-big) {
     margin-bottom: 0;
-    padding-right: 58px;
+    padding-right: 0;
   }
 }
 
@@ -176,17 +186,19 @@
   margin-bottom: 26px;
 
   @media (min-width: global.$width-medium) {
+    align-self: start;
     margin-bottom: 0;
   }
 
   @media (min-width: global.$width-big) {
     grid-column: 2 / 3;
-    grid-row: 1 / -1;
+    grid-row: 1 / 3;
     max-width: 525px;
   }
 }
 
 .promo-card__price {
+  order: 2;
   grid-area: card-price;
   display: flex;
   align-items: center;
@@ -209,16 +221,16 @@
 }
 
 .promo-card__button {
+  order: 3;
   grid-area: card-button;
   align-self: start;
 
   @media (min-width: global.$width-big) {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    align-self: end;
-    justify-self: center;
+    align-self: stretch;
+    justify-self: flex-end;
     max-width: 292px; /* Не знаю, что с этими кнопками делать. */
-    margin-right: 58px;
     margin-bottom: 0;
   }
 }

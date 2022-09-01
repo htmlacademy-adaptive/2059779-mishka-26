@@ -7,7 +7,7 @@
   <title>Интернет-магазин «Мишка»</title>
   <meta name="description" content="Мишка – магазин милых вязаных аксессуаров и игрушек">
   <meta name="keywords" content="Мишка, вязание, мишки, медведи, медведы, корзинки, вязаные корзинки, вязаные игрушки, вязаные аксессуары, вязаный декор, предметы интерьера">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -82,26 +82,31 @@
             <h3 class="promo-card__title">Вязаные корзинки</h3>
             <p class="promo-card__subtitle">Товар недели</p>
           </header>
-          <div class="promo-card__description">
-            <p class="promo-card__lead">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.</p>
-            <dl class="promo-card__feature">
-              <dt class="promo-card__feature-name">Цвет:</dt>
-              <dd class="promo-card__feature-value">тиффани/серый</dd>
-              <dt class="promo-card__feature-name">Диаметр:</dt>
-              <dd class="promo-card__feature-value">25&nbsp;см</dd>
-              <dt class="promo-card__feature-name">Высота:</dt>
-              <dd class="promo-card__feature-value">15&nbsp;см</dd>
-            </dl>
+          <div class="promo-card__text">
+            <div class="promo-card__description">
+              <p class="promo-card__lead">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трёх размерах.</p>
+              <dl class="promo-card__feature">
+                <dt class="promo-card__feature-name">Цвет:</dt>
+                <dd class="promo-card__feature-value">тиффани/серый</dd>
+                <dt class="promo-card__feature-name">Диаметр:</dt>
+                <dd class="promo-card__feature-value">25&nbsp;см</dd>
+                <dt class="promo-card__feature-name">Высота:</dt>
+                <dd class="promo-card__feature-value">15&nbsp;см</dd>
+              </dl>
+            </div>
+            <p class="promo-card__price">Цена: 990&nbsp;руб.</p>
+            <button class="promo-card__button button" type="button">Заказать</button>
           </div>
           <a class="promo-card__image" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/pottle-big.webp 1x, img/catalog/pottle-big@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/pottle-medium.webp 1x, img/catalog/pottle-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/pottle-big.jpg 1x, img/catalog/pottle-big@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/catalog/pottle-medium.jpg 1x, img/catalog/pottle-medium@2x.jpg 2x">
               <img class="image" src="img/catalog/pottle.jpg" width="260" height="315" alt="Три вязаные корзинки в руке.">
             </picture>
           </a>
-          <p class="promo-card__price">Цена: 990&nbsp;руб.</p>
-          <button class="promo-card__button button" type="button">Заказать</button>
+
         </aside>
       </div>
       <div class="container">
@@ -180,7 +185,9 @@
           <div class="contacts__map map">
             <a class="map__link" href="https://yandex.ru/maps/-/CCURYRgCGD">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/map-medium.jpg 1x, img/map-medium@2x.jpg 2x"> <!-- Здесь карта не на всю страницу, можно этот фон использовать повторно -->
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-medium.webp 1x, img/map-medium@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/map-medium.jpg 1x, img/map-medium@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/map-medium.jpg, img/map-medium@2x.jpg 2x">
                 <img class="map__image" src="img/map.jpg" width="320" height="455" alt="Фрагмент карты Санкт-Петербурга с отметкой на углу Волынского переулка и Большой Конюшенной улицы.">
               </picture>

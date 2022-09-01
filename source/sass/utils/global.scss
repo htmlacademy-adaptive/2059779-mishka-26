@@ -39,9 +39,12 @@
   --transition: 120ms ease-in-out;
   --max-width-big: 1440px;
   --page-padding-big: max(50px, calc((100vw - var(--max-width-big)) / 2)); /* Может все паддинги уже сюда перенести? */
+  --padding-small: 30px;
+  --padding-medium: 50px;
+  --padding-big: 50px;
+  --padding-left-big: 16.67%;
 }
 
-/* В чате один наставник упоминал, что это неправильно, не по БЭМу, но критерии разрешают, и я не вижу особого смысла страдать с указанием отдельным элементам этого свойства. */
 *,
 *::before,
 *::after {
