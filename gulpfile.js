@@ -49,7 +49,7 @@ const imagesOptimizer = () => {
 }
 
 const imagesConverter = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src(['source/img/**/*.{jpg,png}', '!source/backgrounds/*.jpg'])
     .pipe(squoosh({
       webp: {quality: 80}, //На стандартном качестве местами видно мыльцо
       // На Win10 ошибка в пути. Ишью есть, но чё-то пока не починили avif: {},
@@ -115,6 +115,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/**/*.js', gulp.series(jsMinimizer));
+  gulp.watch('source/*.html', gulp.series(htmlMinimizer));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
