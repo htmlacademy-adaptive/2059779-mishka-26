@@ -52,7 +52,7 @@ const imagesConverter = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/backgrounds/*.jpg'])
     .pipe(squoosh({
       webp: {quality: 80}, //На стандартном качестве местами видно мыльцо
-      // На Win10 ошибка в пути. Ишью есть, но чё-то пока не починили avif: {},
+      avif: {quality: 80},
     }))
     .pipe(gulp.dest('build/img'));
 }
@@ -130,7 +130,7 @@ export const build = gulp.series(
   jsMinimizer,
   svgOptimizer,
   svgSprite,
-  imagesConverter
+  imagesConverter,
   ),
 );
 
@@ -145,7 +145,7 @@ export default gulp.series(
     jsMinimizer,
     svgOptimizer,
     svgSprite,
-    imagesConverter
+    imagesConverter,
   ),
   gulp.series(
     server,
