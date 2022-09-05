@@ -1,6 +1,8 @@
 @use "../utils/global.scss";
 
 .contacts {
+  display: flex;
+  flex-direction: column;
   padding-top: 42px;
   padding-bottom: 39px;
 
@@ -11,16 +13,29 @@
 
   /* stylelint-disable */
   @media (min-width: global.$width-big) {
-    display: grid;
+/*     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: minmax(136px, min-content) minmax(269px, min-content) minmax(52px, min-content);
     grid-template-areas: "contacts-title contacts-map"
                           "contacts-address contacts-map"
-                          "contacts-action contacts-map";
+                          "contacts-action contacts-map"; */
+    display: flex;
+    flex-direction: row;
+    column-gap: 45px;
     padding: 71px 0 105px var(--padding-left-big);
   }
 }
   /* stylelint-enable */
+
+.contacts__description {
+  display: contents;
+
+  @media (min-width: global.$width-big) {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 35%;
+  }
+}
 
 .contacts__title {
   grid-area: contacts-title;
@@ -43,7 +58,7 @@
 
     @media (min-width: global.$width-big) {
       position: absolute;
-      top: 21px;
+      top: 61px;
       left: -112px;
     }
   }
@@ -60,11 +75,10 @@
 
   @media (min-width: global.$width-big) {
     position: relative;
-    align-self: end;
     margin: 0;
-    padding-top: 40px;
+    padding-top: 78px;
     padding-left: 0;
-    padding-right: 45px;
+    padding-right: 0;
     @include global.fonter(700, 53px, 57px);
   }
 }
@@ -83,9 +97,10 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding-top: 32px;
+    margin-bottom: auto;
+    padding-top: 36px;
     padding-left: 0;
-    padding-right: 45px;
+    padding-right: 0;
   }
 }
 
@@ -112,7 +127,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    flex-basis: 25%;
+    flex-basis: 26%;
     padding-right: 10px;
   }
 }
@@ -127,7 +142,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    flex-basis: 75%;
+    flex-basis: 74%;
   }
 }
 
@@ -171,11 +186,14 @@
   }
 
   @media (min-width: global.$width-big) {
+    flex-basis: 61%;
+    max-width: 61%; /* Без этого при ресайзе карта хочет липнуть к краю экрана */
     margin-bottom: 0;
   }
 }
 
 .contacts__action {
+  order: 2;
   grid-area: contacts-action;
   padding-left: var(--padding-small);
   padding-right: var(--padding-small);
@@ -187,7 +205,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    justify-self: start;
+    justify-content: flex-start;
     padding-left: 0;
     padding-right: 0;
   }
