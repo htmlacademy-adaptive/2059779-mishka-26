@@ -10,7 +10,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    aspect-ratio: 37 / 25;
+    aspect-ratio: 36 / 24;
   }
 
   &:hover .video__icon {
@@ -58,8 +58,4 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
   pointer-events: none;
-}
-
-.video__icon-background {
-  color: var(--light);
 }

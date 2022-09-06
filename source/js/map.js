@@ -1,6 +1,6 @@
 ymaps.ready(function () {
     var myMap = new ymaps.Map('yandexmap', {
-            center: [59.938635, 30.323118],
+            center: [59.938767, 30.323129],
             zoom: 17,
             controls: []
         }, {
@@ -20,7 +20,7 @@ ymaps.ready(function () {
             iconImageSize: [67, 100],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-27, -120]
+            iconImageOffset: [-22, -85]
         });
 
     myMap.geoObjects

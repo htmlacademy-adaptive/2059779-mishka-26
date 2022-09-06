@@ -12,6 +12,10 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -70,6 +74,8 @@
         <article class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
+              <source type="image/avif" media="(min-width: 1150px)" srcset="img/catalog/catalog-bunny-jumper-big.avif 1x, img/catalog/catalog-bunny-jumper-big@2x.avif 2x">
+              <source type="image/avif" media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper-medium.avif 1x, img/catalog/catalog-bunny-jumper-medium@2x.avif 2x">
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-bunny-jumper-big.webp 1x, img/catalog/catalog-bunny-jumper-big@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-bunny-jumper-medium.webp 1x, img/catalog/catalog-bunny-jumper-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-bunny-jumper-big.jpg 1x, img/catalog/catalog-bunny-jumper-big@2x.jpg 2x">
@@ -94,6 +100,8 @@
         <article class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
+              <source type="image/avif" media="(min-width: 1150px)" srcset="img/catalog/catalog-laundry-basket-big.avif 1x, img/catalog/catalog-laundry-basket-big@2x.avif 2x">
+              <source type="image/avif" media="(min-width: 768px)" srcset="img/catalog/catalog-laundry-basket-medium.avif 1x, img/catalog/catalog-laundry-basket-medium@2x.avif 2x">
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-laundry-basket-big.webp 1x, img/catalog/catalog-laundry-basket-big@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-laundry-basket-medium.webp 1x, img/catalog/catalog-laundry-basket-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-laundry-basket-big.jpg 1x, img/catalog/catalog-laundry-basket-big@2x.jpg 2x">
@@ -118,6 +126,8 @@
         <article class="product-card">
           <a class="product-card__image-link" href="#">
             <picture>
+              <source type="image/avif" media="(min-width: 1150px)" srcset="img/catalog/catalog-large-toy-basket-big.avif 1x, img/catalog/catalog-large-toy-basket-big@2x.avif 2x">
+              <source type="image/avif" media="(min-width: 768px)" srcset="img/catalog/catalog-large-toy-basket-medium.avif 1x, img/catalog/catalog-large-toy-basket-medium@2x.avif 2x">
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/catalog-large-toy-basket-big.webp 1x, img/catalog/catalog-large-toy-basket-big@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-large-toy-basket-medium.webp 1x, img/catalog/catalog-large-toy-basket-medium@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/catalog/catalog-large-toy-basket-big.jpg 1x, img/catalog/catalog-large-toy-basket-big@2x.jpg 2x">
@@ -142,11 +152,19 @@
       </section>
       <section class="showcase">
         <div class="showcase__content">
-          <h2 class="showcase__title">Процесс производства</h2>
+          <div class="showcase__text">
+            <h2 class="showcase__title">Процесс производства</h2>
+            <p class="showcase__description">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
+            <div class="showcase__button-container">
+              <a class="showcase__button button" href="#">Сделать заказ</a>
+            </div>
+          </div>
           <div class="showcase__video video">
             <span class="visually-hidden">Видео о производстве</span>
             <a class="video__link" href="https://youtu.be/x8v4EhYe7Rs">
               <picture>
+                <source type="image/avif" media="(min-width: 1150px)" srcset="img/video-cover-big.avif 1x, img/video-cover-big@2x.avif 2x">
+                <source type="image/avif" media="(min-width: 768px)" srcset="img/video-cover-medium.avif 1x, img/video-cover-medium@2x.avif 2x">
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-cover-big.webp 1x, img/video-cover-big@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/video-cover-medium.webp 1x, img/video-cover-medium@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/video-cover-big.jpg 1x, img/video-cover-big@2x.jpg 2x">
@@ -159,10 +177,6 @@
                 <use href="img/sprite.svg#icon-video-play" />
               </svg>
             </button>
-          </div>
-          <p class="showcase__description">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.</p>
-          <div class="showcase__button-container">
-            <a class="showcase__button button" href="#">Сделать заказ</a>
           </div>
         </div>
       </section>

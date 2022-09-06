@@ -22,7 +22,7 @@
   @media (min-width: global.$width-big) {
     column-gap: 58px;
     grid-template-columns: 33% 60%;
-    grid-template-rows: min-content auto;
+    grid-template-rows: minmax(130px, auto) auto;
     padding: 75px 0 max(96px, 9%) var(--padding-left-big);
   }
 }
@@ -54,7 +54,7 @@
     width: 100%;
     height: min-content;
     margin: 0;
-    padding-bottom: 0;
+    padding-top: 61px;
   }
 }
 
@@ -95,7 +95,7 @@
   @media (min-width: global.$width-big) {
     position: absolute;
     left: -130px;
-    top: 10%;
+    top: 58%;
     bottom: 19px;
     margin: 0;
     padding: 0;
@@ -110,10 +110,8 @@
   }
 
   @media (min-width: global.$width-big) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
     margin-bottom: auto;
-    padding-top: 0;
+    padding-top: 24px;
   }
 }
 
@@ -127,8 +125,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    margin-bottom: 0;
-    padding-right: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -188,12 +185,16 @@
   @media (min-width: global.$width-medium) {
     align-self: start;
     margin-bottom: 0;
+    padding-top: 13px;
   }
 
   @media (min-width: global.$width-big) {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
+    justify-self: center;
     max-width: 525px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -213,10 +214,8 @@
   }
 
   @media (min-width: global.$width-big) {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    margin-bottom: 0;
-    padding: 10px 58px 10px 0;
+    margin-bottom: 21px;
+    padding: 10px 0;
   }
 }
 
@@ -226,11 +225,7 @@
   align-self: start;
 
   @media (min-width: global.$width-big) {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    align-self: stretch;
     justify-self: flex-end;
-    max-width: 292px; /* Не знаю, что с этими кнопками делать. */
     margin-bottom: 0;
   }
 }
