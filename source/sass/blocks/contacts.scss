@@ -215,12 +215,12 @@
 
 .contacts__button {
   @media (min-width: global.$width-medium) {
-    width: max-content;
     padding-left: 40px;
     padding-right: 40px;
   }
 
   @media (min-width: global.$width-big) {
     align-self: end;
+    margin-right: 62px;
   }
 }

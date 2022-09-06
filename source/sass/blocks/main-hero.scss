@@ -57,6 +57,7 @@
   min-height: 209px;
   padding-left: var(--padding-small);
   padding-right: var(--padding-small);
+  padding-bottom: 10px;
   @include global.fonter(700, 27px, 30px);
   text-align: center;
   color: var(--dark);

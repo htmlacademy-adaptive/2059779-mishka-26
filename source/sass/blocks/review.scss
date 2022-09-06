@@ -27,11 +27,13 @@
   }
 
   @media (min-width: global.$width-big) {
+    max-width: 90%;
     @include global.fonter(700, 17px, 24px);
   }
 }
 
 .review__link {
+  display: block;
   @include global.fonter(400, 17px, 34px);
   text-decoration: none;
   color: var(--semi-dark);
@@ -46,5 +48,9 @@
 
   @media (min-width: global.$width-medium) {
     @include global.fonter(400, 17px, 30px);
+  }
+
+  @media (min-width: global.$width-big) {
+    max-width: 90%;
   }
 }

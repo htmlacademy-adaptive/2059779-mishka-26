@@ -19,8 +19,13 @@
 .copyright__text {
   @include global.fonter(700, 19px, 18px);
   color: var(--dark);
+
+  @media (min-width: global.$width-big) {
+    max-width: min-content;
+  }
 }
 
 .copyright__img {
+  min-width: 27px;
   color: var(--accent-color);
 }
