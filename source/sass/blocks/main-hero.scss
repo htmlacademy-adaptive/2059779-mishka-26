@@ -20,14 +20,14 @@
 
     @media (min-width: global.$width-medium) {
       display: block;
-      background: url("../img/hero-divider-medium.svg") repeat-x center;
+      background: url("../img/hero-divider-medium.svg") repeat-x center left 5px;
     }
 
     @media (min-width: global.$width-big) {
       bottom: -19px;
       display: block;
       height: 34px;
-      background: url("../img/hero-divider-big.svg") repeat-x center;
+      background: url("../img/hero-divider-big.svg") repeat-x center left 15px;
     }
   }
 
@@ -54,7 +54,7 @@
 
 .main-hero__title {
   margin: 0 auto;
-  min-height: 212px;
+  min-height: 209px;
   padding-left: var(--padding-small);
   padding-right: var(--padding-small);
   @include global.fonter(700, 27px, 30px);
@@ -100,7 +100,7 @@
   display: block;
   min-height: 104px;
   margin-bottom: -5px;
-  padding: 24px 160px 31px 30px;
+  padding: 25px 160px 33px 30px;
   @include global.fonter(700, 19px, 24px);
   color: var(--light);
   text-decoration: none;

@@ -62,7 +62,7 @@
 
   @media (min-width: global.$width-medium) {
     display: block;
-    background: url("../img/hero-divider-medium.svg") repeat-x center;
+    background: url("../img/hero-divider-medium.svg") repeat-x center left 5px;
   }
 
   @media (min-width: global.$width-big) {

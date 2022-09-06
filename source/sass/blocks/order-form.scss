@@ -33,7 +33,7 @@
   }
 
   @media (min-width: global.$width-big) {
-    padding: 108px 173px 30px 61px;
+    padding: 108px 173px 30px 175px;
   }
 }
 
@@ -80,7 +80,7 @@
   @media (min-width: global.$width-big) {
     padding: 0 173px 50px 61px;
     display: grid;
-    grid-template-columns: 14.11% 30% 55.89%;
+    grid-template-columns: 14.11% 28% 57.89%;
     gap: 0;
   }
 

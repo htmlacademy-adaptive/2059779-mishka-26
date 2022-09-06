@@ -49,6 +49,8 @@
   &::after {
     @media (min-width: global.$width-medium) {
       content: "";
+      position: relative;
+      top: -7px;
       display: block;
       width: 47px;
       height: 81px;
