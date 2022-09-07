@@ -1,9 +1,6 @@
 @use "../utils/global.scss";
 
 .fieldset {
-  padding: 0;
-  border: none;
-
   @media (min-width: global.$width-medium) {
     display: grid;
     grid-template-columns: 25.15% 74.85%;

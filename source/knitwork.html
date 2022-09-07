@@ -43,14 +43,14 @@
           <li class="user-menu__item">
             <a class="user-menu__link user-menu__link--search" href="#">
               <svg class="user-menu__icon" width=" 18" height="18" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-search">
+                <use href="img/sprite.svg#icon-search" />
               </svg>
               <span class="user-menu__search-text">Поиск по сайту</span></a>
           </li>
           <li class="user-menu__item">
             <a class="user-menu__link user-menu__link--cart" href="#">
               <svg class="user-menu__icon" width="21" height="18" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-cart">
+                <use href="img/sprite.svg#icon-cart" />
               </svg>
               <span class="user-menu__cart-text">Корзина: пока пуста</span></a>
         </ul>
@@ -78,102 +78,124 @@
         </div>
         <form class="order-form__inputs form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="order-form__container">
-            <fieldset class="form__fieldset fieldset fieldset--radio">
-              <h3 class="fieldset__title fieldset__title--radio">Тип</h3>
-              <div class="fieldset__list fieldset__list--radio">
-                <label class="fieldset__label fieldset__label--radio">
-                  <input class="fieldset__radio" type="radio" name="product-group" value="interior" checked>
-                  <span class="fieldset__value fieldset__value--radio">Аксессуар для интерьера</span>
-                </label>
-                <label class="fieldset__label fieldset__label--radio">
-                  <input class="fieldset__radio" type="radio" name="product-group" value="toy">
-                  <span class="fieldset__value fieldset__value--radio">Детская игрушка</span>
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--radio">
+              <fieldset class="form__fieldset">
+
+                <legend class="fieldset__title fieldset__title--radio">Тип</legend>
+                <div class="fieldset__list fieldset__list--radio">
+                  <label class="fieldset__label fieldset__label--radio">
+                    <input class="fieldset__radio" type="radio" name="product-group" value="interior" checked>
+                    <span class="fieldset__value fieldset__value--radio">Аксессуар для интерьера</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--radio">
+                    <input class="fieldset__radio" type="radio" name="product-group" value="toy">
+                    <span class="fieldset__value fieldset__value--radio">Детская игрушка</span>
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container order-form__container--accent">
-            <fieldset class="form__fieldset fieldset fieldset--check fieldset--wide">
-              <h3 class="fieldset__title fieldset__title--check">Цвет</h3>
-              <div class="fieldset__list fieldset__list--check">
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="white" checked>
-                  <span class="fieldset__value fieldset__value--check">Белый</span>
-                </label>
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="grey" checked>
-                  <span class="fieldset__value fieldset__value--check">Серый</span>
-                </label>
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="tiffany">
-                  <span class="fieldset__value fieldset__value--check">Тиффани</span>
-                </label>
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="black">
-                  <span class="fieldset__value fieldset__value--check">Чёрный</span>
-                </label>
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="pink">
-                  <span class="fieldset__value fieldset__value--check">Розовый</span>
-                </label>
-                <label class="fieldset__label fieldset__label--check">
-                  <input class="fieldset__check" type="checkbox" name="product-color" value="orange">
-                  <span class="fieldset__value fieldset__value--check">Оранжевый</span>
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--check fieldset--wide">
+              <fieldset class="form__fieldset">
+                <legend class="fieldset__title fieldset__title--check">Цвет</legend>
+                <div class="fieldset__list fieldset__list--check">
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="white" checked>
+                    <span class="fieldset__value fieldset__value--check">Белый</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="grey" checked>
+                    <span class="fieldset__value fieldset__value--check">Серый</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="tiffany">
+                    <span class="fieldset__value fieldset__value--check">Тиффани</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="black">
+                    <span class="fieldset__value fieldset__value--check">Чёрный</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="pink">
+                    <span class="fieldset__value fieldset__value--check">Розовый</span>
+                  </label>
+                  <label class="fieldset__label fieldset__label--check">
+                    <input class="fieldset__check" type="checkbox" name="product-color" value="orange">
+                    <span class="fieldset__value fieldset__value--check">Оранжевый</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container">
-            <fieldset class="form__fieldset fieldset fieldset--person">
-              <h3 class="fieldset__title">ФИО</h3>
-              <div class="fieldset__list fieldset__list--text">
-                <label class="fieldset__label">
-                  <span class="fieldset__value">Имя:</span>
-                  <input class="fieldset__input fieldset__input--text" type="text" name="customer-name" placeholder="Введите ваше имя*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
-                </label>
-                <label class="fieldset__label">
-                  <span class="fieldset__value">Фамилия:</span>
-                  <input class="fieldset__input fieldset__input--text" type="text" name="customer-second-name" placeholder="Укажите фамилию*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
-                </label>
-                <label class="fieldset__label">
-                  <span class="fieldset__value">Отчество:</span>
-                  <input class="fieldset__input fieldset__input--text" type="text" name="customer-third-name" placeholder="Отчество, если желаете" pattern="[а-яА-ЯёЁa-zA-Z]">
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--person">
+              <fieldset class="form__fieldset">
+
+                <legend class="fieldset__title">ФИО</legend>
+                <div class="fieldset__list fieldset__list--text">
+                  <label class="fieldset__label">
+                    <span class="fieldset__value">Имя:</span>
+                    <input class="fieldset__input fieldset__input--text" type="text" name="customer-name" placeholder="Введите ваше имя*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
+                  </label>
+                  <label class="fieldset__label">
+                    <span class="fieldset__value">Фамилия:</span>
+                    <input class="fieldset__input fieldset__input--text" type="text" name="customer-second-name" placeholder="Укажите фамилию*" pattern="[а-яА-ЯёЁa-zA-Z]" required>
+                  </label>
+                  <label class="fieldset__label">
+                    <span class="fieldset__value">Отчество:</span>
+                    <input class="fieldset__input fieldset__input--text" type="text" name="customer-third-name" placeholder="Отчество, если желаете" pattern="[а-яА-ЯёЁa-zA-Z]">
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container order-form__container--accent">
-            <fieldset class="form__fieldset fieldset fieldset--phone">
-              <h3 class="fieldset__title">Тел</h3>
-              <div class="fieldset__list">
-                <label class="fieldset__label fieldset__label--phone">
-                  <span class="visually-hidden">Ваш телефон:</span>
-                  <input class="fieldset__input fieldset__input--accent" type="tel" name="customer-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" required>
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--phone">
+              <fieldset class="form__fieldset">
+
+                <legend class="fieldset__title">Тел</legend>
+                <div class="fieldset__list">
+                  <label class="fieldset__label fieldset__label--phone">
+                    <span class="visually-hidden">Ваш телефон:</span>
+                    <input class="fieldset__input fieldset__input--accent" type="tel" name="customer-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$" required>
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container order-form__container--accent">
-            <fieldset class="form__fieldset fieldset fieldset--email">
-              <h3 class="fieldset__title">E-mail</h3>
-              <div class="fieldset__list">
-                <label class="fieldset__label fieldset__label--email">
-                  <span class="visually-hidden">Ваш электронный адрес:</span>
-                  <input class="fieldset__input fieldset__input--accent" type="email" name="customer-email" placeholder="Ваш Email*" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required>
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--email">
+              <fieldset class="form__fieldset">
+
+                <legend class="fieldset__title">E-mail</legend>
+                <div class="fieldset__list">
+                  <label class="fieldset__label fieldset__label--email">
+                    <span class="visually-hidden">Ваш электронный адрес:</span>
+                    <input class="fieldset__input fieldset__input--accent" type="email" name="customer-email" placeholder="Ваш Email*" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required>
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container">
-            <fieldset class="form__fieldset fieldset fieldset--additional">
-              <h3 class="fieldset__title">Доп</h3>
-              <div class="fieldset__list">
-                <label class="fieldset__label">
-                  <span class="visually-hidden">Укажите дополнительную информацию:</span>
-                  <textarea class="fieldset__input fieldset__input--textarea" name="customer-message" rows="6" cols="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-                </label>
-              </div>
-            </fieldset>
+            <div class="fieldset fieldset--additional">
+              <fieldset class="form__fieldset">
+
+                <legend class="fieldset__title">Доп</legend>
+                <div class="fieldset__list">
+                  <label class="fieldset__label">
+                    <span class="visually-hidden">Укажите дополнительную информацию:</span>
+                    <textarea class="fieldset__input fieldset__input--textarea" name="customer-message" rows="6" cols="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                  </label>
+                </div>
+
+              </fieldset>
+            </div>
           </div>
           <div class="order-form__container">
             <footer class="order-form__footer">
@@ -190,7 +212,7 @@
       <a class="page-footer__logo logo logo--footer" href="/">
         <span class="visually-hidden">Логотип магазина «Мишка».</span>
         <svg class="image" width="102" height="34" aria-hidden="true" focusable="false">
-          <use href="img/sprite.svg#logo-footer">
+          <use href="img/sprite.svg#logo-footer" />
         </svg>
       </a>
       <ul class="page-footer__social social reset-list">
@@ -198,7 +220,7 @@
           <a class="social__link" href="#">
             <span class="visually-hidden">Вконтакте</span>
             <svg class="social__img" width="28" height="23" aria-hidden="true" focusable="false">
-              <use href="img/sprite.svg#icon-social-vk">
+              <use href="img/sprite.svg#icon-social-vk" />
             </svg>
           </a>
         </li>
@@ -206,7 +228,7 @@
           <a class="social__link" href="#">
             <span class="visually-hidden">Youtube</span>
             <svg class="social__img" width="28" height="23" fill="currentColor" aria-hidden="true" focusable="false">
-              <use href="img/sprite.svg#icon-social-youtube">
+              <use href="img/sprite.svg#icon-social-youtube" />
             </svg>
           </a>
         </li>
@@ -214,7 +236,7 @@
           <a class="social__link" href="#">
             <span class="visually-hidden">Телеграм</span>
             <svg class="social__img" width="28" height="23" fill="currentColor" aria-hidden="true" focusable="false">
-              <use href="img/sprite.svg#icon-social-telegram">
+              <use href="img/sprite.svg#icon-social-telegram" />
             </svg>
           </a>
         </li>
@@ -224,7 +246,7 @@
           <span class="copyright__text">Разработано</span>
           <span class="visually-hidden">HTML Academy</span>
           <svg class="copyright__img" width="27" height="34">
-            <use href="img/sprite.svg#logo-html-academy">
+            <use href="img/sprite.svg#logo-html-academy" />
           </svg>
         </a>
       </div>

@@ -1,5 +1,8 @@
 @use "../utils/global.scss";
 
 .form__fieldset {
+  display: contents;
   margin: 0;
+  padding: 0;
+  border: none;
 }
