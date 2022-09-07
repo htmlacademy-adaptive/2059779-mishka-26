@@ -55,7 +55,7 @@
   }
 
   &--handmade {
-    @media (max-width: global.$width-small) {
+    @media not all and (min-width: global.$width-medium) {
       order: 2;
     }
   }
@@ -72,7 +72,7 @@
   }
 
   &--patriot {
-    @media (max-width: global.$width-small) {
+    @media not all and (min-width: global.$width-medium) {
       order: 3;
     }
   }
@@ -89,7 +89,7 @@
   }
 
   &--packing {
-    @media (max-width: global.$width-small) {
+    @media not all and (min-width: global.$width-medium) {
       order: 4;
     }
   }
