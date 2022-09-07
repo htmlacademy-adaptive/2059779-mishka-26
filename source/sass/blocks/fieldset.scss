@@ -381,6 +381,7 @@
   &--textarea {
     padding: 17px;
     border: 2px solid var(--dark);
+    resize: none;
 
     @media (min-width: global.$width-medium) {
       padding: 14px;
