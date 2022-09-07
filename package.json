@@ -48,8 +48,5 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module",
-  "dependencies": {
-    "browser-sync-client": "^2.27.7"
-  }
+  "type": "module"
 }
