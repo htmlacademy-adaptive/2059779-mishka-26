@@ -1,9 +1,6 @@
 @use "../utils/global.scss";
 
 .fieldset {
-  padding: 0;
-  border: none;
-
   @media (min-width: global.$width-medium) {
     display: grid;
     grid-template-columns: 25.15% 74.85%;
@@ -203,7 +200,7 @@
     display: block;
     width: 25px;
     height: 24px;
-    background: url("../img/icons/icon-phone.svg") no-repeat center;
+    background: url("../img/sprite.svg#icon-phone") no-repeat center;
 
     @media (min-width: global.$width-medium) {
       top: 11px;
@@ -222,7 +219,7 @@
     display: block;
     width: 32px;
     height: 21px;
-    background: url("../img/icons/icon-email.svg") no-repeat center;
+    background: url("../img/sprite.svg#icon-email") no-repeat center;
 
     @media (min-width: global.$width-medium) {
       right: 23px;
@@ -292,6 +289,21 @@
   &:active {
     border: 2px solid var(--dark-03);
   }
+
+  &--disabled {
+    opacity: var(--disabled-opacity);
+    cursor: auto;
+
+    &:hover {
+      border: 2px solid var(--semi-dark);
+      opacity: var(--disabled-opacity);
+    }
+
+    &:active {
+      border: 2px solid var(--semi-dark);
+      opacity: var(--disabled-opacity);
+    }
+  }
 }
 
 .fieldset__check {
@@ -340,6 +352,21 @@
   &:active {
     border: 2px solid var(--dark-03);
   }
+
+  &--disabled {
+    opacity: var(--disabled-opacity);
+    cursor: auto;
+
+    &:hover {
+      border: 2px solid var(--semi-dark);
+      opacity: var(--disabled-opacity);
+    }
+
+    &:active {
+      border: 2px solid var(--semi-dark);
+      opacity: var(--disabled-opacity);
+    }
+  }
 }
 
 .fieldset__input {
@@ -378,21 +405,90 @@
     }
   }
 
-  &--textarea {
-    padding: 17px;
-    border: 2px solid var(--dark);
+  &--disabled {
+    opacity: var(--disabled-opacity);
+    cursor: default;
 
-    @media (min-width: global.$width-medium) {
-      padding: 14px;
-      padding-bottom: 8px;
+    &:hover {
+      border-bottom: 2px solid var(--dark);
+      opacity: var(--disabled-opacity);
+    }
+
+    &:active {
+      border-bottom: 2px solid var(--dark);
+      opacity: var(--disabled-opacity);
     }
   }
 
-  &--textarea:hover {
+  &--error {
+    color: var(--input-error);
+    border-bottom: 2px solid var(--input-error);
+
+    &:hover {
+      color: var(--input-error);
+      border-bottom: 2px solid var(--input-error);
+    }
+
+    &:active {
+      color: var(--input-error);
+      border-bottom: 2px solid var(--input-error);
+    }
+  }
+}
+
+.fieldset__textarea {
+  padding: 17px;
+  resize: none;
+  @include global.fonter(400, 17px, 17px);
+  color: var(--semi-dark);
+  border: 2px solid var(--dark);
+
+  @media (min-width: global.$width-medium) {
+    padding: 14px;
+    padding-bottom: 8px;
+  }
+
+  @media (min-width: global.$width-medium) {
+    flex-grow: 1;
+    padding-left: 16px;
+    @include global.fonter(400, 19px, 19px);
+  }
+
+  &:hover {
     border: 2px solid var(--accent-color);
   }
 
-  &--textarea:active {
+  &:active {
     border: 2px solid var(--accent-color);
+  }
+
+  &--disabled {
+    opacity: var(--disabled-opacity);
+    cursor: default;
+
+    &:hover {
+      border: 2px solid var(--dark);
+      opacity: var(--disabled-opacity);
+    }
+
+    &:active {
+      border: 2px solid var(--dark);
+      opacity: var(--disabled-opacity);
+    }
+  }
+
+  &--error {
+    color: var(--input-error);
+    border: 2px solid var(--input-error);
+
+    &:hover {
+      color: var(--input-error);
+      border: 2px solid var(--input-error);
+    }
+
+    &:active {
+      color: var(--input-error);
+      border: 2px solid var(--input-error);
+    }
   }
 }

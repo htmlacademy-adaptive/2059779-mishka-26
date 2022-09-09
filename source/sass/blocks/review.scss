@@ -16,7 +16,7 @@
   }
 }
 
-.review__author {
+.review__source {
   @include global.fonter(700, 17px, 24px);
   color: var(--dark);
 
@@ -30,6 +30,16 @@
     max-width: 90%;
     @include global.fonter(700, 17px, 24px);
   }
+}
+
+.review__author {
+  margin: 0;
+  padding: 0;
+}
+
+.review__instagram {
+  margin: 0;
+  padding: 0;
 }
 
 .review__link {

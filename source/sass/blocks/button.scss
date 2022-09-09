@@ -25,21 +25,21 @@
   }
 
   &--disabled {
-    opacity: 0.2;
+    opacity: var(--disabled-opacity);
     cursor: auto;
   }
 
   &--disabled:hover {
     color: var(--main-font-color);
     background-color: transparent;
-    opacity: 0.2;
+    opacity: var(--disabled-opacity);
     cursor: auto;
   }
 
   &--disabled:active {
     color: var(--main-font-color);
     background-color: transparent;
-    opacity: 0.2;
+    opacity: var(--disabled-opacity);
     cursor: auto;
   }
 
