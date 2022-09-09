@@ -200,7 +200,7 @@
     display: block;
     width: 25px;
     height: 24px;
-    background: url("../img/icons/icon-phone.svg") no-repeat center;
+    background: url("../img/sprite.svg#icon-phone") no-repeat center;
 
     @media (min-width: global.$width-medium) {
       top: 11px;
@@ -219,7 +219,7 @@
     display: block;
     width: 32px;
     height: 21px;
-    background: url("../img/icons/icon-email.svg") no-repeat center;
+    background: url("../img/sprite.svg#icon-email") no-repeat center;
 
     @media (min-width: global.$width-medium) {
       right: 23px;

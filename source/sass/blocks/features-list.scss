@@ -25,33 +25,33 @@
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 33px;
     height: 38px;
     top: 0;
     left: 8px;
-    background: url("../img/icons/icon-eco.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-eco") no-repeat transparent top left;
   }
 
   &--style::before {
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 47px;
     height: 38px;
-    top: 0;
+    top: -4px;
     left: 0;
-    background: url("../img/icons/icon-style.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-style") no-repeat transparent top left;
   }
 
   &--like::before {
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 34px;
     height: 38px;
-    top: 6px;
+    top: 0;
     left: 7px;
-    background: url("../img/icons/icon-like.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-like") no-repeat transparent top left;
   }
 
   &--handmade {
@@ -64,11 +64,11 @@
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 35px;
     height: 38px;
     top: 3px;
     left: 3px;
-    background: url("../img/icons/icon-handmade.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-handmade") no-repeat transparent top left;
   }
 
   &--patriot {
@@ -81,11 +81,11 @@
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 55px;
     height: 38px;
-    top: 4px;
+    top: -2px;
     left: -6px;
-    background: url("../img/icons/icon-patriot.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-patriot") no-repeat transparent top left;
   }
 
   &--packing {
@@ -98,11 +98,11 @@
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 33px;
     height: 38px;
     top: 0;
     left: 3px;
-    background: url("../img/icons/icon-packing.svg") no-repeat transparent top left;
+    background: url("../img/sprite.svg#icon-packing") no-repeat transparent top left;
   }
 
   @media (min-width: global.$width-medium) {
