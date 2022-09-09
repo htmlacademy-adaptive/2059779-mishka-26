@@ -186,8 +186,8 @@
   }
 
   &:nth-child(2n+1):last-child {
-		grid-column: span 2;
-	}
+    grid-column: span 2;
+  }
 
   @media (min-width: global.$width-medium) {
     min-height: 119px;
