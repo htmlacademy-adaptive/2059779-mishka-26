@@ -1,13 +1,16 @@
 @use "../utils/global.scss";
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: global.$width-medium) {
-    display: flex;
+    flex-direction: row;
     width: 100%;
   }
 
   @media (min-width: global.$width-big) {
-    flex-flow: column;
+    flex-direction: column;
   }
 
   &:hover .product-card__info {
@@ -24,6 +27,7 @@
 }
 
 .product-card__image-link {
+  order: -1;
   display: block;
   background-color: var(--neutral);
 

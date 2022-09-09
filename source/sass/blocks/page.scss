@@ -71,3 +71,10 @@
     background: url("../img/hero-divider-big.svg") repeat-x center;
   }
 }
+
+.page__fieldset {
+  display: contents;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

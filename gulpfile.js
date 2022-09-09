@@ -10,8 +10,8 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgmin from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
 import del from 'del';
+import { stacksvg } from 'gulp-stacksvg';
 
 // Styles
 export const styles = () => {
@@ -64,19 +64,16 @@ const imagesCopy = () => {
 
 //SVG
 const svgOptimizer = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/sprite/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgmin())
     .pipe(gulp.dest('build/img'));
 }
 
-const svgSprite = () => {
-  return gulp.src('source/img/sprite/*.svg')
-    .pipe(svgmin())
-    .pipe(svgstore({
-    inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+const { src, dest } = gulp
+function makeStack () {
+	return src(`source/img/icons/*.svg`)
+		.pipe(stacksvg({ output: `sprite` }))
+		.pipe(dest(`build/img/`))
 }
 
 //Copy
@@ -129,7 +126,7 @@ export const build = gulp.series(
   htmlMinimizer,
   jsMinimizer,
   svgOptimizer,
-  svgSprite,
+  makeStack,
   imagesConverter,
   ),
 );
@@ -144,7 +141,7 @@ export default gulp.series(
     htmlMinimizer,
     jsMinimizer,
     svgOptimizer,
-    svgSprite,
+    makeStack,
     imagesConverter,
   ),
   gulp.series(
