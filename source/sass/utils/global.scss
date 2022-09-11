@@ -39,8 +39,8 @@
   --card-shadow-hover-right: 6px 2px 14px -3px #0000001a;
   --card-shadow-active: 0px 3px 5px #0000001a;
   --transition: 120ms ease-in-out;
-  --max-width-big: 1440px;
-  --page-padding-big: max(50px, calc((100vw - var(--max-width-big)) / 2)); /* Может все паддинги уже сюда перенести? */
+  --max-width-big: 1050px;
+  --page-padding-big: max(50px, calc((100vw - var(--max-width-big)) / 2));
   --padding-small: 30px;
   --padding-medium: 50px;
   --padding-big: 50px;

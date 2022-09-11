@@ -21,50 +21,54 @@
   <div class="page__container">
     <header class="main-header">
       <nav class="main-header__navigation main-navigation">
-        <a class="main-navigation__logo logo" href="/">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-big.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-medium.svg">
-            <source media="(min-width: 320px)" srcset="img/logo-small.svg">
-            <img class="image" src="img/logo-small.svg" width="86" height="35" alt="Логотип магазина «Мишка».">
-          </picture>
-        </a>
-        <button class="main-header__toggle main-navigation__toggle toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <span class="toggle__button"></span>
-        </button>
-        <ul class="main-header__menu main-navigation__main-menu main-navigation__main-menu--home-page main-menu reset-list">
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__link" href="knitwork.html">Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-header__menu main-navigation__user-menu user-menu reset-list">
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--search" href="#">
-              <svg class="user-menu__icon" width=" 18" height="18" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-search" />
-              </svg>
-              <span class="user-menu__search-text">Поиск по сайту</span></a>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link user-menu__link--cart" href="#">
-              <svg class="user-menu__icon" width="21" height="18" aria-hidden="true" focusable="false">
-                <use href="img/sprite.svg#icon-cart" />
-              </svg>
-              <span class="user-menu__cart-text">Корзина: пока пуста</span></a>
-        </ul>
-        <ul class="main-navigation__promo main-navigation__promo--home-page promo-menu reset-list">
-          <li class="promo-menu__item">
-            <a class="promo-menu__link" href="#">Новые поступления</a>
-          </li>
-          <li class="promo-menu__item">
-            <a class="promo-menu__link" href="#">Распродажа</a>
-          </li>
-        </ul>
-        <span class="main-navigation__delivery main-navigation__delivery--home-page">Бесплатная доставка по&nbsp;России</span>
+        <div class="main-navigation__container">
+          <a class="main-navigation__logo logo" href="/">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-big.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-medium.svg">
+              <source media="(min-width: 320px)" srcset="img/logo-small.svg">
+              <img class="image" src="img/logo-small.svg" width="86" height="35" alt="Логотип магазина «Мишка».">
+            </picture>
+          </a>
+          <button class="main-header__toggle main-navigation__toggle toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="toggle__button"></span>
+          </button>
+          <ul class="main-header__menu main-navigation__main-menu main-navigation__main-menu--home-page main-menu reset-list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="knitwork.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="main-header__menu main-navigation__user-menu user-menu reset-list">
+            <li class="user-menu__item">
+              <a class="user-menu__link user-menu__link--search" href="#">
+                <svg class="user-menu__icon" width=" 18" height="18" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#icon-search" />
+                </svg>
+                <span class="user-menu__search-text">Поиск по сайту</span></a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link user-menu__link--cart" href="#">
+                <svg class="user-menu__icon" width="21" height="18" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#icon-cart" />
+                </svg>
+                <span class="user-menu__cart-text">Корзина: пока пуста</span></a>
+          </ul>
+        </div>
+        <div class="main-navigation__container main-navigation__container--home-page">
+          <ul class="main-navigation__promo main-navigation__promo--home-page promo-menu reset-list">
+            <li class="promo-menu__item">
+              <a class="promo-menu__link" href="#">Новые поступления</a>
+            </li>
+            <li class="promo-menu__item">
+              <a class="promo-menu__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <span class="main-navigation__delivery main-navigation__delivery--home-page">Бесплатная доставка по&nbsp;России</span>
+        </div>
       </nav>
     </header>
     <main class="main-content">
