@@ -99,7 +99,8 @@
   }
 
   @media (min-width: global.$width-medium) {
-    display: none;
+    padding: 0;
+    font-size: 0;
   }
 }
 
